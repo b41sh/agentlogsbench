@@ -1,0 +1,69 @@
+{
+  "source_of_truth": ".omx/specs/deep-interview-observation-benchmark.md",
+  "tiers": {
+    "S": {
+      "purpose": "development_and_ci",
+      "generation_rows": 1000000,
+      "observation_rows": {
+        "min": 10000000,
+        "max": 30000000
+      }
+    },
+    "M": {
+      "purpose": "official_leaderboard",
+      "generation_rows": 10000000,
+      "observation_rows": {
+        "min": 100000000,
+        "max": 300000000
+      }
+    },
+    "L": {
+      "purpose": "scale_appendix",
+      "generation_rows": {
+        "min": 30000000,
+        "max": 50000000
+      },
+      "observation_rows": {
+        "min": 300000000,
+        "max": 1000000000
+      }
+    }
+  },
+  "preserve": {
+    "trace_first_generation": true,
+    "observation_chain_coherence": true,
+    "mixed_observation_types": true,
+    "sparse_keyword_injection": true,
+    "hard_negatives": true,
+    "tenant_app_long_tail": true,
+    "controlled_text_size_buckets": true,
+    "attr_coverage": true
+  },
+  "trace_archetypes": [
+    "simple_chat",
+    "tool_lookup",
+    "research_agent",
+    "retry_after_429",
+    "timeout_then_fallback",
+    "guardrail_block",
+    "large_context_replay"
+  ],
+  "text_size_buckets": {
+    "input": [
+      "5KB-20KB",
+      "20KB-50KB",
+      "50KB-100KB",
+      "100KB-250KB",
+      "250KB-1000KB"
+    ],
+    "output": [
+      "1KB-5KB",
+      "5KB-20KB",
+      "20KB-50KB"
+    ]
+  },
+  "keyword_injection": {
+    "strong_injection_rate": 0.18,
+    "hard_negative_policy": "1x_to_2x_of_matching_positive_family"
+  }
+}

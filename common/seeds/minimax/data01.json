@@ -1,0 +1,67 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "anthropic-version": "2023-06-01",
+      "user-agent": "agentlogsbench-seed"
+    },
+    "body": {
+      "system": "You are an agent assistant. Keep recent execution context, retrieval evidence, and tool outputs available for debugging and triage.",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Investigate the failing deployment trace. Keep the recent context, tool outputs, and retrieval evidence visible. Look for retry transient cache db failures and summarize the production impact."
+            },
+            {
+              "type": "thinking",
+              "thinking": "I should inspect the trace, look at tool stderr, compare retrieval evidence, and preserve the latest execution details for a realistic debugging workflow."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "tool_result",
+              "tool_use_id": "toolu_seed_00",
+              "content": "stderr: unable to open /workspace/output/cache.db\njson={\"status\":\"retry\",\"reason\":\"transient upstream failure\"}\nThe deployment tool reported a transient error while applying the latest rollout."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__deploy",
+          "description": "Deploy a service revision and stream structured execution feedback.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "target": {"type": "string"},
+              "cwd": {"type": "string"},
+              "env": {"type": "object"}
+            }
+          }
+        },
+        {
+          "name": "mcp__matrix__images_list",
+          "description": "List image artifacts related to a trace or workflow run.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "target": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_seed_messages"
+    }
+  }
+}

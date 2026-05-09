@@ -1,0 +1,74 @@
+{
+  "system": "Apache Doris",
+  "version": "5.7.99",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-15",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [
+    "sql",
+    "column-oriented",
+    "full-text",
+    "semi-structured"
+  ],
+  "dataset_size": 100000000,
+  "num_loaded_documents": 99950144,
+  "total_size": 62217969991,
+  "result": [
+    [1.396, 0.334, 0.093],
+    [4.944, 0.848, 0.84],
+    [0.088, 0.021, 0.02],
+    [0.166, 0.036, 0.036],
+    [11.286, 1.437, 1.428],
+    [0.626, 0.419, 0.415],
+    [5.41, 1.497, 1.483],
+    [0.372, 0.133, 0.135],
+    [0.346, 0.278, 0.27],
+    [0.38, 0.315, 0.312],
+    [2.713, 0.134, 0.14],
+    [1.325, 0.57, 0.459],
+    [1.208, 0.131, 0.088],
+    [2.996, 0.557, 0.43],
+    [2.192, 0.205, 0.081],
+    [0.451, 0.113, 0.078],
+    [0.142, 0.032, 0.03],
+    [1.226, 1.166, 1.169],
+    [1.098, 1.013, 0.986],
+    [0.695, 0.629, 0.601]
+  ],
+  "data_size": 62217969991,
+  "load_time": 4396.104,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_100m.count",
+        "field": "num_loaded_documents",
+        "value": 99950144
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.total_size",
+        "field": "total_size",
+        "value": 62217969991
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.data_size",
+        "field": "data_size",
+        "value": 62217969991
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.load_time",
+        "field": "load_time",
+        "value": 4396.104
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_m6i.8xlarge_agentlog_100m.query_results"
+    }
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "contracts": {
+    "Q01": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 5,
+      "expected_result_fingerprints": {
+        "clickhouse": "12bac72038e08d73",
+        "postgres": "12bac72038e08d73"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "seq_no",
+          "type",
+          "status"
+        ]
+      }
+    },
+    "Q02": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 20,
+      "expected_result_fingerprints": {
+        "clickhouse": "47159590354193c7",
+        "postgres": "47159590354193c7"
+      },
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "trace_id",
+          "observation_count",
+          "failure_count",
+          "total_cost",
+          "total_latency_ms"
+        ]
+      }
+    },
+    "Q03": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "small_set",
+      "minimum_row_count": 1,
+      "expected_row_count": 9,
+      "expected_result_fingerprints": {
+        "clickhouse": "9dea986c60b66c7d",
+        "postgres": "9dea986c60b66c7d"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "trace_id",
+          "seq_no",
+          "type",
+          "status",
+          "input",
+          "output"
+        ]
+      }
+    },
+    "Q04": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 9,
+      "expected_result_fingerprints": {
+        "clickhouse": "1c62d71c1dd27940",
+        "postgres": "1c62d71c1dd27940"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "trace_id",
+          "seq_no",
+          "observation_id",
+          "parent_observation_id",
+          "parent_type",
+          "child_type"
+        ]
+      }
+    },
+    "Q05": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 1,
+      "expected_result_fingerprints": {
+        "clickhouse": "548b72c627df8c3c",
+        "postgres": "548b72c627df8c3c"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "tool_name",
+          "latency_ms",
+          "text_score"
+        ]
+      }
+    },
+    "Q06": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 40,
+      "expected_result_fingerprints": {
+        "clickhouse": "f906738c39b7af8f",
+        "postgres": "f906738c39b7af8f"
+      },
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "type",
+          "model",
+          "input_tokens",
+          "output_tokens",
+          "total_cost",
+          "avg_latency_ms"
+        ]
+      }
+    },
+    "Q07": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 31,
+      "expected_result_fingerprints": {
+        "clickhouse": "f6478fc24f3d92ed",
+        "postgres": "f6478fc24f3d92ed"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "type",
+          "status"
+        ]
+      }
+    },
+    "Q08": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 4,
+      "expected_result_fingerprints": {
+        "clickhouse": "e2c71aa4b8df3971",
+        "postgres": "e2c71aa4b8df3971"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "input",
+          "output",
+          "phrase_match",
+          "text_score"
+        ]
+      }
+    },
+    "Q09": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 49,
+      "expected_result_fingerprints": {
+        "clickhouse": "75e84e5e2635633a",
+        "postgres": "75e84e5e2635633a"
+      },
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "tool_name",
+          "status",
+          "observations",
+          "avg_latency_ms"
+        ]
+      }
+    },
+    "Q10": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 5,
+      "expected_result_fingerprints": {
+        "clickhouse": "0b2d642c2587142c",
+        "postgres": "0b2d642c2587142c"
+      },
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "stop_reason",
+          "cache_hit",
+          "observations",
+          "avg_latency_ms"
+        ]
+      }
+    },
+    "Q11": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 4,
+      "expected_result_fingerprints": {
+        "clickhouse": "06e30b5d3f01f094",
+        "postgres": "06e30b5d3f01f094"
+      },
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "type",
+          "status",
+          "phrase_match",
+          "text_score"
+        ]
+      }
+    },
+    "Q12": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "expected_row_count": 50,
+      "expected_result_fingerprints": {
+        "clickhouse": "4dfc33e36ef539f4",
+        "postgres": "4dfc33e36ef539f4"
+      },
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "release_ring",
+          "customer_tier",
+          "retrieval_strategy",
+          "observations",
+          "avg_latency_ms",
+          "total_cost"
+        ]
+      }
+    },
+    "Q13": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "observations",
+          "traces",
+          "last_event_time"
+        ]
+      }
+    },
+    "Q14": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "type",
+          "status",
+          "tool_name"
+        ]
+      }
+    },
+    "Q15": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "type",
+          "status",
+          "tool_name",
+          "latency_ms"
+        ]
+      }
+    },
+    "Q16": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "event_time",
+          "trace_id",
+          "observation_id",
+          "type",
+          "status",
+          "release_ring",
+          "customer_tier",
+          "traffic_cluster"
+        ]
+      }
+    },
+    "Q17": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "sample_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "exact",
+        "must_include_fields": [
+          "trace_id",
+          "observation_id",
+          "seq_no",
+          "type",
+          "status",
+          "request_key",
+          "workflow_variant"
+        ]
+      }
+    },
+    "Q18": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "prompt_template_version",
+          "observations",
+          "traces",
+          "avg_latency_ms",
+          "total_cost"
+        ]
+      }
+    },
+    "Q19": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "deployment_channel",
+          "release_ring",
+          "incident_observations",
+          "incident_traces",
+          "avg_latency_ms"
+        ]
+      }
+    },
+    "Q20": {
+      "fixture_dataset": "fixture-mini-observation-v1",
+      "result_kind": "aggregate_rows",
+      "minimum_row_count": 1,
+      "assertions": {
+        "tolerance": "1e-6",
+        "must_include_fields": [
+          "workflow_variant",
+          "policy_pack",
+          "observations",
+          "tenants",
+          "avg_latency_ms",
+          "total_cost"
+        ]
+      }
+    }
+  }
+}

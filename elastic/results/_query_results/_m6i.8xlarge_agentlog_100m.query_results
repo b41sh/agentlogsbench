@@ -1,0 +1,58 @@
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q01:
+
+event_time          | trace_id               | observation_id                             | seq_no | type       | status | model            | tool_name                         | latency_ms
+
+--------------------+------------------------+--------------------------------------------+--------+------------+--------+------------------+-----------------------------------+-----------
+2027-03-21 00:15:06 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000012_0ac8b2b0 | 12     | TOOL       | ok     | count-token-lite | mcp__matrix__deploy               | 1167      
+2027-03-21 00:15:04 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000010_3f4d9b77 | 10     | TOOL       | ok     | count-token-lite | mcp__matrix__images_list          | 1167      
+2027-03-21 00:15:03 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000009_d146361c | 9      | TOOL       | ok     | count-token-lite | mcp__matrix__deploy_service       | 1167      
+2027-03-21 00:15:02 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000008_fe0b55c9 | 8      | TOOL       | error  | count-token-lite | mcp__matrix__inspect_metrics      | 1167      
+2027-03-21 00:15:00 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000006_51c4189e | 6      | GENERATION | ok     | count-token-lite | null                              | 4191      
+2027-03-21 00:11:04 | trace_7871225_abd6c29f | obs_trace_7871225_abd6c29f_000005_39e45732 | 5      | TOOL       | ok     | count-token-lite | mcp__matrix__vector_search        | 909       
+2027-03-21 00:11:03 | trace_7871225_abd6c29f | obs_trace_7871225_abd6c29f_000004_6112498e | 4      | TOOL       | ok     | count-token-lite | mcp__matrix__browser_navigate     | 909       
+2027-03-21 00:11:02 | trace_7871225_abd6c29f | obs_trace_7871225_abd6c29f_000003_7301357a | 3      | TOOL       | ok     | count-token-lite | mcp__matrix__schedule_workflow    | 909       
+2027-03-21 00:11:00 | trace_7871225_abd6c29f | obs_trace_7871225_abd6c29f_000001_4a472bf9 | 1      | GENERATION | ok     | count-token-lite | null                              | 2367      
+2027-03-21 00:00:03 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000004_bf8ee23c | 4      | TOOL       | ok     | general-medium   | mcp__matrix__images_list          | 2384      
+2027-03-21 00:00:02 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000003_601738b5 | 3      | TOOL       | error  | general-medium   | mcp__matrix__deploy_service       | 2384      
+2027-03-21 00:00:00 | trace_2496600_c7475e05 | obs_trace_2496600_c7475e05_000001_e8813693 | 1      | GENERATION | ok     | general-medium   | null                              | 4529      
+2027-03-20 23:37:08 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000026_e442fc7f | 26     | TOOL       | ok     | reasoning-medium | mcp__matrix__deploy_service       | 2462      
+2027-03-20 23:37:06 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000024_7dc1279a | 24     | TOOL       | ok     | reasoning-medium | mcp__matrix__fetch_runbook        | 2462      
+2027-03-20 23:37:04 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000022_d2fc0ab2 | 22     | TOOL       | ok     | reasoning-medium | mcp__matrix__rerank_results       | 2462      
+2027-03-20 23:37:02 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000020_adb77a96 | 20     | TOOL       | ok     | reasoning-medium | mcp__matrix__vector_search        | 2462      
+2027-03-20 23:37:00 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000018_1df10ff6 | 18     | GENERATION | ok     | reasoning-medium | null                              | 9368      
+2027-03-20 23:30:02 | trace_6263400_62cb284f | obs_trace_6263400_62cb284f_000021_0988c645 | 21     | TOOL       | error  | reasoning-large  | mcp__matrix__eval_trace           | 1060      
+2027-03-20 23:30:00 | trace_6263400_62cb284f | obs_trace_6263400_62cb284f_000019_a3bc0570 | 19     | GENERATION | ok     | reasoning-large  | null                              | 940       
+2027-03-20 23:28:05 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000017_531e5e3f | 17     | TOOL       | ok     | reasoning-large  | mcp__matrix__bash_exec            | 2374      
+2027-03-20 23:28:04 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000016_00ef628b | 16     | TOOL       | ok     | reasoning-large  | mcp__matrix__browser_navigate     | 2374      
+2027-03-20 23:28:02 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000014_d689fd45 | 14     | TOOL       | ok     | reasoning-large  | mcp__matrix__vector_search        | 2374      
+2027-03-20 23:28:00 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000012_240524ee | 12     | GENERATION | ok     | reasoning-large  | null                              | 6763      
+2027-03-20 23:25:10 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000011_6982ba0b | 11     | TOOL       | ok     | coder-large      | mcp__matrix__deploy_service       | 493       
+2027-03-20 23:25:09 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000010_ef13d327 | 10     | TOOL       | ok     | coder-large      | mcp__matrix__schedule_workflow    | 493       
+2027-03-20 23:25:07 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000008_9b1e839f | 8      | TOOL       | ok     | coder-large      | mcp__matrix__vector_search        | 493       
+2027-03-20 23:25:06 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000007_f70a38ad | 7      | TOOL       | ok     | coder-large      | mcp__matrix__browser_navigate     | 493       
+2027-03-20 23:25:04 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000005_d6a93c19 | 5      | TOOL       | ok     | coder-large      | mcp__matrix__artifact_extract_pdf | 493       
+2027-03-20 23:25:02 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000003_82f98120 | 3      | TOOL       | ok     | coder-large      | mcp__matrix__github_search_code   | 493       
+2027-03-20 23:25:00 | trace_5971400_e7c5469c | obs_trace_5971400_e7c5469c_000001_ac1bb79b | 1      | GENERATION | ok     | coder-large      | null                              | 2242      
+2027-03-20 23:14:06 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000010_caa5d01e | 10     | TOOL       | ok     | coder-medium     | mcp__matrix__read_file            | 3307      
+2027-03-20 23:14:04 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000008_129ce3f2 | 8      | TOOL       | ok     | coder-medium     | mcp__matrix__rerank_results       | 3307      
+2027-03-20 23:14:02 | trace_6360125_6a4db7d7 | obs_trace_6360125_6a4db7d7_000006_eb1e0c49 | 6      | TOOL       | ok     | reasoning-medium | mcp__matrix__vector_search        | 4142      
+2027-03-20 23:14:02 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000006_2d66dc3f | 6      | TOOL       | ok     | coder-medium     | mcp__matrix__web_search           | 3307      
+2027-03-20 23:14:00 | trace_6360125_6a4db7d7 | obs_trace_6360125_6a4db7d7_000004_f1c08523 | 4      | GENERATION | ok     | reasoning-medium | null                              | 4022      
+2027-03-20 23:14:00 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000004_da5b23d3 | 4      | GENERATION | ok     | coder-medium     | null                              | 9562      
+2027-03-20 23:12:07 | trace_7341975_50dc3853 | obs_trace_7341975_50dc3853_000008_ec0e6571 | 8      | TOOL       | ok     | general-medium   | mcp__matrix__query_warehouse      | 2656      
+2027-03-20 23:12:06 | trace_7341975_50dc3853 | obs_trace_7341975_50dc3853_000007_084ea60e | 7      | TOOL       | ok     | general-medium   | mcp__matrix__eval_trace           | 2656      
+2027-03-20 23:12:04 | trace_7341975_50dc3853 | obs_trace_7341975_50dc3853_000005_ba8fb00c | 5      | TOOL       | ok     | general-medium   | mcp__matrix__browser_get_dom      | 2656      
+2027-03-20 23:12:02 | trace_7341975_50dc3853 | obs_trace_7341975_50dc3853_000003_ca07db77 | 3      | TOOL       | ok     | general-medium   | mcp__matrix__web_search           | 2656      
+2027-03-20 23:12:00 | trace_7341975_50dc3853 | obs_trace_7341975_50dc3853_000001_3fcfe085 | 1      | GENERATION | ok     | general-medium   | null                              | 10144     
+2027-03-20 23:11:04 | trace_3994925_7bbcacd2 | obs_trace_3994925_7bbcacd2_000004_3382390e | 4      | TOOL       | ok     | reasoning-medium | mcp__matrix__deploy_service       | 1623      
+2027-03-20 23:11:03 | trace_6263400_62cb284f | obs_trace_6263400_62cb284f_000016_da042f7a | 16     | TOOL       | ok     | reasoning-medium | mcp__matrix__web_search           | 1856      
+2027-03-20 23:11:03 | trace_3994925_7bbcacd2 | obs_trace_3994925_7bbcacd2_000003_b72f22a7 | 3      | TOOL       | ok     | reasoning-medium | mcp__matrix__schedule_workflow    | 1623      
+2027-03-20 23:11:02 | trace_6263400_62cb284f | obs_trace_6263400_62cb284f_000015_ae1c8df4 | 15     | TOOL       | error  | reasoning-medium | mcp__matrix__query_warehouse      | 1856      
+2027-03-20 23:11:02 | trace_3994925_7bbcacd2 | obs_trace_3994925_7bbcacd2_000002_d7f3ba3f | 2      | TOOL       | error  | reasoning-medium | mcp__matrix__tail_logs            | 1623      
+2027-03-20 23:11:00 | trace_6263400_62cb284f | obs_trace_6263400_62cb284f_000014_6974a3fd | 14     | GENERATION | error  | reasoning-medium | null                              | 3472      
+2027-03-20 23:11:00 | trace_3994925_7bbcacd2 | obs_trace_3994925_7bbcacd2_000001_d0596fa1 | 1      | GENERATION | error  | reasoning-medium | null                              | 4509      
+2027-03-20 23:08:02 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000003_8a679295 | 3      | TOOL       | ok     | reasoning-large  | mcp__matrix__read_file            | 7560      
+2027-03-20 23:08:00 | trace_7705150_7ea0a93e | obs_trace_7705150_7ea0a93e_000001_ce7af935 | 1      | GENERATION | ok     | reasoning-large  | null                              | 7440      
+

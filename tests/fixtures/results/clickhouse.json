@@ -1,0 +1,407 @@
+{
+  "dataset_tier": "M",
+  "edition": "2026.04-observability-v1",
+  "engine": "clickhouse",
+  "query_results": [
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q01",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        120,
+        118,
+        121,
+        119,
+        120
+      ],
+      "query_id": "Q01",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q02",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        130,
+        131,
+        129,
+        128,
+        132
+      ],
+      "query_id": "Q02",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q03",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        140,
+        142,
+        139,
+        141,
+        138
+      ],
+      "query_id": "Q03",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q04",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        150,
+        148,
+        151,
+        149,
+        150
+      ],
+      "query_id": "Q04",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q05",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        160,
+        161,
+        159,
+        162,
+        158
+      ],
+      "query_id": "Q05",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q06",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        170,
+        168,
+        171,
+        169,
+        170
+      ],
+      "query_id": "Q06",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q07",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        180,
+        179,
+        181,
+        178,
+        180
+      ],
+      "query_id": "Q07",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q08",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        190,
+        192,
+        188,
+        191,
+        189
+      ],
+      "query_id": "Q08",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q09",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        200,
+        202,
+        199,
+        201,
+        198
+      ],
+      "query_id": "Q09",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q10",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        210,
+        208,
+        211,
+        209,
+        210
+      ],
+      "query_id": "Q10",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q11",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        220,
+        221,
+        219,
+        218,
+        222
+      ],
+      "query_id": "Q11",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q12",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        230,
+        232,
+        229,
+        231,
+        228
+      ],
+      "query_id": "Q12",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q13",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        240,
+        239,
+        241,
+        238,
+        240
+      ],
+      "query_id": "Q13",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q14",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        250,
+        251,
+        249,
+        252,
+        248
+      ],
+      "query_id": "Q14",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q15",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        260,
+        258,
+        261,
+        259,
+        260
+      ],
+      "query_id": "Q15",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q16",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        270,
+        271,
+        269,
+        272,
+        268
+      ],
+      "query_id": "Q16",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q17",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        280,
+        279,
+        281,
+        278,
+        280
+      ],
+      "query_id": "Q17",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q18",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        290,
+        291,
+        289,
+        292,
+        288
+      ],
+      "query_id": "Q18",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q19",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        300,
+        298,
+        301,
+        299,
+        300
+      ],
+      "query_id": "Q19",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q20",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        310,
+        311,
+        309,
+        312,
+        308
+      ],
+      "query_id": "Q20",
+      "status": "ok"
+    }
+  ],
+  "run_metadata": {
+    "config_fingerprint": "cfg-clickhouse-fixture",
+    "dataset_version": "fixture-mini-observability-v1",
+    "engine_version": "clickhouse-fixture-1.0",
+    "index_config_fingerprint": "idx-clickhouse-fixture",
+    "query_adapter_version": "2",
+    "execution_mode": "fixture",
+    "run_timestamp": "2026-04-11T15:01:00Z"
+  },
+  "run_protocol": {
+    "cache_policy": "disable_where_supported",
+    "measured_runs": 5,
+    "timeout_seconds": 900,
+    "warmup_runs": 1
+  },
+  "secondary_metrics": {
+    "index_build_ms": 12000,
+    "ingest_ms": 100000,
+    "storage_bytes": 580000000
+  }
+}

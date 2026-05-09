@@ -1,0 +1,34 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "agentlogsbench-bedrock-seed"
+    },
+    "body": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "count_tokens for a policy review packet with nested artifacts, multilingual notes, and the final operator escalation summary."
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__count_tokens",
+          "description": "Count tokens for a candidate prompt or conversation body.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "content": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_bedrock_count_tokens"
+    }
+  }
+}

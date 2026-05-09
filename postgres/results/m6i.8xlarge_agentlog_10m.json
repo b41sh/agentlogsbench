@@ -1,0 +1,75 @@
+{
+  "system": "PostgreSQL",
+  "version": "16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-15",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 10000000,
+  "num_loaded_documents": 9996778,
+  "total_size": 37761736704,
+  "result": [
+    [86.431, 0.857, 0.893],
+    [33.634, 7.281, 7.298],
+    [2.469, 0.268, 0.267],
+    [0.37, 0.268, 0.267],
+    [1.17, 1.004, 1.001],
+    [30.596, 2.277, 2.316],
+    [103.234, 33.948, 33.924],
+    [148.657, 97.05, 95.963],
+    [30.57, 1.865, 1.855],
+    [122.381, 35.746, 35.072],
+    [18.875, 10.937, 10.965],
+    [106.962, 51.956, 51.543],
+    [218.286, 149.13, 149.207],
+    [1.221, 1.107, 1.108],
+    [142.022, 141.866, 142.043],
+    [76.535, 81.85, 12.068],
+    [143.632, 72.319, 8.912],
+    [106.551, 27.07, 26.757],
+    [486.269, 457.238, 454.881],
+    [110.274, 48.709, 48.814]
+  ],
+  "data_size": 31284420608,
+  "index_size": 6477316096,
+  "load_time": 3823.721,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_10m.count",
+        "field": "num_loaded_documents",
+        "value": 9996778
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.total_size",
+        "field": "total_size",
+        "value": 37761736704
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.data_size",
+        "field": "data_size",
+        "value": 31284420608
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.index_size",
+        "field": "index_size",
+        "value": 6477316096
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.load_time",
+        "field": "load_time",
+        "value": 3823.721
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_m6i.8xlarge_agentlog_10m.query_results"
+    }
+  }
+}

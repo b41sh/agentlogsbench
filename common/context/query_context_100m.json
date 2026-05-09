@@ -1,0 +1,12 @@
+{
+  "tenant": "tenant_001",
+  "app": "app_001",
+  "trace_id": "trace_000290_77c65acd",
+  "release_ring": "stable",
+  "customer_tier": "pro",
+  "traffic_cluster": "cluster_c",
+  "request_key": "req_000700_a7d1bd07",
+  "workflow_variant": "tool_first",
+  "start_date": "2026-03-17",
+  "end_date": "2027-03-21"
+}

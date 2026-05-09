@@ -1,0 +1,23 @@
+*/runtime/
+*/runtime-*/
+#*/results/
+#*/result/
+*/.local/
+downloads/*
+common/downloads/
+generated/downloaded/*
+**/__pycache__/
+**/*.pyc
+common/generated/*
+
+# Temporary files
+*.tmp
+*/.tmp_import/
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+*~
+.omx/
+.codex

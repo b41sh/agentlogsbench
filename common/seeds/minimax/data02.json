@@ -1,0 +1,35 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "anthropic-version": "2023-06-01",
+      "user-agent": "agentlogsbench-seed"
+    },
+    "body": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Estimate token usage for the latest agent run, including retrieval notes, tool stderr, and multilingual debugging context."
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__count_tokens",
+          "description": "Count tokens for a candidate prompt or conversation body.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "content": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_seed_count_tokens"
+    }
+  }
+}

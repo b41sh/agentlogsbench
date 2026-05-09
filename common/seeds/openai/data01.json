@@ -1,0 +1,65 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "agentlogsbench-openai-seed"
+    },
+    "body": {
+      "system": "You are an enterprise agent. Keep citations, tool evidence, and customer-impact context visible in every answer.",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Investigate the latency spike in the retrieval pipeline. Compare warehouse metrics, runbook guidance, and the latest customer-facing summary before proposing a fix."
+            },
+            {
+              "type": "thinking",
+              "thinking": "I should compare warehouse metrics with the retrieved runbook guidance, then keep only the highest-signal evidence in the final answer."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "tool_result",
+              "tool_use_id": "toolu_openai_00",
+              "content": "warehouse query completed with a partial warning; row_count=182, p95_latency_ms=1240, anomaly_window=15m, likely correlated with a stale rerank cache."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__query_warehouse",
+          "description": "Run an analytics query and return compact tabular results.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "query": {"type": "string"},
+              "warehouse": {"type": "string"}
+            }
+          }
+        },
+        {
+          "name": "mcp__matrix__fetch_runbook",
+          "description": "Fetch the latest runbook section for an incident or workflow.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "target": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_openai_messages"
+    }
+  }
+}

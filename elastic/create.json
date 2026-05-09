@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "refresh_interval": "-1",
+    "translog.durability": "async",
+    "translog.sync_interval": "120s",
+    "analysis": {
+      "analyzer": {
+        "agentlog_simple": {
+          "type": "simple"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": false,
+    "dynamic_templates": [
+      {
+        "content_attr_keywords": {
+          "path_match": "payload.attr.*",
+          "match_mapping_type": "string",
+          "mapping": {
+            "type": "keyword",
+            "ignore_above": 1024
+          }
+        }
+      }
+    ],
+    "properties": {
+      "event_time": {"type": "date", "format": "yyyy-MM-dd HH:mm:ss"},
+      "biz_date": {"type": "keyword"},
+      "trace_id": {"type": "keyword"},
+      "session_id": {"type": "keyword"},
+      "observation_id": {"type": "keyword"},
+      "parent_observation_id": {"type": "keyword"},
+      "seq_no": {"type": "integer"},
+      "type": {"type": "keyword"},
+      "status": {"type": "keyword"},
+      "tenant": {"type": "keyword"},
+      "app": {"type": "keyword"},
+      "environment": {"type": "keyword"},
+      "task_category": {"type": "keyword"},
+      "trace_archetype": {"type": "keyword"},
+      "model": {"type": "keyword"},
+      "tool_name": {"type": "keyword"},
+      "input": {"type": "text", "analyzer": "agentlog_simple", "search_analyzer": "agentlog_simple"},
+      "output": {"type": "text", "analyzer": "agentlog_simple", "search_analyzer": "agentlog_simple"},
+      "input_tokens": {"type": "long"},
+      "output_tokens": {"type": "long"},
+      "total_cost": {"type": "double"},
+      "latency_ms": {"type": "long"},
+      "payload": {
+        "properties": {
+          "provider": {
+            "properties": {
+              "stop_reason": {"type": "keyword"},
+              "response_id": {"type": "keyword"},
+              "cache_hit": {"type": "boolean"}
+            }
+          },
+          "generation_config": {
+            "properties": {
+              "temperature": {"type": "float"},
+              "top_p": {"type": "float"},
+              "max_tokens": {"type": "integer"},
+              "stream": {"type": "boolean"}
+            }
+          },
+          "tool_args": {
+            "properties": {
+              "user_intent": {"type": "keyword"},
+              "display_text": {"type": "keyword"},
+              "cwd": {"type": "keyword"},
+              "env": {
+                "type": "flattened"
+              }
+            }
+          },
+          "tool_result": {
+            "properties": {
+              "stderr": {"type": "text"},
+              "exit_code": {"type": "integer"}
+            }
+          },
+          "event": {
+            "properties": {
+              "http_status": {"type": "integer"},
+              "stop_reason": {"type": "keyword"},
+              "error_kind": {"type": "keyword"}
+            }
+          },
+          "attr": {
+            "type": "object",
+            "dynamic": true
+          },
+          "links": {
+            "type": "flattened"
+          },
+          "context": {
+            "type": "flattened"
+          }
+        }
+      }
+    }
+  }
+}

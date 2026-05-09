@@ -1,0 +1,72 @@
+{
+  "system": "PostgreSQL",
+  "version": "16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-16",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 100000000,
+  "num_loaded_documents": 99950144,
+  "total_size": 376086061056,
+  "result": [
+    [892.109, 9.218, 9.171],
+    [348.158, 344.996, 343.59],
+    [21.831, 3.63, 3.593],
+    [21.778, 3.629, 3.636],
+    [14.797, 3.839, 3.836],
+    [291.099, 284.959, 285.867],
+    [986.967, 982.04, 981.569],
+    [1527.478, 1497.41, 1496.702],
+    [292.163, 287.239, 287.064],
+    [867.34, 863.092, 863.473],
+    [213.165, 122.253, 121.77],
+    [1059.613, 1058.676, 1057.234],
+    [2818.222, 2761.598, 2764.718],
+    [145.249, 12.366, 12.07],
+    [2752.86, 2698.333, 2691.4],
+    [1689.146, 1627.534, 1627.072],
+    [1831.839, 1770.649, 1769.845],
+    [1046.221, 1037.443, 1037.045],
+    [4751.104, 4752.853, 4752.691],
+    [1088.987, 1090.687, 1091.191]
+  ],
+  "data_size": 313364791296,
+  "index_size": 62721269760,
+  "load_time": 51250.203,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_100m.count",
+        "field": "num_loaded_documents",
+        "value": 99950144
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.total_size",
+        "field": "total_size",
+        "value": 376086061056
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.data_size",
+        "field": "data_size",
+        "value": 313364791296
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.index_size",
+        "field": "index_size",
+        "value": 62721269760
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.load_time",
+        "field": "load_time",
+        "value": 51250.203
+      }
+    ]
+  }
+}

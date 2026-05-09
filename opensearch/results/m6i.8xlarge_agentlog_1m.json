@@ -1,0 +1,63 @@
+{
+  "system": "OpenSearch",
+  "version": "3.6.0",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-15",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 1000000,
+  "num_loaded_documents": 998799,
+  "total_size": 2912684955,
+  "result": [
+    [0.363, 0.064, 0.079],
+    [3.119, 2.985, 2.696],
+    [0.031, 0.032, 0.032],
+    [0.031, 0.032, 0.032],
+    [0.05, 0.05, 0.051],
+    [0.066, 0.066, 0.065],
+    [0.06, 0.075, 0.075],
+    [0.072, 0.072, 0.789],
+    [0.045, 0.069, 0.048],
+    [0.05, 0.038, 0.047],
+    [0.189, 0.161, 0.194],
+    [0.098, 0.087, 0.072],
+    [0.144, 0.134, 0.119],
+    [0.058, 0.059, 0.051],
+    [0.12, 0.127, 0.114],
+    [0.053, 0.051, 0.049],
+    [0.031, 0.032, 0.032],
+    [1.275, 1.287, 1.266],
+    [1.736, 2.314, 2.26],
+    [0.131, 0.135, 0.112]
+  ],
+  "load_time": 188.592,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_1m.count",
+        "field": "num_loaded_documents",
+        "value": 998799
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.total_size",
+        "field": "total_size",
+        "value": 2912684955
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.load_time",
+        "field": "load_time",
+        "value": 188.592
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_m6i.8xlarge_agentlog_1m.query_results"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "system": "DuckDB",
+  "version": "1.5.2",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-16",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 1000000,
+  "num_loaded_documents": 998799,
+  "total_size": 1509437440,
+  "result": [
+    [
+      0.046,
+      0.007,
+      0.007
+    ],
+    [
+      0.03,
+      0.014,
+      0.014
+    ],
+    [
+      0.014,
+      0.003,
+      0.002
+    ],
+    [
+      0.029,
+      0.01,
+      0.01
+    ],
+    [
+      3.148,
+      2.666,
+      2.667
+    ],
+    [
+      0.018,
+      0.011,
+      0.011
+    ],
+    [
+      23.303,
+      23.453,
+      23.307
+    ],
+    [
+      0.537,
+      0.294,
+      0.27
+    ],
+    [
+      0.007,
+      0.006,
+      0.006
+    ],
+    [
+      42.732,
+      42.608,
+      42.642
+    ],
+    [
+      0.18,
+      0.178,
+      0.176
+    ],
+    [
+      63.145,
+      63.38,
+      63.286
+    ],
+    [
+      0.386,
+      0.382,
+      0.383
+    ],
+    [
+      0.167,
+      0.167,
+      0.167
+    ],
+    [
+      0.367,
+      0.367,
+      0.371
+    ],
+    [
+      23.799,
+      23.583,
+      23.672
+    ],
+    [
+      20.647,
+      20.741,
+      20.601
+    ],
+    [
+      20.917,
+      20.798,
+      20.775
+    ],
+    [
+      44.303,
+      44.473,
+      44.467
+    ],
+    [
+      41.93,
+      41.977,
+      42.006
+    ]
+  ],
+  "data_size": 1509437440,
+  "index_size": 0,
+  "load_time": 90.26,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_1m.count",
+        "field": "num_loaded_documents",
+        "value": 998799
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.total_size",
+        "field": "total_size",
+        "value": 1509437440
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.data_size",
+        "field": "data_size",
+        "value": 1509437440
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.index_size",
+        "field": "index_size",
+        "value": 0
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_1m.load_time",
+        "field": "load_time",
+        "value": 90.26
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_m6i.8xlarge_agentlog_1m.query_results"
+    }
+  }
+}

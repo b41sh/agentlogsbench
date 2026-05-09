@@ -1,0 +1,812 @@
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q01:
+
+event_time          | trace_id              | observation_id                            | seq_no | type       | status | model            | tool_name                         | latency_ms
+
+--------------------+-----------------------+-------------------------------------------+--------+------------+--------+------------------+-----------------------------------+-----------
+2027-03-20 23:06:03 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000010_0b26d97c | 10     | TOOL       | ok     | reasoning-large  | mcp__matrix__inspect_metrics      | 1463      
+2027-03-20 23:06:02 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000009_c3f581db | 9      | TOOL       | ok     | reasoning-large  | mcp__matrix__tail_logs            | 1463      
+2027-03-20 23:06:00 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000007_c8a10fc7 | 7      | GENERATION | ok     | reasoning-large  | null                              | 2687      
+2027-03-20 22:56:05 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000006_c17a4cbf | 6      | TOOL       | ok     | general-medium   | mcp__matrix__tail_logs            | 740       
+2027-03-20 22:56:04 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000005_c484c11c | 5      | TOOL       | ok     | general-medium   | mcp__matrix__browser_navigate     | 740       
+2027-03-20 22:56:02 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000003_4a54247d | 3      | TOOL       | ok     | general-medium   | mcp__matrix__artifact_extract_pdf | 740       
+2027-03-20 22:56:00 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000001_30d4b18f | 1      | GENERATION | ok     | general-medium   | null                              | 1861      
+2027-03-20 20:58:00 | trace_021900_9457b082 | obs_trace_021900_9457b082_000001_4d3aa2f7 | 1      | GENERATION | ok     | reasoning-medium | null                              | 1335      
+2027-03-20 20:16:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000015_906ea295 | 15     | GENERATION | ok     | reasoning-medium | null                              | 824       
+2027-03-20 20:14:02 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000013_89fc097c | 13     | TOOL       | ok     | general-large    | mcp__matrix__browser_get_dom      | 1470      
+2027-03-20 20:14:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000011_d7b61d2c | 11     | GENERATION | ok     | general-large    | null                              | 1350      
+2027-03-20 19:59:02 | trace_271925_70f1675c | obs_trace_271925_70f1675c_000003_726e305f | 3      | TOOL       | ok     | search-lite      | mcp__matrix__web_search           | 4554      
+2027-03-20 19:59:00 | trace_271925_70f1675c | obs_trace_271925_70f1675c_000001_c22e3be1 | 1      | GENERATION | ok     | search-lite      | null                              | 4434      
+2027-03-20 19:56:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000009_c61e0f59 | 9      | GENERATION | ok     | reasoning-medium | null                              | 3408      
+2027-03-20 19:38:02 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000007_db193fae | 7      | TOOL       | ok     | coder-medium     | mcp__matrix__vector_search        | 1692      
+2027-03-20 19:38:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000005_86789175 | 5      | GENERATION | ok     | coder-medium     | null                              | 1572      
+2027-03-20 19:35:02 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000003_904c1913 | 3      | TOOL       | ok     | coder-medium     | mcp__matrix__web_search           | 3688      
+2027-03-20 19:35:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000001_653957be | 1      | GENERATION | ok     | coder-medium     | null                              | 3568      
+2027-03-20 19:30:02 | trace_306600_9c103273 | obs_trace_306600_9c103273_000011_9b851e22 | 11     | TOOL       | ok     | general-medium   | mcp__matrix__tail_logs            | 10460     
+2027-03-20 19:30:00 | trace_306600_9c103273 | obs_trace_306600_9c103273_000009_4563194e | 9      | GENERATION | ok     | general-medium   | null                              | 10340     
+2027-03-20 19:11:04 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000009_bd162773 | 9      | TOOL       | ok     | reasoning-medium | mcp__matrix__read_file            | 1365      
+2027-03-20 19:11:02 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000007_b42cad26 | 7      | TOOL       | ok     | reasoning-medium | mcp__matrix__rerank_results       | 1365      
+2027-03-20 19:11:02 | trace_306600_9c103273 | obs_trace_306600_9c103273_000007_9332ad72 | 7      | TOOL       | ok     | general-medium   | mcp__matrix__vector_search        | 10883     
+2027-03-20 19:11:00 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000005_c285483c | 5      | GENERATION | ok     | reasoning-medium | null                              | 2491      
+2027-03-20 19:11:00 | trace_306600_9c103273 | obs_trace_306600_9c103273_000005_9b1d67e6 | 5      | GENERATION | ok     | general-medium   | null                              | 10763     
+2027-03-20 19:05:03 | trace_306600_9c103273 | obs_trace_306600_9c103273_000004_0979a354 | 4      | TOOL       | ok     | count-token-lite | mcp__matrix__edit_file            | 5139      
+2027-03-20 19:05:02 | trace_306600_9c103273 | obs_trace_306600_9c103273_000003_2119782b | 3      | TOOL       | ok     | count-token-lite | mcp__matrix__tail_logs            | 5139      
+2027-03-20 19:05:00 | trace_306600_9c103273 | obs_trace_306600_9c103273_000001_c58dcf61 | 1      | GENERATION | ok     | count-token-lite | null                              | 10038     
+2027-03-20 18:55:03 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000004_6dc09624 | 4      | TOOL       | ok     | reasoning-medium | mcp__matrix__eval_trace           | 2293      
+2027-03-20 18:55:02 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000003_b0cc7c7c | 3      | TOOL       | ok     | reasoning-medium | mcp__matrix__edit_file            | 2293      
+2027-03-20 18:55:00 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000001_a1d84080 | 1      | GENERATION | ok     | reasoning-medium | null                              | 4346      
+2027-03-20 18:13:05 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000010_f95035fd | 10     | TOOL       | ok     | count-token-lite | mcp__matrix__browser_navigate     | 3805      
+2027-03-20 18:13:04 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000009_7c25e487 | 9      | TOOL       | ok     | count-token-lite | mcp__matrix__query_warehouse      | 3805      
+2027-03-20 18:13:02 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000007_8d7e3ddd | 7      | TOOL       | ok     | count-token-lite | mcp__matrix__browser_get_dom      | 3805      
+2027-03-20 18:13:00 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000005_975984f3 | 5      | GENERATION | ok     | count-token-lite | null                              | 11056     
+2027-03-20 18:06:03 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000004_d4201cbc | 4      | TOOL       | ok     | general-large    | mcp__matrix__memory_upsert        | 5933      
+2027-03-20 18:06:02 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000003_824c71eb | 3      | TOOL       | ok     | general-large    | mcp__matrix__browser_navigate     | 5933      
+2027-03-20 18:06:00 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000001_09faa4d0 | 1      | GENERATION | ok     | general-large    | null                              | 11626     
+2027-03-20 17:41:02 | trace_226300_85711af1 | obs_trace_226300_85711af1_000003_3d516f6e | 3      | TOOL       | ok     | search-lite      | mcp__matrix__browser_navigate     | 3510      
+2027-03-20 17:41:00 | trace_226300_85711af1 | obs_trace_226300_85711af1_000001_32698eb6 | 1      | GENERATION | ok     | search-lite      | null                              | 3390      
+2027-03-20 17:39:04 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000011_0cd79757 | 11     | TOOL       | ok     | reasoning-medium | mcp__matrix__read_file            | 2102      
+2027-03-20 17:39:02 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000009_f1a3b62e | 9      | TOOL       | ok     | reasoning-medium | mcp__matrix__fetch_runbook        | 2102      
+2027-03-20 17:39:00 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000007_e2c86cde | 7      | GENERATION | ok     | reasoning-medium | null                              | 3964      
+2027-03-20 17:22:05 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000006_71df69a5 | 6      | TOOL       | ok     | general-large    | mcp__matrix__edit_file            | 624       
+2027-03-20 17:22:04 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000005_cc3cb969 | 5      | TOOL       | ok     | general-large    | mcp__matrix__read_file            | 624       
+2027-03-20 17:22:02 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000003_f9895868 | 3      | TOOL       | ok     | general-large    | mcp__matrix__images_list          | 624       
+2027-03-20 17:22:00 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000001_51f78c06 | 1      | GENERATION | ok     | general-large    | null                              | 1512      
+2027-03-20 17:01:02 | trace_494575_30ca7c13 | obs_trace_494575_30ca7c13_000009_93c060c3 | 9      | TOOL       | error  | coder-large      | mcp__matrix__edit_file            | 2635      
+2027-03-20 17:01:00 | trace_494575_30ca7c13 | obs_trace_494575_30ca7c13_000008_8879d724 | 8      | GENERATION | error  | coder-large      | null                              | 2515      
+2027-03-20 16:50:02 | trace_432525_505833a8 | obs_trace_432525_505833a8_000008_4ae78dd6 | 8      | TOOL       | ok     | reasoning-medium | mcp__matrix__github_search_code   | 1878      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q02:
+
+trace_id              | started_at          | observation_count | failure_count | total_cost | total_latency_ms
+
+----------------------+---------------------+-------------------+---------------+------------+-----------------
+trace_226614_98a00405 | 2026-05-21 17:33:00 | 16                | 1             | 8.995112   | 18144           
+trace_451592_0764870f | 2026-08-28 09:51:00 | 27                | 0             | 8.855178   | 37038           
+trace_536526_27298ef8 | 2027-03-12 22:21:00 | 38                | 0             | 8.539348   | 76985           
+trace_728146_ff10bbf5 | 2027-03-11 09:50:00 | 35                | 0             | 8.156492   | 40729           
+trace_884262_d6806fb0 | 2026-09-26 14:57:00 | 28                | 0             | 8.11135    | 36641           
+trace_283536_bfa78053 | 2026-07-27 09:54:00 | 34                | 0             | 7.964436   | 29842           
+trace_102011_e6b84e8c | 2027-02-07 10:13:00 | 14                | 2             | 7.9622     | 11167           
+trace_948359_7fe108f1 | 2026-11-11 11:45:00 | 21                | 2             | 7.950772   | 19889           
+trace_199189_485e5766 | 2026-05-11 16:33:00 | 25                | 0             | 7.940604   | 41176           
+trace_440471_de1622e1 | 2026-07-24 23:29:00 | 29                | 0             | 7.9386     | 84076           
+trace_373414_00a7a26c | 2026-10-28 07:28:00 | 16                | 2             | 7.925204   | 18244           
+trace_157437_90d35a9f | 2026-06-23 15:27:00 | 38                | 9             | 7.91956    | 27820           
+trace_625941_4e8b9df4 | 2027-03-10 14:29:00 | 34                | 0             | 7.8598     | 87280           
+trace_488184_6acc2925 | 2026-09-17 22:13:00 | 30                | 0             | 7.832982   | 33828           
+trace_668264_298dbe4f | 2026-05-21 20:21:00 | 15                | 1             | 7.826456   | 17321           
+trace_315177_27b8d5fe | 2026-11-28 14:19:00 | 25                | 0             | 7.822028   | 29543           
+trace_937698_99af2e92 | 2027-01-07 17:44:00 | 31                | 9             | 7.801756   | 27044           
+trace_414994_27ff703d | 2026-08-10 18:27:00 | 21                | 0             | 7.77709    | 46362           
+trace_760252_c23a5e3b | 2026-10-14 18:07:00 | 25                | 0             | 7.775232   | 71616           
+trace_191197_2edac91f | 2026-12-22 15:51:00 | 58                | 0             | 7.76153    | 61131           
+trace_914867_c256a91c | 2026-07-04 12:10:00 | 19                | 0             | 7.759706   | 30425           
+trace_904554_33484d7d | 2026-11-10 10:34:00 | 11                | 0             | 7.740316   | 15582           
+trace_640286_0202d087 | 2027-01-18 12:38:00 | 13                | 0             | 7.735628   | 20814           
+trace_821355_830d1aab | 2026-04-10 22:17:00 | 26                | 0             | 7.730496   | 83743           
+trace_458547_8c40985f | 2026-06-20 13:47:00 | 28                | 0             | 7.718492   | 80041           
+trace_900694_9f355efa | 2026-09-29 15:12:00 | 15                | 2             | 7.698564   | 17272           
+trace_622341_32e5fc3f | 2026-03-20 09:27:00 | 15                | 3             | 7.694124   | 19371           
+trace_064486_8ef4ede3 | 2026-07-17 17:57:00 | 28                | 0             | 7.689816   | 34722           
+trace_515516_bbabb13b | 2026-09-06 19:13:00 | 27                | 0             | 7.68346    | 22159           
+trace_189121_bbcf75dd | 2026-11-01 17:16:00 | 35                | 0             | 7.680302   | 99448           
+trace_093306_cc495a3e | 2026-05-02 14:17:00 | 15                | 3             | 7.67581    | 17963           
+trace_404142_8b77c707 | 2026-08-28 22:11:00 | 29                | 0             | 7.671274   | 32774           
+trace_290546_22d5d87e | 2026-05-30 12:36:00 | 17                | 0             | 7.670562   | 21959           
+trace_146924_815ed48f | 2026-09-20 02:24:00 | 42                | 0             | 7.669652   | 106887          
+trace_484236_b414ebfb | 2026-07-17 09:44:00 | 34                | 0             | 7.667598   | 35003           
+trace_289402_3d118bc2 | 2026-10-14 03:39:00 | 15                | 1             | 7.667408   | 26582           
+trace_924285_07a1b89e | 2026-09-03 16:38:00 | 29                | 0             | 7.656228   | 32693           
+trace_425950_27005dcb | 2026-08-12 11:10:00 | 27                | 5             | 7.65231    | 35526           
+trace_848327_a50a0e26 | 2027-01-17 13:07:00 | 40                | 0             | 7.634      | 89251           
+trace_602853_0b79dabc | 2026-07-17 11:00:00 | 47                | 0             | 7.632382   | 58187           
+trace_166759_4e1e84b9 | 2026-08-03 22:10:00 | 16                | 1             | 7.632276   | 26960           
+trace_618847_586fa3d0 | 2026-04-21 11:34:00 | 16                | 2             | 7.623172   | 20484           
+trace_558837_c7aeff89 | 2026-06-03 10:15:00 | 36                | 10            | 7.621086   | 48645           
+trace_154947_08ece4ae | 2027-02-10 10:52:00 | 28                | 0             | 7.615968   | 68615           
+trace_016436_75c949f8 | 2026-03-19 04:04:00 | 16                | 2             | 7.610154   | 25118           
+trace_683388_f3f9a6c7 | 2026-09-02 17:24:00 | 27                | 0             | 7.609958   | 32572           
+trace_784299_ab9548f9 | 2026-12-19 13:26:00 | 27                | 0             | 7.59006    | 28867           
+trace_130809_30b2958d | 2026-11-21 18:51:00 | 29                | 0             | 7.589068   | 68759           
+trace_446472_639c48ae | 2026-11-07 07:38:00 | 50                | 0             | 7.588348   | 86519           
+trace_775136_f1532780 | 2026-12-09 11:57:00 | 29                | 0             | 7.57801    | 31962           
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q03:
+
+trace_id              | seq_no | type       | status | model          | tool_name                  
+
+----------------------+--------+------------+--------+----------------+----------------------------
+trace_000290_77c65acd | 1      | GENERATION | ok     | general-medium | null                       
+trace_000290_77c65acd | 2      | REASONING  | ok     | general-medium | null                       
+trace_000290_77c65acd | 3      | TOOL       | ok     | general-medium | mcp__matrix__deploy_service
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q04:
+
+trace_id              | seq_no | observation_id                            | parent_observation_id                     | type       | status | tool_name                  
+
+----------------------+--------+-------------------------------------------+-------------------------------------------+------------+--------+----------------------------
+trace_000290_77c65acd | 1      | obs_trace_000290_77c65acd_000001_346705e2 | null                                      | GENERATION | ok     | null                       
+trace_000290_77c65acd | 2      | obs_trace_000290_77c65acd_000002_649ef441 | obs_trace_000290_77c65acd_000001_346705e2 | REASONING  | ok     | null                       
+trace_000290_77c65acd | 3      | obs_trace_000290_77c65acd_000003_26fd0070 | obs_trace_000290_77c65acd_000001_346705e2 | TOOL       | ok     | mcp__matrix__deploy_service
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q05:
+
+event_time          | trace_id              | observation_id                            | tool_name                         | latency_ms
+
+--------------------+-----------------------+-------------------------------------------+-----------------------------------+-----------
+2026-08-29 09:34:02 | trace_391368_810b7e3f | obs_trace_391368_810b7e3f_000009_d5b4ba70 | mcp__matrix__read_file            | 5120      
+2026-08-19 21:39:02 | trace_697922_6b34bed8 | obs_trace_697922_6b34bed8_000009_99be9d3e | mcp__matrix__browser_get_dom      | 5105      
+2026-04-04 16:15:02 | trace_615112_b1dc56f5 | obs_trace_615112_b1dc56f5_000010_658f3dd9 | mcp__matrix__browser_get_dom      | 5095      
+2026-03-31 16:14:02 | trace_063938_2c9037ed | obs_trace_063938_2c9037ed_000007_91357e0f | mcp__matrix__inspect_metrics      | 5092      
+2027-02-02 17:51:02 | trace_581961_dd2309b0 | obs_trace_581961_dd2309b0_000021_994e3e71 | mcp__matrix__artifact_extract_pdf | 5083      
+2026-12-18 09:59:02 | trace_590848_f56f8bad | obs_trace_590848_f56f8bad_000002_fa140ef3 | mcp__matrix__memory_upsert        | 5068      
+2026-03-22 08:39:02 | trace_824922_35eed39a | obs_trace_824922_35eed39a_000013_635deace | mcp__matrix__inspect_metrics      | 5066      
+2026-08-10 15:51:02 | trace_097444_7af9fe06 | obs_trace_097444_7af9fe06_000002_a7dc1439 | mcp__matrix__inspect_metrics      | 5044      
+2026-09-02 01:06:02 | trace_708937_4dd1932c | obs_trace_708937_4dd1932c_000019_f583606c | mcp__matrix__memory_upsert        | 5032      
+2026-07-01 08:00:02 | trace_520652_5f0a94bd | obs_trace_520652_5f0a94bd_000003_d792d71b | mcp__matrix__github_search_code   | 5023      
+2026-10-06 14:24:02 | trace_532091_1b0bef5b | obs_trace_532091_1b0bef5b_000002_c02c4f7f | mcp__matrix__artifact_extract_pdf | 5003      
+2026-12-03 11:43:02 | trace_435640_2bcc3286 | obs_trace_435640_2bcc3286_000012_19f30827 | mcp__matrix__bash_exec            | 4983      
+2026-08-30 10:48:02 | trace_190631_9053a800 | obs_trace_190631_9053a800_000017_340c76b4 | mcp__matrix__artifact_extract_pdf | 4982      
+2027-02-28 10:52:02 | trace_206141_d620eb08 | obs_trace_206141_d620eb08_000008_ec16fa9f | mcp__matrix__browser_navigate     | 4961      
+2026-10-25 10:38:02 | trace_563195_d2657518 | obs_trace_563195_d2657518_000005_51a771ec | mcp__matrix__deploy_service       | 4953      
+2026-09-25 11:18:02 | trace_634220_d9c16a4f | obs_trace_634220_d9c16a4f_000002_6fd42803 | mcp__matrix__deploy               | 4950      
+2026-06-14 15:05:02 | trace_945780_0ee55332 | obs_trace_945780_0ee55332_000010_c27f881e | mcp__matrix__inspect_metrics      | 4936      
+2026-04-30 04:29:02 | trace_702842_bc3f136b | obs_trace_702842_bc3f136b_000003_348fd1d1 | mcp__matrix__deploy_service       | 4923      
+2026-03-25 08:19:02 | trace_425250_9978dd98 | obs_trace_425250_9978dd98_000002_f635ae5e | mcp__matrix__artifact_extract_pdf | 4892      
+2026-12-18 11:53:02 | trace_576240_826da7f3 | obs_trace_576240_826da7f3_000011_ce71075c | mcp__matrix__bash_exec            | 4881      
+2026-07-07 09:24:02 | trace_630186_5a354b50 | obs_trace_630186_5a354b50_000002_437b664e | mcp__matrix__query_warehouse      | 4849      
+2026-11-27 12:35:02 | trace_444739_a55a28ce | obs_trace_444739_a55a28ce_000016_df76182a | mcp__matrix__edit_file            | 4835      
+2027-01-16 22:29:02 | trace_490626_4381be32 | obs_trace_490626_4381be32_000003_9c933113 | mcp__matrix__vector_search        | 4822      
+2026-08-10 16:21:02 | trace_243440_5d452ff2 | obs_trace_243440_5d452ff2_000003_4394263a | mcp__matrix__deploy_service       | 4819      
+2026-07-04 02:58:02 | trace_405688_64e1fce5 | obs_trace_405688_64e1fce5_000002_f85ef734 | mcp__matrix__memory_upsert        | 4809      
+2026-12-08 15:34:02 | trace_154627_3b65a17c | obs_trace_154627_3b65a17c_000004_f46711af | mcp__matrix__read_file            | 4807      
+2027-01-23 06:42:02 | trace_445032_e31f6755 | obs_trace_445032_e31f6755_000005_67a6d311 | mcp__matrix__eval_trace           | 4795      
+2026-05-01 10:05:02 | trace_458297_b00d38ed | obs_trace_458297_b00d38ed_000014_f8924216 | mcp__matrix__deploy_service       | 4786      
+2026-09-23 12:02:02 | trace_495526_0226c38d | obs_trace_495526_0226c38d_000002_ecb25d6f | mcp__matrix__query_warehouse      | 4784      
+2026-04-03 20:43:02 | trace_027449_b9579cce | obs_trace_027449_b9579cce_000008_1273adbf | mcp__matrix__deploy_service       | 4768      
+2026-05-01 10:14:02 | trace_325076_225c9017 | obs_trace_325076_225c9017_000002_88b4db68 | mcp__matrix__eval_trace           | 4741      
+2026-12-30 18:45:02 | trace_731441_2e230273 | obs_trace_731441_2e230273_000002_570655b1 | mcp__matrix__github_search_code   | 4728      
+2026-11-21 11:12:02 | trace_450184_7049dc9d | obs_trace_450184_7049dc9d_000012_1e95f09e | mcp__matrix__artifact_extract_pdf | 4728      
+2026-12-26 13:35:02 | trace_828146_1dc401de | obs_trace_828146_1dc401de_000002_9a076b7a | mcp__matrix__fetch_runbook        | 4711      
+2026-06-28 23:51:02 | trace_423912_11729327 | obs_trace_423912_11729327_000009_62b40443 | mcp__matrix__read_file            | 4706      
+2027-02-06 11:52:02 | trace_145794_0cb59861 | obs_trace_145794_0cb59861_000004_4c323d04 | mcp__matrix__deploy_service       | 4690      
+2026-08-10 10:45:02 | trace_046352_d4364e02 | obs_trace_046352_d4364e02_000003_b46df312 | mcp__matrix__edit_file            | 4671      
+2026-05-22 20:41:02 | trace_337956_9e06b0b4 | obs_trace_337956_9e06b0b4_000003_89066fc4 | mcp__matrix__edit_file            | 4663      
+2027-03-16 10:34:02 | trace_297459_8edfee6f | obs_trace_297459_8edfee6f_000008_2bb30c67 | mcp__matrix__vector_search        | 4636      
+2026-06-20 06:23:02 | trace_657476_56ffc91c | obs_trace_657476_56ffc91c_000003_6815371a | mcp__matrix__browser_navigate     | 4624      
+2027-01-22 10:01:02 | trace_578244_fdf03776 | obs_trace_578244_fdf03776_000002_59bc05bd | mcp__matrix__rerank_results       | 4609      
+2027-03-02 16:38:02 | trace_598526_088ba436 | obs_trace_598526_088ba436_000003_7c7236d1 | mcp__matrix__artifact_extract_pdf | 4606      
+2026-08-03 17:48:02 | trace_675930_f5416449 | obs_trace_675930_f5416449_000014_dd99f650 | mcp__matrix__browser_navigate     | 4569      
+2026-12-22 11:44:02 | trace_736860_b11e4498 | obs_trace_736860_b11e4498_000029_ff5ccb0a | mcp__matrix__artifact_extract_pdf | 4559      
+2026-04-28 16:49:02 | trace_064078_9da422e0 | obs_trace_064078_9da422e0_000008_202dce3c | mcp__matrix__tail_logs            | 4520      
+2026-07-01 12:47:02 | trace_484144_f1a998fe | obs_trace_484144_f1a998fe_000003_6df5883d | mcp__matrix__browser_navigate     | 4516      
+2027-02-16 20:08:02 | trace_342956_adabb7bb | obs_trace_342956_adabb7bb_000003_e9d16fca | mcp__matrix__inspect_metrics      | 4493      
+2026-08-14 19:05:02 | trace_371210_f512cedc | obs_trace_371210_f512cedc_000009_e69abe97 | mcp__matrix__tail_logs            | 4484      
+2027-02-14 23:35:02 | trace_111155_995582ac | obs_trace_111155_995582ac_000002_5d930ef4 | mcp__matrix__read_file            | 4473      
+2026-04-21 22:23:02 | trace_795868_f4fcc517 | obs_trace_795868_f4fcc517_000009_49d29948 | mcp__matrix__fetch_runbook        | 4469      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q06:
+
+type           | model            | observations | input_tokens | output_tokens | total_cost   | avg_latency_ms  
+
+---------------+------------------+--------------+--------------+---------------+--------------+-----------------
+GENERATION     | reasoning-large  | 371621       | 18280912096  | 6639779322    | 249206.91418 | 3893.90892872039
+GENERATION     | general-large    | 309921       | 15272712766  | 5542076186    | 208147.88952 | 3887.39834022219
+GENERATION     | reasoning-medium | 309792       | 15256146973  | 5541414378    | 207975.61351 | 3890.80533712943
+GENERATION     | general-medium   | 309717       | 15222125766  | 5532081389    | 207542.07155 | 3895.24449739601
+GENERATION     | coder-large      | 289130       | 14268764762  | 5181994814    | 194507.59576 | 3890.44743540968
+GENERATION     | coder-medium     | 186006       | 9149569490   | 3324666411    | 124742.35901 | 3889.95088330484
+GENERATION     | search-lite      | 165021       | 8123024279   | 2952887777    | 110759.12056 | 3892.8974615352 
+GENERATION     | count-token-lite | 123982       | 6102876006   | 2213284124    | 83161.6013   | 3878.10268426062
+REASONING      | reasoning-large  | 337566       | 0            | 20035407      | 40.070814    | 44.3887299076329
+REASONING      | general-medium   | 281358       | 0            | 16701634      | 33.403268    | 44.3958728737054
+REASONING      | reasoning-medium | 281247       | 0            | 16695197      | 33.390394    | 44.3968255661394
+REASONING      | general-large    | 281305       | 0            | 16694534      | 33.389068    | 44.3868576811646
+REASONING      | coder-large      | 262512       | 0            | 15579810      | 31.15962     | 44.3866032790882
+REASONING      | coder-medium     | 168982       | 0            | 10029857      | 20.059714    | 44.3927223017836
+REASONING      | search-lite      | 149968       | 0            | 8901265       | 17.80253     | 44.3900498773072
+REASONING      | count-token-lite | 112505       | 0            | 6677978       | 13.355956    | 44.3924003377628
+TOOL           | general-medium   | 562263       | 0            | 0             | 0            | 1980.33750931504
+TOOL           | reasoning-large  | 675484       | 0            | 0             | 0            | 1979.52067702566
+TOOL           | reasoning-medium | 563091       | 0            | 0             | 0            | 1978.84277674479
+TOOL           | coder-medium     | 338219       | 0            | 0             | 0            | 1977.97709767931
+TOOL           | search-lite      | 300580       | 0            | 0             | 0            | 1975.98425377603
+TOOL           | coder-large      | 526727       | 0            | 0             | 0            | 1973.7453614491 
+TOOL           | general-large    | 564240       | 0            | 0             | 0            | 1973.71927194102
+TOOL           | count-token-lite | 225607       | 0            | 0             | 0            | 1968.05006936842
+TOKEN_ESTIMATE | search-lite      | 22729        | 90458689     | 0             | 0            | 492.020942408377
+TOKEN_ESTIMATE | general-large    | 42099        | 168728428    | 0             | 0            | 491.526425805839
+TOKEN_ESTIMATE | coder-large      | 39420        | 156880111    | 0             | 0            | 490.427701674277
+TOKEN_ESTIMATE | count-token-lite | 16828        | 66191457     | 0             | 0            | 490.372712146423
+TOKEN_ESTIMATE | general-medium   | 42303        | 169279838    | 0             | 0            | 490.333309694348
+TOKEN_ESTIMATE | coder-medium     | 25204        | 100354693    | 0             | 0            | 489.333558165371
+TOKEN_ESTIMATE | reasoning-medium | 42228        | 168617788    | 0             | 0            | 489.0952685422  
+TOKEN_ESTIMATE | reasoning-large  | 50809        | 204293762    | 0             | 0            | 489.022161428093
+RETRIEVAL      | general-medium   | 255196       | 1992746      | 16842936      | 0            | 377.145582219157
+RETRIEVAL      | reasoning-medium | 255609       | 1995851      | 16870194      | 0            | 376.710495326847
+RETRIEVAL      | reasoning-large  | 306815       | 2395668      | 20249790      | 0            | 376.687560908039
+RETRIEVAL      | general-large    | 255701       | 1996253      | 16876266      | 0            | 376.65438930626 
+RETRIEVAL      | search-lite      | 136490       | 1065681      | 9008340       | 0            | 376.589281266027
+RETRIEVAL      | coder-large      | 239164       | 1867670      | 15784824      | 0            | 376.531681189477
+RETRIEVAL      | coder-medium     | 153377       | 1197828      | 10122882      | 0            | 376.492805309792
+RETRIEVAL      | count-token-lite | 102187       | 797891       | 6744342       | 0            | 375.733576678051
+GUARDRAIL      | reasoning-medium | 12363        | 0            | 0             | 0            | 152.325002022163
+GUARDRAIL      | reasoning-large  | 14845        | 0            | 0             | 0            | 152.237790501852
+EVENT          | coder-medium     | 20880        | 0            | 0             | 0            | 152.213362068966
+EVENT          | search-lite      | 18122        | 0            | 0             | 0            | 151.918165765368
+EVENT          | reasoning-large  | 41617        | 0            | 0             | 0            | 151.844150227071
+GUARDRAIL      | count-token-lite | 4992         | 0            | 0             | 0            | 151.818509615385
+EVENT          | reasoning-medium | 34829        | 0            | 0             | 0            | 151.766344138505
+EVENT          | general-large    | 34598        | 0            | 0             | 0            | 151.725793398462
+GUARDRAIL      | search-lite      | 6637         | 0            | 0             | 0            | 151.62829591683 
+EVENT          | count-token-lite | 13864        | 0            | 0             | 0            | 151.598889209463
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q07:
+
+event_time          | trace_id              | observation_id                            | type       | status
+
+--------------------+-----------------------+-------------------------------------------+------------+-------
+2027-03-21 00:16:00 | trace_281050_65793b3f | obs_trace_281050_65793b3f_000005_acc03fc0 | GENERATION | error 
+2027-03-20 23:57:06 | trace_647875_6b4ae193 | obs_trace_647875_6b4ae193_000007_a40bcea3 | TOOL       | ok    
+2027-03-20 23:57:04 | trace_647875_6b4ae193 | obs_trace_647875_6b4ae193_000005_af89a744 | RETRIEVAL  | ok    
+2027-03-20 23:57:03 | trace_835850_6c8feb2c | obs_trace_835850_6c8feb2c_000012_5ff38e6b | TOOL       | ok    
+2027-03-20 23:57:00 | trace_835850_6c8feb2c | obs_trace_835850_6c8feb2c_000010_15363db6 | GENERATION | error 
+2027-03-20 23:51:00 | trace_620500_afada118 | obs_trace_620500_afada118_000003_b5496589 | GENERATION | ok    
+2027-03-20 23:48:03 | trace_835850_6c8feb2c | obs_trace_835850_6c8feb2c_000007_3592f757 | TOOL       | ok    
+2027-03-20 23:45:00 | trace_620500_afada118 | obs_trace_620500_afada118_000001_02d1d791 | GENERATION | ok    
+2027-03-20 23:44:03 | trace_835850_6c8feb2c | obs_trace_835850_6c8feb2c_000003_a3852fc0 | TOOL       | ok    
+2027-03-20 23:44:00 | trace_835850_6c8feb2c | obs_trace_835850_6c8feb2c_000001_9ef47f9d | GENERATION | error 
+2027-03-20 23:21:02 | trace_474500_b8af1988 | obs_trace_474500_b8af1988_000003_f077f664 | TOOL       | ok    
+2027-03-20 23:21:00 | trace_474500_b8af1988 | obs_trace_474500_b8af1988_000001_10007895 | GENERATION | ok    
+2027-03-20 23:16:02 | trace_666125_4d85a03a | obs_trace_666125_4d85a03a_000012_6f8a3e9f | TOOL       | ok    
+2027-03-20 23:16:00 | trace_666125_4d85a03a | obs_trace_666125_4d85a03a_000010_c97e6b07 | GENERATION | ok    
+2027-03-20 23:11:03 | trace_666125_4d85a03a | obs_trace_666125_4d85a03a_000007_257d5f5f | RETRIEVAL  | ok    
+2027-03-20 23:07:04 | trace_826725_7847c0be | obs_trace_826725_7847c0be_000010_2ad958ae | TOOL       | ok    
+2027-03-20 22:56:05 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000006_c17a4cbf | TOOL       | ok    
+2027-03-20 22:54:09 | trace_255500_bf041363 | obs_trace_255500_bf041363_000027_479f1a03 | RETRIEVAL  | ok    
+2027-03-20 22:54:04 | trace_255500_bf041363 | obs_trace_255500_bf041363_000022_8d13fce1 | RETRIEVAL  | ok    
+2027-03-20 22:54:03 | trace_255500_bf041363 | obs_trace_255500_bf041363_000021_f9b1d730 | TOOL       | ok    
+2027-03-20 22:54:00 | trace_961775_f2723ed8 | obs_trace_961775_f2723ed8_000009_ad0cf543 | GENERATION | error 
+2027-03-20 22:53:06 | trace_751900_71192d51 | obs_trace_751900_71192d51_000015_8bd2d51b | RETRIEVAL  | ok    
+2027-03-20 22:53:04 | trace_751900_71192d51 | obs_trace_751900_71192d51_000013_ee860d44 | TOOL       | ok    
+2027-03-20 22:53:00 | trace_751900_71192d51 | obs_trace_751900_71192d51_000009_2d0d9bcc | GENERATION | ok    
+2027-03-20 22:51:04 | trace_826725_7847c0be | obs_trace_826725_7847c0be_000004_f981f22f | TOOL       | ok    
+2027-03-20 22:51:03 | trace_826725_7847c0be | obs_trace_826725_7847c0be_000003_8223c15b | TOOL       | ok    
+2027-03-20 22:50:02 | trace_961775_f2723ed8 | obs_trace_961775_f2723ed8_000006_eef0e6e7 | TOOL       | error 
+2027-03-20 22:50:00 | trace_961775_f2723ed8 | obs_trace_961775_f2723ed8_000005_ce8c77a0 | GENERATION | error 
+2027-03-20 22:49:04 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000018_b4e8e43a | TOOL       | ok    
+2027-03-20 22:49:03 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000017_d67689ab | RETRIEVAL  | ok    
+2027-03-20 22:47:05 | trace_255500_bf041363 | obs_trace_255500_bf041363_000017_af01a8c8 | TOOL       | ok    
+2027-03-20 22:47:04 | trace_255500_bf041363 | obs_trace_255500_bf041363_000016_4b7f9e04 | TOOL       | ok    
+2027-03-20 22:42:03 | trace_751900_71192d51 | obs_trace_751900_71192d51_000004_6a593a1d | RETRIEVAL  | ok    
+2027-03-20 22:39:03 | trace_009125_608c13f4 | obs_trace_009125_608c13f4_000021_dc94567a | TOOL       | ok    
+2027-03-20 22:39:02 | trace_009125_608c13f4 | obs_trace_009125_608c13f4_000020_025cb445 | TOOL       | error 
+2027-03-20 22:36:03 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000013_18fe2053 | TOOL       | ok    
+2027-03-20 22:34:04 | trace_894250_0ea053f8 | obs_trace_894250_0ea053f8_000018_75bd5b12 | RETRIEVAL  | ok    
+2027-03-20 22:34:00 | trace_894250_0ea053f8 | obs_trace_894250_0ea053f8_000014_b64bec30 | GENERATION | ok    
+2027-03-20 22:25:04 | trace_890600_ba985e11 | obs_trace_890600_ba985e11_000010_207fe511 | TOOL       | ok    
+2027-03-20 22:25:00 | trace_890600_ba985e11 | obs_trace_890600_ba985e11_000006_83ea4dcc | GENERATION | ok    
+2027-03-20 22:25:00 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000008_1ff87316 | GENERATION | ok    
+2027-03-20 22:17:05 | trace_255500_bf041363 | obs_trace_255500_bf041363_000006_4b1bb0b4 | TOOL       | ok    
+2027-03-20 22:17:00 | trace_255500_bf041363 | obs_trace_255500_bf041363_000001_90c6bdf5 | GENERATION | ok    
+2027-03-20 22:16:05 | trace_894250_0ea053f8 | obs_trace_894250_0ea053f8_000006_1e04def1 | RETRIEVAL  | ok    
+2027-03-20 22:16:04 | trace_894250_0ea053f8 | obs_trace_894250_0ea053f8_000005_857ae25e | TOOL       | ok    
+2027-03-20 22:16:03 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000004_96d8614b | TOOL       | ok    
+2027-03-20 22:16:02 | trace_286525_1be5c920 | obs_trace_286525_1be5c920_000003_6928b53b | TOOL       | ok    
+2027-03-20 22:16:00 | trace_890600_ba985e11 | obs_trace_890600_ba985e11_000001_a511da0f | GENERATION | ok    
+2027-03-20 22:12:03 | trace_009125_608c13f4 | obs_trace_009125_608c13f4_000010_ac184967 | TOOL       | ok    
+2027-03-20 22:12:02 | trace_009125_608c13f4 | obs_trace_009125_608c13f4_000009_2d099611 | TOOL       | error 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q08:
+
+event_time          | trace_id              | observation_id                            | type           | status
+
+--------------------+-----------------------+-------------------------------------------+----------------+-------
+2027-03-20 23:06:03 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000010_0b26d97c | TOOL           | ok    
+2027-03-20 22:56:04 | trace_622325_a9145bf0 | obs_trace_622325_a9145bf0_000005_c484c11c | TOOL           | ok    
+2027-03-20 20:14:03 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000014_1bac1730 | RETRIEVAL      | ok    
+2027-03-20 20:14:02 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000013_89fc097c | TOOL           | ok    
+2027-03-20 19:56:00 | trace_905200_a63c61a2 | obs_trace_905200_a63c61a2_000009_c61e0f59 | GENERATION     | ok    
+2027-03-20 19:11:03 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000008_854b94aa | RETRIEVAL      | ok    
+2027-03-20 19:11:02 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000007_b42cad26 | TOOL           | ok    
+2027-03-20 19:05:03 | trace_306600_9c103273 | obs_trace_306600_9c103273_000004_0979a354 | TOOL           | ok    
+2027-03-20 18:55:02 | trace_003650_10f0c410 | obs_trace_003650_10f0c410_000003_b0cc7c7c | TOOL           | ok    
+2027-03-20 18:13:05 | trace_897900_f7e98acc | obs_trace_897900_f7e98acc_000010_f95035fd | TOOL           | ok    
+2027-03-20 17:41:02 | trace_226300_85711af1 | obs_trace_226300_85711af1_000003_3d516f6e | TOOL           | ok    
+2027-03-20 17:39:04 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000011_0cd79757 | TOOL           | ok    
+2027-03-20 17:22:04 | trace_886950_92b86ce3 | obs_trace_886950_92b86ce3_000005_cc3cb969 | TOOL           | ok    
+2027-03-20 16:50:03 | trace_432525_505833a8 | obs_trace_432525_505833a8_000009_4f896558 | RETRIEVAL      | ok    
+2027-03-20 16:50:02 | trace_432525_505833a8 | obs_trace_432525_505833a8_000008_4ae78dd6 | TOOL           | ok    
+2027-03-20 16:50:00 | trace_432525_505833a8 | obs_trace_432525_505833a8_000006_02eca3dd | GENERATION     | ok    
+2027-03-20 16:49:06 | trace_494575_30ca7c13 | obs_trace_494575_30ca7c13_000006_e7d4d08e | RETRIEVAL      | ok    
+2027-03-20 16:49:05 | trace_494575_30ca7c13 | obs_trace_494575_30ca7c13_000005_370b01ed | TOOL           | ok    
+2027-03-20 16:33:05 | trace_611375_6de894ee | obs_trace_611375_6de894ee_000012_1e745344 | RETRIEVAL      | ok    
+2027-03-20 16:33:04 | trace_611375_6de894ee | obs_trace_611375_6de894ee_000011_5b10a6d6 | TOOL           | ok    
+2027-03-20 16:30:05 | trace_611375_6de894ee | obs_trace_611375_6de894ee_000006_be92ede0 | RETRIEVAL      | ok    
+2027-03-20 16:30:04 | trace_611375_6de894ee | obs_trace_611375_6de894ee_000005_4f5bcd31 | TOOL           | ok    
+2027-03-20 16:27:03 | trace_478150_980f7604 | obs_trace_478150_980f7604_000009_9ff5ecea | TOOL           | ok    
+2027-03-20 16:22:00 | trace_478150_980f7604 | obs_trace_478150_980f7604_000004_2699173a | GENERATION     | error 
+2027-03-20 16:15:02 | trace_206225_387190c4 | obs_trace_206225_387190c4_000008_c71c6d14 | TOOL           | ok    
+2027-03-20 16:15:00 | trace_206225_387190c4 | obs_trace_206225_387190c4_000006_4e9e6f44 | GENERATION     | ok    
+2027-03-20 16:15:00 | trace_105850_5659e5f7 | obs_trace_105850_5659e5f7_000001_547e8458 | GENERATION     | ok    
+2027-03-20 16:11:00 | trace_447125_a68085a0 | obs_trace_447125_a68085a0_000001_c5597a6c | GENERATION     | ok    
+2027-03-20 16:10:00 | trace_478150_980f7604 | obs_trace_478150_980f7604_000001_699cfb67 | GENERATION     | error 
+2027-03-20 16:01:04 | trace_206225_387190c4 | obs_trace_206225_387190c4_000005_5cc409dc | RETRIEVAL      | ok    
+2027-03-20 16:01:03 | trace_206225_387190c4 | obs_trace_206225_387190c4_000004_c4cd60f0 | TOOL           | ok    
+2027-03-20 14:32:07 | trace_443475_b6b3b04e | obs_trace_443475_b6b3b04e_000015_9df536f8 | RETRIEVAL      | ok    
+2027-03-20 14:32:06 | trace_443475_b6b3b04e | obs_trace_443475_b6b3b04e_000014_14c5f197 | TOOL           | ok    
+2027-03-20 14:18:04 | trace_443475_b6b3b04e | obs_trace_443475_b6b3b04e_000006_6ba12f38 | TOOL           | ok    
+2027-03-20 14:09:00 | trace_443475_b6b3b04e | obs_trace_443475_b6b3b04e_000001_250015cd | TOKEN_ESTIMATE | ok    
+2027-03-20 13:54:02 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000016_e4a6dd76 | TOOL           | ok    
+2027-03-20 13:54:00 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000014_90e3b7a8 | GENERATION     | ok    
+2027-03-20 13:35:06 | trace_448950_90e05553 | obs_trace_448950_90e05553_000007_7d9a2aea | RETRIEVAL      | ok    
+2027-03-20 13:35:05 | trace_448950_90e05553 | obs_trace_448950_90e05553_000006_65bd9f76 | TOOL           | ok    
+2027-03-20 13:35:02 | trace_448950_90e05553 | obs_trace_448950_90e05553_000003_31f6943d | TOOL           | ok    
+2027-03-20 13:31:06 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000007_da878bfb | TOOL           | ok    
+2027-03-20 13:31:05 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000006_eae7a433 | RETRIEVAL      | ok    
+2027-03-20 13:31:04 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000005_25c9d6bc | TOOL           | ok    
+2027-03-20 13:31:03 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000004_57247711 | RETRIEVAL      | ok    
+2027-03-20 13:31:02 | trace_461725_a65c8332 | obs_trace_461725_a65c8332_000003_4f0a9262 | TOOL           | ok    
+2027-03-20 12:18:00 | trace_454425_28f4989b | obs_trace_454425_28f4989b_000010_f857e5fc | GENERATION     | ok    
+2027-03-20 12:10:00 | trace_855925_1c46c0f5 | obs_trace_855925_1c46c0f5_000013_55d7ccfc | TOKEN_ESTIMATE | ok    
+2027-03-20 12:10:00 | trace_454425_28f4989b | obs_trace_454425_28f4989b_000006_f02ca676 | GENERATION     | ok    
+2027-03-20 11:54:04 | trace_556625_d08cbdf2 | obs_trace_556625_d08cbdf2_000004_1bf13d58 | TOOL           | ok    
+2027-03-20 11:54:00 | trace_556625_d08cbdf2 | obs_trace_556625_d08cbdf2_000001_ccecd177 | GENERATION     | error 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q09:
+
+tool_name                         | status | observations | avg_latency_ms  
+
+----------------------------------+--------+--------------+-----------------
+mcp__matrix__vector_search        | ok     | 262886       | 2270.03970161971
+mcp__matrix__browser_get_dom      | ok     | 233542       | 2043.10833169194
+mcp__matrix__github_search_code   | ok     | 231654       | 2074.81098534884
+mcp__matrix__browser_navigate     | ok     | 213208       | 1952.52214738659
+mcp__matrix__web_search           | ok     | 212776       | 1981.23140767756
+mcp__matrix__read_file            | ok     | 202696       | 2196.48054228993
+mcp__matrix__artifact_extract_pdf | ok     | 181641       | 2006.37678717911
+mcp__matrix__fetch_runbook        | ok     | 179268       | 1995.83239061071
+mcp__matrix__rerank_results       | ok     | 179055       | 1948.14134763062
+mcp__matrix__memory_upsert        | ok     | 177293       | 2231.63058327176
+mcp__matrix__query_warehouse      | ok     | 147121       | 2282.51512020718
+mcp__matrix__deploy               | ok     | 134420       | 1976.4746615087 
+mcp__matrix__edit_file            | ok     | 134251       | 1991.61067701544
+mcp__matrix__schedule_workflow    | ok     | 134051       | 1953.74195641957
+mcp__matrix__deploy_service       | ok     | 133732       | 1979.39141716268
+mcp__matrix__tail_logs            | ok     | 118167       | 1829.40343750793
+mcp__matrix__bash_exec            | ok     | 113559       | 1877.02909500788
+mcp__matrix__eval_trace           | ok     | 113527       | 1848.35067428894
+mcp__matrix__inspect_metrics      | ok     | 107921       | 1730.69771406862
+mcp__matrix__images_list          | ok     | 93275        | 1763.47227016886
+mcp__matrix__count_tokens         | ok     | 79957        | 1611.22402041097
+mcp__matrix__read_file            | error  | 31902        | 1693.64315716883
+mcp__matrix__tail_logs            | error  | 31489        | 1565.1026390168 
+mcp__matrix__inspect_metrics      | error  | 30906        | 1551.52889406588
+mcp__matrix__github_search_code   | error  | 25874        | 1603.09132720105
+mcp__matrix__deploy               | error  | 25027        | 1602.42781795661
+mcp__matrix__deploy_service       | error  | 25022        | 1621.92662457038
+mcp__matrix__vector_search        | error  | 21842        | 1596.57673289992
+mcp__matrix__browser_navigate     | error  | 21794        | 1586.35133522988
+mcp__matrix__browser_get_dom      | error  | 21749        | 1585.38525909237
+mcp__matrix__web_search           | error  | 18878        | 1561.55869265812
+mcp__matrix__edit_file            | error  | 16642        | 1623.40121379642
+mcp__matrix__fetch_runbook        | error  | 16284        | 1833.08253500368
+mcp__matrix__artifact_extract_pdf | error  | 15097        | 1843.90680267603
+mcp__matrix__eval_trace           | error  | 13634        | 1879.56146398709
+mcp__matrix__schedule_workflow    | error  | 13078        | 1632.00665239333
+mcp__matrix__memory_upsert        | error  | 12957        | 1649.13814926295
+mcp__matrix__bash_exec            | error  | 11642        | 1600.77761552998
+mcp__matrix__rerank_results       | error  | 8923         | 1584.29765773843
+mcp__matrix__query_warehouse      | error  | 5971         | 1548.9361915927 
+mcp__matrix__images_list          | error  | 1795         | 1190.2651810585 
+mcp__matrix__count_tokens         | error  | 1705         | 1168.99648093842
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q10:
+
+stop_reason | cache_hit | observations | avg_latency_ms  
+
+------------+-----------+--------------+-----------------
+tool_use    | true      | 1501727      | 4334.96992862218
+error       | false     | 189747       | 2700.67808713708
+stop        | true      | 124001       | 2703.11510391045
+max_tokens  | true      | 123894       | 2697.50619077599
+end_turn    | true      | 123518       | 2704.28101167441
+tool_use    | false     | 1865         | 4429.91742627346
+stop        | false     | 163          | 2653.57668711656
+end_turn    | false     | 141          | 2643.05673758865
+max_tokens  | false     | 134          | 2667.21641791045
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q11:
+
+event_time          | trace_id              | observation_id                            | type       | status | tool_name                  | latency_ms
+
+--------------------+-----------------------+-------------------------------------------+------------+--------+----------------------------+-----------
+2027-01-12 12:47:02 | trace_753406_d9c9d6ba | obs_trace_753406_d9c9d6ba_000003_3bbdf57f | TOOL       | ok     | mcp__matrix__read_file     | 12072     
+2026-12-28 02:09:02 | trace_205819_f8a95461 | obs_trace_205819_f8a95461_000003_42416cec | TOOL       | ok     | mcp__matrix__memory_upsert | 12057     
+2026-12-10 07:52:00 | trace_488616_6d0b7bc2 | obs_trace_488616_6d0b7bc2_000001_379554bf | GENERATION | ok     | null                       | 11994     
+2026-05-01 16:27:02 | trace_465597_cc84d985 | obs_trace_465597_cc84d985_000003_dadbfa56 | TOOL       | ok     | mcp__matrix__eval_trace    | 11991     
+2026-06-28 10:46:00 | trace_427562_d3b102b3 | obs_trace_427562_d3b102b3_000010_93e33013 | GENERATION | ok     | null                       | 11990     
+2026-07-26 10:12:00 | trace_663131_3a8e03cb | obs_trace_663131_3a8e03cb_000015_d482a77b | GENERATION | ok     | null                       | 11983     
+2027-01-23 13:04:00 | trace_965145_ed17bc08 | obs_trace_965145_ed17bc08_000023_9cf89ed2 | GENERATION | ok     | null                       | 11974     
+2026-06-23 09:44:00 | trace_907508_6f1f30e7 | obs_trace_907508_6f1f30e7_000006_6dd93747 | GENERATION | ok     | null                       | 11967     
+2027-02-18 10:28:00 | trace_653208_8e8d8877 | obs_trace_653208_8e8d8877_000005_6b939350 | GENERATION | ok     | null                       | 11966     
+2026-07-15 09:27:02 | trace_031622_2cce3ad3 | obs_trace_031622_2cce3ad3_000007_a59b8f2c | TOOL       | ok     | mcp__matrix__memory_upsert | 11964     
+2026-06-22 15:28:00 | trace_967736_b1e8c93b | obs_trace_967736_b1e8c93b_000014_56632bf7 | GENERATION | ok     | null                       | 11960     
+2026-12-27 22:43:00 | trace_663893_2774ca8d | obs_trace_663893_2774ca8d_000004_084f261d | GENERATION | ok     | null                       | 11958     
+2026-08-31 12:46:00 | trace_457078_31f3c765 | obs_trace_457078_31f3c765_000015_98a13a49 | GENERATION | ok     | null                       | 11956     
+2026-07-26 16:00:00 | trace_487919_63f49775 | obs_trace_487919_63f49775_000005_ec5c2020 | GENERATION | ok     | null                       | 11945     
+2026-09-22 16:17:00 | trace_150580_9c50c57a | obs_trace_150580_9c50c57a_000014_4662d09d | GENERATION | ok     | null                       | 11941     
+2026-12-28 02:09:00 | trace_205819_f8a95461 | obs_trace_205819_f8a95461_000001_99e1e1c3 | GENERATION | ok     | null                       | 11937     
+2026-12-06 17:58:00 | trace_087088_3d54030e | obs_trace_087088_3d54030e_000001_ca98b95d | GENERATION | ok     | null                       | 11937     
+2026-10-02 15:36:00 | trace_721859_c24866ca | obs_trace_721859_c24866ca_000001_eed629b8 | GENERATION | ok     | null                       | 11935     
+2026-04-23 10:40:02 | trace_394370_e4dcd902 | obs_trace_394370_e4dcd902_000003_ec217387 | TOOL       | ok     | mcp__matrix__memory_upsert | 11935     
+2026-07-28 21:56:00 | trace_484287_648eb80f | obs_trace_484287_648eb80f_000007_d92cacf7 | GENERATION | ok     | null                       | 11931     
+2026-08-07 17:12:00 | trace_772675_08d1c3f1 | obs_trace_772675_08d1c3f1_000007_53a9d420 | GENERATION | ok     | null                       | 11928     
+2026-06-16 10:26:00 | trace_456690_90b73f83 | obs_trace_456690_90b73f83_000015_6ba49a63 | GENERATION | ok     | null                       | 11928     
+2026-09-09 22:28:00 | trace_688906_37c4400c | obs_trace_688906_37c4400c_000030_8812638a | GENERATION | ok     | null                       | 11922     
+2027-01-01 18:06:00 | trace_603693_ba99c602 | obs_trace_603693_ba99c602_000001_dcc6bf45 | GENERATION | ok     | null                       | 11914     
+2026-03-19 18:06:00 | trace_467207_24994326 | obs_trace_467207_24994326_000001_07e78271 | GENERATION | ok     | null                       | 11910     
+2027-02-16 17:51:00 | trace_861244_a1370e64 | obs_trace_861244_a1370e64_000001_41967d5f | GENERATION | ok     | null                       | 11909     
+2026-11-17 14:32:00 | trace_762251_b748c4de | obs_trace_762251_b748c4de_000002_52f0b48b | GENERATION | ok     | null                       | 11906     
+2026-12-19 13:56:00 | trace_017803_af409501 | obs_trace_017803_af409501_000022_03a2e6a9 | GENERATION | ok     | null                       | 11905     
+2026-03-24 16:05:02 | trace_812149_86b901c2 | obs_trace_812149_86b901c2_000020_08b93a58 | TOOL       | ok     | mcp__matrix__vector_search | 11902     
+2026-11-08 11:09:00 | trace_386240_1280e765 | obs_trace_386240_1280e765_000001_768bcffb | GENERATION | ok     | null                       | 11899     
+2026-03-18 20:02:00 | trace_596781_7aa6891e | obs_trace_596781_7aa6891e_000016_b795343f | GENERATION | ok     | null                       | 11890     
+2026-08-19 15:50:00 | trace_842089_44640e29 | obs_trace_842089_44640e29_000005_b6468e53 | GENERATION | ok     | null                       | 11880     
+2026-04-16 10:50:00 | trace_695472_2d866a89 | obs_trace_695472_2d866a89_000007_e0add1d7 | GENERATION | ok     | null                       | 11879     
+2026-12-04 10:39:00 | trace_296961_c663ab06 | obs_trace_296961_c663ab06_000001_0cc3f0a3 | GENERATION | ok     | null                       | 11873     
+2027-02-09 17:06:00 | trace_591105_e0d3a5b9 | obs_trace_591105_e0d3a5b9_000011_c27a9aee | GENERATION | ok     | null                       | 11872     
+2026-12-30 08:51:00 | trace_415712_9267a051 | obs_trace_415712_9267a051_000001_3052a86a | GENERATION | ok     | null                       | 11864     
+2026-09-03 16:26:00 | trace_048297_69fd241c | obs_trace_048297_69fd241c_000006_b18c5a3b | GENERATION | ok     | null                       | 11855     
+2027-03-05 11:39:02 | trace_386837_2fb9edb1 | obs_trace_386837_2fb9edb1_000003_e6f980f4 | TOOL       | ok     | mcp__matrix__fetch_runbook | 11852     
+2026-05-27 14:58:00 | trace_332506_ff193c87 | obs_trace_332506_ff193c87_000005_83f6cd67 | GENERATION | ok     | null                       | 11852     
+2026-10-26 12:17:00 | trace_400779_9c0c8491 | obs_trace_400779_9c0c8491_000001_70a7e0e3 | GENERATION | ok     | null                       | 11848     
+2026-06-18 10:50:00 | trace_914787_962b89f3 | obs_trace_914787_962b89f3_000001_f95a0791 | GENERATION | ok     | null                       | 11836     
+2026-05-02 15:36:00 | trace_054977_20613579 | obs_trace_054977_20613579_000010_4ffa949e | GENERATION | ok     | null                       | 11829     
+2026-04-24 16:41:00 | trace_421762_a525b33a | obs_trace_421762_a525b33a_000001_398acc4b | GENERATION | ok     | null                       | 11829     
+2027-02-24 18:04:00 | trace_233492_4f866f33 | obs_trace_233492_4f866f33_000002_4b332546 | GENERATION | ok     | null                       | 11821     
+2026-09-02 18:00:00 | trace_197934_e8a873a1 | obs_trace_197934_e8a873a1_000016_519d6ae7 | GENERATION | ok     | null                       | 11821     
+2026-08-16 11:40:00 | trace_035436_d7b78d86 | obs_trace_035436_d7b78d86_000001_f94c9753 | GENERATION | ok     | null                       | 11814     
+2027-02-19 18:27:00 | trace_476192_d65a75af | obs_trace_476192_d65a75af_000009_2fa08856 | GENERATION | ok     | null                       | 11813     
+2027-01-10 19:54:00 | trace_607388_1cadaddc | obs_trace_607388_1cadaddc_000008_e2eb07be | GENERATION | ok     | null                       | 11812     
+2027-02-16 14:36:00 | trace_746277_cdb6ba31 | obs_trace_746277_cdb6ba31_000002_8834f734 | GENERATION | ok     | null                       | 11811     
+2026-03-24 16:05:00 | trace_812149_86b901c2 | obs_trace_812149_86b901c2_000018_ff3f428a | GENERATION | ok     | null                       | 11782     
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q12:
+
+release_ring | customer_tier | retrieval_strategy | observations | avg_latency_ms   | total_cost 
+
+-------------+---------------+--------------------+--------------+------------------+------------
+stable       | pro           | keyword            | 204443       | 2130.59967325856 | 37766.43783
+canary       | pro           | keyword            | 204116       | 2131.41652295753 | 37432.49032
+shadow       | pro           | keyword            | 203843       | 2147.7689888787  | 37559.05857
+shadow       | pro           | hybrid_rerank      | 175705       | 2142.42767707237 | 32278.83223
+stable       | pro           | hybrid             | 175049       | 2130.48826899897 | 32258.65032
+canary       | pro           | dense              | 174895       | 2142.69779582035 | 32160.10301
+shadow       | business      | keyword            | 167322       | 2122.76359355016 | 30498.11049
+canary       | business      | keyword            | 166103       | 2139.93272848775 | 30714.47331
+stable       | business      | keyword            | 165913       | 2146.82589067764 | 30609.21977
+canary       | pro           | hybrid             | 160868       | 2131.88407887212 | 29419.62929
+canary       | pro           | hybrid_rerank      | 160740       | 2131.9093007341  | 29348.53048
+shadow       | pro           | dense              | 160636       | 2138.31274434124 | 29355.15047
+stable       | pro           | dense              | 160616       | 2142.99143298302 | 29627.84668
+shadow       | pro           | hybrid             | 160564       | 2141.11445280387 | 29591.90344
+stable       | pro           | hybrid_rerank      | 160384       | 2138.71333175379 | 29544.33433
+canary       | business      | dense              | 143140       | 2134.00181640352 | 26160.17675
+stable       | business      | hybrid             | 142595       | 2144.57117009713 | 26306.53121
+shadow       | business      | hybrid_rerank      | 142560       | 2132.6218714927  | 26292.68687
+canary       | business      | hybrid_rerank      | 131332       | 2146.43969481924 | 24469.75901
+stable       | business      | dense              | 130834       | 2138.55955638443 | 24039.33248
+shadow       | business      | hybrid             | 130671       | 2142.96224104813 | 24308.95027
+shadow       | business      | dense              | 130538       | 2140.2041168089  | 24169.57771
+canary       | business      | hybrid             | 130425       | 2140.54472685451 | 24114.37837
+stable       | business      | hybrid_rerank      | 130326       | 2136.1871077145  | 23912.87718
+shadow       | free          | keyword            | 126205       | 2138.86331761816 | 23186.69057
+canary       | free          | keyword            | 125649       | 2141.39818064609 | 23205.1122 
+stable       | free          | keyword            | 125461       | 2141.63123998693 | 23074.29943
+canary       | enterprise    | keyword            | 118678       | 2134.82260402096 | 21805.71818
+shadow       | enterprise    | keyword            | 118337       | 2139.11067544386 | 21692.65488
+stable       | enterprise    | keyword            | 117878       | 2140.40797264969 | 21822.58526
+stable       | free          | hybrid             | 107454       | 2135.04043590746 | 19545.89126
+shadow       | free          | hybrid_rerank      | 107419       | 2137.90091138439 | 19789.08832
+canary       | free          | dense              | 107418       | 2136.4120445363  | 19740.02529
+stable       | enterprise    | hybrid             | 101187       | 2157.25234466878 | 18617.51966
+canary       | enterprise    | dense              | 101037       | 2141.68847056029 | 18698.81168
+shadow       | enterprise    | hybrid_rerank      | 100728       | 2142.33925025812 | 18497.69748
+canary       | free          | hybrid_rerank      | 98719        | 2128.44208308431 | 18226.42152
+canary       | free          | hybrid             | 98710        | 2136.30707121872 | 18191.57598
+shadow       | free          | hybrid             | 98676        | 2147.1617819936  | 18277.95561
+stable       | free          | dense              | 98591        | 2143.78482822976 | 18208.47175
+shadow       | free          | dense              | 98306        | 2142.58276198808 | 18013.55367
+stable       | free          | hybrid_rerank      | 98280        | 2131.32797110297 | 18025.37195
+shadow       | enterprise    | hybrid             | 93150        | 2138.46261943103 | 16975.25965
+stable       | enterprise    | dense              | 93024        | 2144.37886996904 | 17233.75692
+stable       | enterprise    | hybrid_rerank      | 92928        | 2152.91525697314 | 17297.13994
+canary       | enterprise    | hybrid_rerank      | 92861        | 2150.33919514112 | 17134.91731
+canary       | enterprise    | hybrid             | 92682        | 2150.80805334369 | 17050.32896
+shadow       | enterprise    | dense              | 92473        | 2156.89465033037 | 17078.13614
+staging      | pro           | keyword            | 80026        | 2133.63534351336 | 14703.61772
+staging      | pro           | hybrid             | 65157        | 2134.3681569133  | 11907.48094
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q13:
+
+observations | traces | last_event_time    
+
+-------------+--------+--------------------
+115961       | 56669  | 2027-03-20 19:59:03
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q14:
+
+event_time          | trace_id              | observation_id                            | type       | status | tool_name                        
+
+--------------------+-----------------------+-------------------------------------------+------------+--------+----------------------------------
+2027-03-20 16:40:04 | trace_708100_9bd4b610 | obs_trace_708100_9bd4b610_000005_c2f330c2 | TOOL       | ok     | mcp__matrix__images_list         
+2027-03-20 14:10:02 | trace_669775_118cf997 | obs_trace_669775_118cf997_000011_373f5394 | TOOL       | ok     | mcp__matrix__deploy              
+2027-03-20 14:10:00 | trace_669775_118cf997 | obs_trace_669775_118cf997_000009_bb7204e0 | GENERATION | ok     | null                             
+2027-03-20 13:51:00 | trace_669775_118cf997 | obs_trace_669775_118cf997_000005_4c9b572d | GENERATION | ok     | null                             
+2027-03-20 11:55:00 | trace_855925_1c46c0f5 | obs_trace_855925_1c46c0f5_000007_7ceb8121 | GENERATION | ok     | null                             
+2027-03-20 11:37:00 | trace_063875_36855564 | obs_trace_063875_36855564_000001_d8a7b91e | GENERATION | ok     | null                             
+2027-03-20 11:33:00 | trace_855925_1c46c0f5 | obs_trace_855925_1c46c0f5_000003_03768aeb | GENERATION | ok     | null                             
+2027-03-20 11:32:04 | trace_761025_f583e948 | obs_trace_761025_f583e948_000038_899b8820 | TOOL       | ok     | mcp__matrix__images_list         
+2027-03-20 11:32:02 | trace_761025_f583e948 | obs_trace_761025_f583e948_000036_4d609de2 | TOOL       | ok     | mcp__matrix__fetch_runbook       
+2027-03-20 11:32:00 | trace_761025_f583e948 | obs_trace_761025_f583e948_000034_baf0d8de | GENERATION | ok     | null                             
+2027-03-20 11:23:08 | trace_761025_f583e948 | obs_trace_761025_f583e948_000033_b0a144f7 | TOOL       | ok     | mcp__matrix__edit_file           
+2027-03-20 11:23:06 | trace_761025_f583e948 | obs_trace_761025_f583e948_000031_b5fa7daa | TOOL       | ok     | mcp__matrix__browser_get_dom     
+2027-03-20 11:23:04 | trace_761025_f583e948 | obs_trace_761025_f583e948_000029_6b4aaed8 | TOOL       | ok     | mcp__matrix__web_search          
+2027-03-20 11:23:02 | trace_761025_f583e948 | obs_trace_761025_f583e948_000027_27b1635e | TOOL       | ok     | mcp__matrix__vector_search       
+2027-03-20 11:23:00 | trace_761025_f583e948 | obs_trace_761025_f583e948_000025_edb3f8db | GENERATION | ok     | null                             
+2027-03-20 10:58:04 | trace_761025_f583e948 | obs_trace_761025_f583e948_000011_4209aeee | TOOL       | ok     | mcp__matrix__artifact_extract_pdf
+2027-03-20 10:58:00 | trace_761025_f583e948 | obs_trace_761025_f583e948_000007_6b09303e | GENERATION | ok     | null                             
+2027-03-20 10:42:02 | trace_761025_f583e948 | obs_trace_761025_f583e948_000003_823d313b | TOOL       | ok     | mcp__matrix__edit_file           
+2027-03-20 08:51:08 | trace_901550_7be7212c | obs_trace_901550_7be7212c_000009_41b9e0f5 | TOOL       | ok     | mcp__matrix__browser_navigate    
+2027-03-20 08:51:02 | trace_901550_7be7212c | obs_trace_901550_7be7212c_000003_99d4c699 | TOOL       | ok     | mcp__matrix__rerank_results      
+2027-03-20 05:17:05 | trace_531075_fbd65d08 | obs_trace_531075_fbd65d08_000013_856e519b | TOOL       | ok     | mcp__matrix__count_tokens        
+2027-03-20 05:17:00 | trace_531075_fbd65d08 | obs_trace_531075_fbd65d08_000008_ad9e4bfe | GENERATION | ok     | null                             
+2027-03-20 05:13:04 | trace_531075_fbd65d08 | obs_trace_531075_fbd65d08_000005_bb63ece6 | TOOL       | ok     | mcp__matrix__browser_navigate    
+2027-03-20 05:13:03 | trace_531075_fbd65d08 | obs_trace_531075_fbd65d08_000004_2f1059ab | TOOL       | ok     | mcp__matrix__inspect_metrics     
+2027-03-20 05:13:02 | trace_531075_fbd65d08 | obs_trace_531075_fbd65d08_000003_9e89164a | TOOL       | ok     | mcp__matrix__read_file           
+2027-03-19 21:51:04 | trace_328495_2fe6c054 | obs_trace_328495_2fe6c054_000008_79bf2bda | TOOL       | ok     | mcp__matrix__browser_navigate    
+2027-03-19 21:51:02 | trace_328495_2fe6c054 | obs_trace_328495_2fe6c054_000006_7aa6e7ff | TOOL       | ok     | mcp__matrix__artifact_extract_pdf
+2027-03-19 21:46:00 | trace_328495_2fe6c054 | obs_trace_328495_2fe6c054_000001_845d26f8 | GENERATION | ok     | null                             
+2027-03-19 18:33:04 | trace_510999_be440e89 | obs_trace_510999_be440e89_000005_86da50ba | TOOL       | ok     | mcp__matrix__read_file           
+2027-03-19 18:33:02 | trace_510999_be440e89 | obs_trace_510999_be440e89_000003_2592f304 | TOOL       | error  | mcp__matrix__browser_get_dom     
+2027-03-19 18:02:02 | trace_454420_40b8b41a | obs_trace_454420_40b8b41a_000014_9f04c388 | TOOL       | error  | mcp__matrix__vector_search       
+2027-03-19 15:41:06 | trace_680720_10603dbe | obs_trace_680720_10603dbe_000015_76534039 | TOOL       | ok     | mcp__matrix__vector_search       
+2027-03-19 15:41:02 | trace_680720_10603dbe | obs_trace_680720_10603dbe_000011_144abb3c | TOOL       | ok     | mcp__matrix__fetch_runbook       
+2027-03-19 15:38:02 | trace_490920_074902d9 | obs_trace_490920_074902d9_000015_3d6d4803 | TOOL       | ok     | mcp__matrix__deploy              
+2027-03-19 15:28:00 | trace_490920_074902d9 | obs_trace_490920_074902d9_000010_658e490c | GENERATION | ok     | null                             
+2027-03-19 15:27:06 | trace_680720_10603dbe | obs_trace_680720_10603dbe_000008_22a4d29a | TOOL       | ok     | mcp__matrix__edit_file           
+2027-03-19 15:27:00 | trace_680720_10603dbe | obs_trace_680720_10603dbe_000002_2e4a32c4 | GENERATION | ok     | null                             
+2027-03-19 14:51:00 | trace_490920_074902d9 | obs_trace_490920_074902d9_000001_300e800c | GENERATION | ok     | null                             
+2027-03-19 11:48:02 | trace_437995_f94f20e5 | obs_trace_437995_f94f20e5_000002_f7c258f3 | TOOL       | error  | mcp__matrix__fetch_runbook       
+2027-03-19 10:58:00 | trace_682545_a5a3672a | obs_trace_682545_a5a3672a_000005_99b8811e | GENERATION | ok     | null                             
+2027-03-19 08:53:05 | trace_379595_01c5da24 | obs_trace_379595_01c5da24_000012_07d48188 | TOOL       | ok     | mcp__matrix__browser_navigate    
+2027-03-19 08:53:02 | trace_379595_01c5da24 | obs_trace_379595_01c5da24_000009_e0b82afd | TOOL       | ok     | mcp__matrix__browser_get_dom     
+2027-03-19 08:53:00 | trace_379595_01c5da24 | obs_trace_379595_01c5da24_000007_d25f530c | GENERATION | ok     | null                             
+2027-03-19 07:16:00 | trace_178845_21b70f7e | obs_trace_178845_21b70f7e_000007_95338401 | GENERATION | ok     | null                             
+2027-03-19 06:46:00 | trace_178845_21b70f7e | obs_trace_178845_21b70f7e_000001_cd806698 | GENERATION | ok     | null                             
+2027-03-18 20:42:00 | trace_512819_26fc5e4a | obs_trace_512819_26fc5e4a_000001_f14c6124 | GENERATION | ok     | null                             
+2027-03-18 17:49:00 | trace_762840_42978fcf | obs_trace_762840_42978fcf_000001_4a15da1e | GENERATION | ok     | null                             
+2027-03-18 17:03:07 | trace_481790_a74179b9 | obs_trace_481790_a74179b9_000015_56392e53 | TOOL       | ok     | mcp__matrix__fetch_runbook       
+2027-03-18 16:08:00 | trace_155119_eabb09aa | obs_trace_155119_eabb09aa_000003_18d29dce | GENERATION | ok     | null                             
+2027-03-18 15:33:00 | trace_032840_f954f8c3 | obs_trace_032840_f954f8c3_000002_4f482d34 | GENERATION | ok     | null                             
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q15:
+
+event_time          | trace_id              | observation_id                            | type       | status | tool_name                         | latency_ms
+
+--------------------+-----------------------+-------------------------------------------+------------+--------+-----------------------------------+-----------
+2026-05-25 11:12:02 | trace_533230_466a9bc6 | obs_trace_533230_466a9bc6_000003_05f24b04 | TOOL       | ok     | mcp__matrix__query_warehouse      | 12120     
+2026-07-19 11:04:02 | trace_487896_d9604c36 | obs_trace_487896_d9604c36_000014_a0f469de | TOOL       | ok     | mcp__matrix__schedule_workflow    | 12115     
+2026-04-22 07:36:02 | trace_080477_553e5a12 | obs_trace_080477_553e5a12_000003_3b22aba5 | TOOL       | ok     | mcp__matrix__browser_get_dom      | 12114     
+2026-04-03 15:24:02 | trace_233674_d064b663 | obs_trace_233674_d064b663_000003_d7c80b8e | TOOL       | ok     | mcp__matrix__deploy               | 12113     
+2026-12-20 17:05:02 | trace_444850_9ba72aa3 | obs_trace_444850_9ba72aa3_000003_15b5ac93 | TOOL       | ok     | mcp__matrix__query_warehouse      | 12111     
+2026-04-15 17:24:02 | trace_730146_67b4eadc | obs_trace_730146_67b4eadc_000003_98aaa372 | TOOL       | ok     | mcp__matrix__deploy               | 12110     
+2027-03-11 12:27:02 | trace_100330_8cb20cf9 | obs_trace_100330_8cb20cf9_000006_900dca78 | TOOL       | ok     | mcp__matrix__artifact_extract_pdf | 12107     
+2026-07-26 10:12:02 | trace_663131_3a8e03cb | obs_trace_663131_3a8e03cb_000017_d815f69c | TOOL       | ok     | mcp__matrix__read_file            | 12103     
+2026-05-28 07:21:02 | trace_186507_b7cec1ca | obs_trace_186507_b7cec1ca_000014_3be047b0 | TOOL       | ok     | mcp__matrix__fetch_runbook        | 12103     
+2026-11-10 17:32:02 | trace_444662_c5c80285 | obs_trace_444662_c5c80285_000014_852f6870 | TOOL       | ok     | mcp__matrix__deploy_service       | 12095     
+2026-06-25 15:54:02 | trace_117301_18f789e5 | obs_trace_117301_18f789e5_000012_0b173368 | TOOL       | ok     | mcp__matrix__vector_search        | 12091     
+2027-03-16 03:57:02 | trace_308405_0e7462db | obs_trace_308405_0e7462db_000003_7b69d3d1 | TOOL       | ok     | mcp__matrix__memory_upsert        | 12090     
+2026-05-10 14:26:02 | trace_487530_7fc103ff | obs_trace_487530_7fc103ff_000010_44866bf3 | TOOL       | ok     | mcp__matrix__browser_navigate     | 12088     
+2026-12-24 10:49:02 | trace_556195_b88de9aa | obs_trace_556195_b88de9aa_000003_a9b0807f | TOOL       | ok     | mcp__matrix__memory_upsert        | 12083     
+2026-06-25 19:31:02 | trace_449439_a256eb5d | obs_trace_449439_a256eb5d_000003_208df380 | TOOL       | ok     | mcp__matrix__artifact_extract_pdf | 12081     
+2027-01-30 13:19:02 | trace_457846_5e91363f | obs_trace_457846_5e91363f_000010_35cdc966 | TOOL       | ok     | mcp__matrix__edit_file            | 12080     
+2026-11-01 10:25:02 | trace_128892_4cfc466e | obs_trace_128892_4cfc466e_000003_6ec2e286 | TOOL       | ok     | mcp__matrix__edit_file            | 12065     
+2026-09-19 15:13:02 | trace_701727_5a385631 | obs_trace_701727_5a385631_000011_0881f100 | TOOL       | ok     | mcp__matrix__read_file            | 12064     
+2026-04-21 16:06:02 | trace_250201_600e3e0e | obs_trace_250201_600e3e0e_000003_3546f2b3 | TOOL       | ok     | mcp__matrix__deploy_service       | 12048     
+2026-11-24 13:09:02 | trace_415536_d54596d9 | obs_trace_415536_d54596d9_000016_39128e6c | TOOL       | ok     | mcp__matrix__edit_file            | 12039     
+2026-08-14 16:10:02 | trace_856676_3c52eb31 | obs_trace_856676_3c52eb31_000010_3a8667f6 | TOOL       | ok     | mcp__matrix__query_warehouse      | 12020     
+2026-07-28 07:34:02 | trace_354704_69465bfd | obs_trace_354704_69465bfd_000003_ec3d21c8 | TOOL       | ok     | mcp__matrix__query_warehouse      | 12018     
+2026-11-19 11:54:02 | trace_521349_91167fed | obs_trace_521349_91167fed_000003_ca17227b | TOOL       | ok     | mcp__matrix__query_warehouse      | 12010     
+2026-10-07 13:51:02 | trace_785759_1c0ca8e9 | obs_trace_785759_1c0ca8e9_000003_226ab9d5 | TOOL       | ok     | mcp__matrix__vector_search        | 12006     
+2026-09-20 10:57:02 | trace_541132_65d62a51 | obs_trace_541132_65d62a51_000017_3b6f0ce4 | TOOL       | ok     | mcp__matrix__memory_upsert        | 12004     
+2026-12-22 16:56:02 | trace_289743_f41815d6 | obs_trace_289743_f41815d6_000011_45fd6c98 | TOOL       | ok     | mcp__matrix__github_search_code   | 12003     
+2026-07-14 09:08:02 | trace_243317_0276a080 | obs_trace_243317_0276a080_000009_88e97ddc | TOOL       | ok     | mcp__matrix__memory_upsert        | 12003     
+2027-01-27 10:37:00 | trace_815527_5ec86a44 | obs_trace_815527_5ec86a44_000014_0f1f9488 | GENERATION | ok     | null                              | 12000     
+2026-05-25 11:12:00 | trace_533230_466a9bc6 | obs_trace_533230_466a9bc6_000001_f6fbfb20 | GENERATION | ok     | null                              | 12000     
+2026-06-22 07:59:00 | trace_203053_d1baccd5 | obs_trace_203053_d1baccd5_000017_ca9167bc | GENERATION | ok     | null                              | 11999     
+2027-01-19 07:52:00 | trace_795404_d037b5b6 | obs_trace_795404_d037b5b6_000016_fc731661 | GENERATION | ok     | null                              | 11998     
+2026-04-28 16:24:02 | trace_461932_3973453c | obs_trace_461932_3973453c_000004_9c205c46 | TOOL       | ok     | mcp__matrix__vector_search        | 11997     
+2026-09-07 21:06:00 | trace_692530_23f73513 | obs_trace_692530_23f73513_000001_d97ac856 | GENERATION | ok     | null                              | 11995     
+2026-07-19 11:04:00 | trace_487896_d9604c36 | obs_trace_487896_d9604c36_000012_390e8e4c | GENERATION | ok     | null                              | 11995     
+2027-01-06 18:41:00 | trace_486926_8026d24a | obs_trace_486926_8026d24a_000001_85aec659 | GENERATION | ok     | null                              | 11993     
+2026-09-15 06:27:00 | trace_289257_9d75ed4f | obs_trace_289257_9d75ed4f_000001_c085bb8c | GENERATION | ok     | null                              | 11993     
+2026-05-06 22:14:00 | trace_527672_f9406b57 | obs_trace_527672_f9406b57_000014_6eea5407 | GENERATION | ok     | null                              | 11993     
+2027-03-13 11:59:00 | trace_739094_d22107e5 | obs_trace_739094_d22107e5_000023_244be87f | GENERATION | ok     | null                              | 11992     
+2026-10-12 17:11:02 | trace_249230_1833fd13 | obs_trace_249230_1833fd13_000010_8563405f | TOOL       | ok     | mcp__matrix__vector_search        | 11992     
+2026-08-25 09:53:00 | trace_374915_7d47bc3e | obs_trace_374915_7d47bc3e_000005_5006c4fb | GENERATION | ok     | null                              | 11992     
+2026-07-15 16:56:00 | trace_524368_8c479cfd | obs_trace_524368_8c479cfd_000001_a3e2c584 | GENERATION | ok     | null                              | 11992     
+2026-06-28 23:50:00 | trace_606400_366da83e | obs_trace_606400_366da83e_000004_a18433b3 | GENERATION | ok     | null                              | 11992     
+2026-07-13 13:31:00 | trace_307179_e21ab166 | obs_trace_307179_e21ab166_000004_19b4bd63 | GENERATION | ok     | null                              | 11990     
+2026-07-09 19:41:00 | trace_608292_414e1019 | obs_trace_608292_414e1019_000001_25f1c06e | GENERATION | ok     | null                              | 11990     
+2026-06-28 10:46:00 | trace_427562_d3b102b3 | obs_trace_427562_d3b102b3_000010_93e33013 | GENERATION | ok     | null                              | 11990     
+2026-09-09 19:24:00 | trace_416969_f2435bdb | obs_trace_416969_f2435bdb_000010_d841828c | GENERATION | ok     | null                              | 11988     
+2026-06-26 12:39:00 | trace_889281_1b4bac1b | obs_trace_889281_1b4bac1b_000001_050214fb | GENERATION | ok     | null                              | 11988     
+2026-06-02 09:11:00 | trace_392761_9d08df55 | obs_trace_392761_9d08df55_000001_caa56845 | GENERATION | ok     | null                              | 11988     
+2026-06-21 09:03:00 | trace_641048_5ade9ce4 | obs_trace_641048_5ade9ce4_000009_59aa697e | GENERATION | ok     | null                              | 11987     
+2026-12-25 07:44:00 | trace_364575_949714cd | obs_trace_364575_949714cd_000009_ebe18f8d | GENERATION | ok     | null                              | 11986     
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q16:
+
+event_time          | trace_id              | observation_id                            | type       | status | release_ring | customer_tier | traffic_cluster
+
+--------------------+-----------------------+-------------------------------------------+------------+--------+--------------+---------------+----------------
+2027-03-20 16:49:02 | trace_494575_30ca7c13 | obs_trace_494575_30ca7c13_000002_36ccacc6 | TOOL       | error  | stable       | pro           | cluster_c      
+2027-03-20 16:33:05 | trace_611375_6de894ee | obs_trace_611375_6de894ee_000012_1e745344 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-20 16:27:03 | trace_478150_980f7604 | obs_trace_478150_980f7604_000009_9ff5ecea | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-20 16:22:02 | trace_478150_980f7604 | obs_trace_478150_980f7604_000005_501918c6 | TOOL       | error  | stable       | pro           | cluster_c      
+2027-03-20 13:51:03 | trace_448950_90e05553 | obs_trace_448950_90e05553_000011_df78cded | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-20 13:51:02 | trace_448950_90e05553 | obs_trace_448950_90e05553_000010_111df9b8 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-20 13:51:00 | trace_448950_90e05553 | obs_trace_448950_90e05553_000008_ecda34f2 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-20 13:35:04 | trace_448950_90e05553 | obs_trace_448950_90e05553_000005_9e516cad | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-20 13:35:02 | trace_448950_90e05553 | obs_trace_448950_90e05553_000003_31f6943d | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-20 13:35:00 | trace_448950_90e05553 | obs_trace_448950_90e05553_000001_b013bd37 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-20 11:23:04 | trace_386900_4872cce4 | obs_trace_386900_4872cce4_000005_b4b3b5a2 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-20 11:23:00 | trace_386900_4872cce4 | obs_trace_386900_4872cce4_000001_fb66b475 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-20 10:39:03 | trace_211700_36dbd9c5 | obs_trace_211700_36dbd9c5_000005_09c2df2c | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-20 10:39:00 | trace_211700_36dbd9c5 | obs_trace_211700_36dbd9c5_000002_3b960c8b | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:49:02 | trace_423395_fadce962 | obs_trace_423395_fadce962_000013_5c6f9dee | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:41:02 | trace_423395_fadce962 | obs_trace_423395_fadce962_000009_3b1c2e8a | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:35:03 | trace_423395_fadce962 | obs_trace_423395_fadce962_000004_9d41f734 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:35:02 | trace_423395_fadce962 | obs_trace_423395_fadce962_000003_d0937b9e | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:19:02 | trace_124099_eb25a4f3 | obs_trace_124099_eb25a4f3_000007_69635a88 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:19:00 | trace_124099_eb25a4f3 | obs_trace_124099_eb25a4f3_000005_c9832bd3 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 21:06:03 | trace_124099_eb25a4f3 | obs_trace_124099_eb25a4f3_000004_d68f5249 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 18:35:04 | trace_883295_6d07fcf7 | obs_trace_883295_6d07fcf7_000005_ac83578a | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 18:35:00 | trace_883295_6d07fcf7 | obs_trace_883295_6d07fcf7_000001_592bfa7a | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 18:08:05 | trace_281045_a5142308 | obs_trace_281045_a5142308_000013_c36bcb7e | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 18:08:02 | trace_281045_a5142308 | obs_trace_281045_a5142308_000010_c6a0460d | TOOL       | error  | stable       | pro           | cluster_c      
+2027-03-19 18:05:06 | trace_281045_a5142308 | obs_trace_281045_a5142308_000007_ca39affa | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 18:05:03 | trace_281045_a5142308 | obs_trace_281045_a5142308_000004_21ba3fff | RETRIEVAL  | error  | stable       | pro           | cluster_c      
+2027-03-19 18:05:00 | trace_281045_a5142308 | obs_trace_281045_a5142308_000001_2e7b4b99 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:45:00 | trace_138695_a3b54cf6 | obs_trace_138695_a3b54cf6_000004_687e4062 | GENERATION | error  | stable       | pro           | cluster_c      
+2027-03-19 17:36:05 | trace_454420_40b8b41a | obs_trace_454420_40b8b41a_000005_f6ee96c3 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:35:06 | trace_326670_9b684839 | obs_trace_326670_9b684839_000016_fc6bfbcd | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:35:05 | trace_326670_9b684839 | obs_trace_326670_9b684839_000015_ba554fcd | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:35:02 | trace_326670_9b684839 | obs_trace_326670_9b684839_000012_6072cc09 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:35:00 | trace_326670_9b684839 | obs_trace_326670_9b684839_000010_7e6735b6 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:34:02 | trace_138695_a3b54cf6 | obs_trace_138695_a3b54cf6_000002_9a3294ef | TOOL       | error  | stable       | pro           | cluster_c      
+2027-03-19 17:29:02 | trace_326670_9b684839 | obs_trace_326670_9b684839_000007_ac8c2f14 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 17:23:00 | trace_326670_9b684839 | obs_trace_326670_9b684839_000001_0e2a8705 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:36:02 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000020_ef41dce2 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:28:02 | trace_136870_c58403c0 | obs_trace_136870_c58403c0_000007_1b6e9c62 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:13:06 | trace_036499_6e50e944 | obs_trace_036499_6e50e944_000007_9ef7e426 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:13:03 | trace_036499_6e50e944 | obs_trace_036499_6e50e944_000004_f5425c21 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:13:02 | trace_036499_6e50e944 | obs_trace_036499_6e50e944_000003_f260a5f1 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:13:00 | trace_036499_6e50e944 | obs_trace_036499_6e50e944_000001_541d93af | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:11:03 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000012_81108fa5 | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:09:03 | trace_136870_c58403c0 | obs_trace_136870_c58403c0_000004_97ff80ef | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:09:00 | trace_136870_c58403c0 | obs_trace_136870_c58403c0_000001_28513114 | GENERATION | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:03:07 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000008_a4663383 | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:03:06 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000007_a887fd8d | TOOL       | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:03:05 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000006_be19941e | RETRIEVAL  | ok     | stable       | pro           | cluster_c      
+2027-03-19 16:03:04 | trace_631449_e3d3268b | obs_trace_631449_e3d3268b_000005_bebb1717 | TOOL       | ok     | stable       | pro           | cluster_c      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q17:
+
+trace_id              | observation_id                            | seq_no | type       | status | request_key         | workflow_variant
+
+----------------------+-------------------------------------------+--------+------------+--------+---------------------+-----------------
+trace_000290_77c65acd | obs_trace_000290_77c65acd_000001_346705e2 | 1      | GENERATION | ok     | req_000700_a7d1bd07 | tool_first      
+trace_000290_77c65acd | obs_trace_000290_77c65acd_000002_649ef441 | 2      | REASONING  | ok     | req_000700_a7d1bd07 | tool_first      
+trace_000290_77c65acd | obs_trace_000290_77c65acd_000003_26fd0070 | 3      | TOOL       | ok     | req_000700_a7d1bd07 | tool_first      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q18:
+
+prompt_template_version | observations | traces | avg_latency_ms   | total_cost   
+
+------------------------+--------------+--------+------------------+--------------
+pt_2026_04_1            | 2567684      | 812637 | 2020.24981111383 | 461919.549502
+pt_2026_03_2            | 2565390      | 812634 | 2018.82900689564 | 461928.915092
+pt_2026_04_2            | 2563770      | 812963 | 2019.34077861899 | 462417.33216 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q19:
+
+deployment_channel | release_ring | incident_observations | incident_traces | avg_latency_ms  
+
+-------------------+--------------+-----------------------+-----------------+-----------------
+shadow             | stable       | 1575398               | 636558          | 2159.18394208955
+customer_rollout   | canary       | 1541629               | 630812          | 2158.75066893526
+default            | shadow       | 1541274               | 630927          | 2161.21043889665
+shadow             | staging      | 206611                | 124215          | 2153.04422804207
+customer_rollout   | staging      | 202155                | 122395          | 2150.32754074844
+default            | staging      | 201563                | 122293          | 2166.17050748401
+email              | shadow       | 102157                | 93378           | 2166.61884158697
+slack              | canary       | 101804                | 93153           | 2157.45524733802
+shadow             | dev          | 94686                 | 59088           | 2154.67019411529
+default            | dev          | 93319                 | 58593           | 2170.59859192662
+customer_rollout   | dev          | 91922                 | 58109           | 2162.15264028198
+chat_ui            | stable       | 68300                 | 64425           | 2180.63256222548
+email              | staging      | 13321                 | 12839           | 2198.54590496209
+slack              | staging      | 13287                 | 12742           | 2218.02265372168
+chat_ui            | staging      | 9053                  | 8823            | 2187.50524687949
+slack              | dev          | 6071                  | 5860            | 2151.26980728051
+email              | dev          | 5994                  | 5799            | 2127.65465465465
+chat_ui            | dev          | 4103                  | 4008            | 2171.24031196685
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q20:
+
+workflow_variant      | policy_pack     | observations | tenants | avg_latency_ms   | total_cost   
+
+----------------------+-----------------+--------------+---------+------------------+--------------
+tool_first            | default         | 1258589      | 18      | 1377.84461885492 | 176393.941666
+tool_first            | enterprise_safe | 1106182      | 18      | 1515.83255196704 | 150923.112084
+long_context_replay   | cost_guarded    | 1017653      | 18      | 2499.38034772167 | 154857.127062
+tool_first            | cost_guarded    | 901856       | 18      | 1859.98904592307 | 130254.056816
+retrieval_then_reason | enterprise_safe | 645045       | 18      | 1873.71100310831 | 61768.506234 
+long_context_replay   | latency_strict  | 574985       | 18      | 2221.66735306138 | 77845.16719  
+tool_first            | latency_strict  | 572013       | 18      | 1619.097274013   | 81467.655282 
+long_context_replay   | enterprise_safe | 556470       | 18      | 1796.61959494672 | 76979.660676 
+retrieval_then_reason | default         | 448480       | 18      | 1740.71505083839 | 39083.47152  
+long_context_replay   | default         | 417593       | 18      | 1378.97225767673 | 63347.41888  
+retrieval_then_reason | cost_guarded    | 351418       | 18      | 1866.74138490345 | 33778.721776 
+direct_answer         | default         | 251572       | 18      | 1373.10653013849 | 86937.106546 
+direct_answer         | cost_guarded    | 206472       | 18      | 1375.21278430005 | 70982.962986 
+fallback_recovery     | enterprise_safe | 199022       | 18      | 1154.55508436253 | 26050.285084 
+retry_with_backoff    | latency_strict  | 151607       | 18      | 1406.76894866332 | 20266.528728 
+retry_with_backoff    | enterprise_safe | 151212       | 18      | 1448.87302595032 | 20992.243362 
+fallback_recovery     | latency_strict  | 147335       | 18      | 1155.35242813995 | 19394.97085  
+direct_answer         | enterprise_safe | 128284       | 18      | 1372.01043777868 | 44250.798822 
+fallback_recovery     | default         | 105513       | 18      | 1099.66032621573 | 12977.86835  
+retry_with_backoff    | default         | 103768       | 18      | 1402.87142471668 | 13710.29206  
+

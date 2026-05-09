@@ -1,0 +1,63 @@
+{
+  "system": "Elasticsearch",
+  "version": "9.3.0",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-15",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 10000000,
+  "num_loaded_documents": 9996778,
+  "total_size": 25491916673,
+  "result": [
+    [0.853, 0.247, 0.211],
+    [2.353, 1.421, 1.38],
+    [0.037, 0.031, 0.031],
+    [0.033, 0.03, 0.031],
+    [0.585, 0.085, 0.083],
+    [0.517, 0.31, 0.314],
+    [0.866, 0.257, 0.255],
+    [0.662, 0.171, 0.165],
+    [0.266, 0.132, 0.099],
+    [0.371, 0.243, 0.244],
+    [0.825, 0.505, 0.504],
+    [0.338, 0.255, 0.305],
+    [1.492, 0.634, 0.624],
+    [0.267, 0.112, 0.111],
+    [0.444, 0.215, 0.215],
+    [0.221, 0.131, 0.131],
+    [0.049, 0.032, 0.032],
+    [129.678, 128.927, 129.129],
+    [157.312, 157.178, 156.962],
+    [0.34, 0.283, 0.274]
+  ],
+  "load_time": 1430.632,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_10m.count",
+        "field": "num_loaded_documents",
+        "value": 9996778
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.total_size",
+        "field": "total_size",
+        "value": 25491916673
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_10m.load_time",
+        "field": "load_time",
+        "value": 1430.632
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_m6i.8xlarge_agentlog_10m.query_results"
+    }
+  }
+}

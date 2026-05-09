@@ -1,0 +1,34 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "agentlogsbench-openai-seed"
+    },
+    "body": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "count_tokens for a retrieval-heavy incident summary with citations, tool stderr, and a bilingual customer update."
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__count_tokens",
+          "description": "Count tokens for a candidate prompt or conversation body.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "content": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_openai_count_tokens"
+    }
+  }
+}

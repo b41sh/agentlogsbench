@@ -1,0 +1,92 @@
+{
+  "edition": "2026.04-observability-v1",
+  "table_name": "agent_observations",
+  "dynamic_column": "payload",
+  "logical_surface": "single-primary-surface",
+  "promoted_columns": [
+    "event_time",
+    "biz_date",
+    "trace_id",
+    "session_id",
+    "observation_id",
+    "parent_observation_id",
+    "seq_no",
+    "type",
+    "status",
+    "tenant",
+    "app",
+    "environment",
+    "task_category",
+    "trace_archetype",
+    "model",
+    "tool_name",
+    "input",
+    "output",
+    "input_tokens",
+    "output_tokens",
+    "total_cost",
+    "latency_ms"
+  ],
+  "main_track": {
+    "dataset_tier": "M",
+    "query_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "Q17",
+      "Q18",
+      "Q19",
+      "Q20"
+    ],
+    "search_surface": [
+      "input",
+      "output",
+      "payload"
+    ],
+    "leaderboard_requires_all_queries_ok": true
+  },
+  "scoring": {
+    "normalization": "fastest_valid_engine_per_query",
+    "aggregation": "geometric_mean",
+    "published_latency_stat": "median",
+    "incomplete_status_values": [
+      "incorrect",
+      "unsupported",
+      "timeout"
+    ]
+  },
+  "execution_protocol": {
+    "concurrency": 1,
+    "serial_queries": true,
+    "warmup_runs": 1,
+    "measured_runs": 5,
+    "timeout_seconds": 900,
+    "cache_policy": "disable_where_supported",
+    "main_leaderboard_tier": "M",
+    "supporting_tiers": {
+      "S": "ci_and_sanity_only",
+      "L": "appendix_scale_only"
+    }
+  },
+  "fairness": {
+    "allow_generated_nested_indexes": true,
+    "allow_engine_native_nested_mappings": true,
+    "allow_extra_promoted_columns": false,
+    "allow_scored_multi_table_design": false,
+    "allow_hidden_payload_flattening": false,
+    "allow_full_raw_payload_primary_surface": false
+  }
+}

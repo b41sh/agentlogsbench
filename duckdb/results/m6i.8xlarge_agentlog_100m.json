@@ -1,0 +1,72 @@
+{
+  "system": "DuckDB",
+  "version": "1.5.2",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-16",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 100000000,
+  "num_loaded_documents": 99950144,
+  "total_size": 107655737344,
+  "result": [
+    [0.734, 0.112, 0.109],
+    [3.247, 1.089, 1.082],
+    [0.015, 0.003, 0.003],
+    [3.18, 0.742, 0.743],
+    [52.981, 8.853, 8.793],
+    [1.43, 0.64, 0.641],
+    [299.108, 271.855, 282.798],
+    [73.549, 26.942, 27.027],
+    [0.521, 0.374, 0.378],
+    [4855.174, 5056.695, 5058.677],
+    [18.428, 18.845, 19.122],
+    [7414.692, 7415.307, 7389.796],
+    [44.902, 44.623, 44.637],
+    [17.932, 17.842, 17.841],
+    [43.504, 43.563, 43.458],
+    [2533.656, 2562.166, 2546.002],
+    [2486.025, 2516.961, 2503.892],
+    [2524.596, 2534.466, 2613.451],
+    [5379.943, 5374.306, 5402.615],
+    [5576.6, 5574.802, 5590.164]
+  ],
+  "data_size": 107655737344,
+  "index_size": 0,
+  "load_time": 10111,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_100m.count",
+        "field": "num_loaded_documents",
+        "value": 99950144
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.total_size",
+        "field": "total_size",
+        "value": 107655737344
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.data_size",
+        "field": "data_size",
+        "value": 107655737344
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.index_size",
+        "field": "index_size",
+        "value": 0
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.load_time",
+        "field": "load_time",
+        "value": 10111
+      }
+    ]
+  }
+}

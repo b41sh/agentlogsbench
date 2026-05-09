@@ -1,0 +1,72 @@
+{
+  "system": "ClickHouse",
+  "version": "ClickHouse local version 26.2.13.2 (official build).",
+  "os": "Ubuntu 24.04.4 LTS",
+  "date": "2026-04-16",
+  "machine": "m6i.8xlarge, 991gib root",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 100000000,
+  "num_loaded_documents": 99950144,
+  "total_size": 53798872327,
+  "result": [
+    [27.175, 2.351, 2.377],
+    [12.405, 2.599, 2.557],
+    [9.176, 2.307, 2.289],
+    [13.52, 2.411, 2.534],
+    [78.229, 3.631, 3.517],
+    [12.33, 2.479, 2.505],
+    [39.093, 2.904, 2.866],
+    [76.042, 11.396, 11.512],
+    [11.129, 2.421, 2.444],
+    [11.739, 2.448, 2.362],
+    [74.181, 6.481, 6.463],
+    [15.705, 2.66, 2.656],
+    [70.355, 9.364, 9.324],
+    [68.419, 6.266, 6.224],
+    [72.972, 9.607, 9.536],
+    [22.189, 2.715, 2.667],
+    [10.585, 2.306, 2.339],
+    [12.514, 2.719, 2.76],
+    [72.568, 30.816, 29.569],
+    [12.116, 2.592, 2.555]
+  ],
+  "data_size": 46198760483,
+  "index_size": 112646839,
+  "load_time": 2754.753,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "m6i.8xlarge_agentlog_100m.count",
+        "field": "num_loaded_documents",
+        "value": 99950144
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.total_size",
+        "field": "total_size",
+        "value": 53798872327
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.data_size",
+        "field": "data_size",
+        "value": 46198760483
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.index_size",
+        "field": "index_size",
+        "value": 112646839
+      },
+      {
+        "name": "m6i.8xlarge_agentlog_100m.load_time",
+        "field": "load_time",
+        "value": 2754.753
+      }
+    ]
+  }
+}

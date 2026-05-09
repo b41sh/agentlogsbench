@@ -1,0 +1,227 @@
+{
+  "suite": "ai-agent-observation-main-track",
+  "expected_result_contracts_file": "agentlogsbench/common/contracts/query-contracts.json",
+  "query_count": 20,
+  "queries": [
+    {
+      "id": "Q01",
+      "title": "Observation list under common filters",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q01",
+      "contract": "Lists observations filtered by tenant, type, status, and time range, ordered by event_time and seq_no.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q01"
+    },
+    {
+      "id": "Q02",
+      "title": "Trace list with failure and cost summaries",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q02",
+      "contract": "Aggregates observations by trace_id to produce trace-level counts, failure counts, total cost, and total latency.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q02"
+    },
+    {
+      "id": "Q03",
+      "title": "Trace replay ordered by seq_no",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "small_set",
+      "expected_result_contract_id": "Q03",
+      "contract": "Returns the ordered observations for one trace replay target from the primary `agent_observations` surface.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q03"
+    },
+    {
+      "id": "Q04",
+      "title": "Generation and tool chain expansion",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q04",
+      "contract": "Expands parent-child relationships within one trace to show generation-to-tool chains and execution order.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q04"
+    },
+    {
+      "id": "Q05",
+      "title": "Tool failure triage with text relevance",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q05",
+      "contract": "Returns failing tool observations with tenant/app filters and aligned token-based relevance over observation text and nested tool diagnostics.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q05"
+    },
+    {
+      "id": "Q06",
+      "title": "Token, cost, and latency rollup by model and type",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q06",
+      "contract": "Aggregates tokens, cost, and latency by observation type and model.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q06"
+    },
+    {
+      "id": "Q07",
+      "title": "Production-style attr filter across evolving payload",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q07",
+      "contract": "Filters observations using multiple evolving payload.attr dimensions, matching production-style faceted investigation without helper-table flattening.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q07"
+    },
+    {
+      "id": "Q08",
+      "title": "Structured plus term-based text retrieval over observation payload",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q08",
+      "contract": "Combines tenant scoping with aligned token retrieval plus a phrase constraint over input/output and nested tool diagnostics, suitable for text-index-backed execution.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q08"
+    },
+    {
+      "id": "Q09",
+      "title": "Tool usage distribution by name and status",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q09",
+      "contract": "Counts tool observations by tool_name and status across the selected time range.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q09"
+    },
+    {
+      "id": "Q10",
+      "title": "Provider stop reason and cache-hit analysis",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q10",
+      "contract": "Aggregates generation observations by nested payload.provider.stop_reason and payload.provider.cache_hit.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q10"
+    },
+    {
+      "id": "Q11",
+      "title": "App-Scoped Phrase Retrieval Over Incident Observations",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q11",
+      "contract": "Retrieves incident observations for one tenant/app slice using the same aligned token retrieval and phrase constraint over observation text and nested tool diagnostics.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q11"
+    },
+    {
+      "id": "Q12",
+      "title": "Dynamic field facet aggregation over evolving payload dimensions",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q12",
+      "contract": "Aggregates observations by selected payload.attr dimensions such as release ring, customer tier, and retrieval strategy.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q12"
+    },
+    {
+      "id": "Q13",
+      "title": "Operational phrase aggregate over tenant-scoped observations",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q13",
+      "contract": "Counts tenant-scoped operational incident observations and distinct traces when text contains operational phrases such as timeout awaiting headers, retry budget depletion, or transient upstream failure.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q13"
+    },
+    {
+      "id": "Q14",
+      "title": "LIKE-based deployment and rollback keyword retrieval",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q14",
+      "contract": "Retrieves recent generation, tool, and event observations for one tenant/app slice using LIKE-style matching over deployment, rollback, and transient incident keywords.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q14"
+    },
+    {
+      "id": "Q15",
+      "title": "Phrase retrieval over transient failure and timeout incidents",
+      "category": "retrieval",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q15",
+      "contract": "Retrieves tenant-scoped observations containing common operational incident phrases such as transient upstream failure, retry budget depletion, and connector timeout.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q15"
+    },
+    {
+      "id": "Q16",
+      "title": "Low-cardinality dynamic field multi-filter",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q16",
+      "contract": "Filters production observations with low-cardinality payload.attr dimensions such as release ring, customer tier, and traffic cluster.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q16"
+    },
+    {
+      "id": "Q17",
+      "title": "High-cardinality request-key filter over dynamic payload",
+      "category": "semi_structured",
+      "main_track": true,
+      "result_kind": "sample_rows",
+      "expected_result_contract_id": "Q17",
+      "contract": "Retrieves one request slice by filtering on the high-cardinality payload.attr.request_key while also checking workflow_variant in the evolving payload.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q17"
+    },
+    {
+      "id": "Q18",
+      "title": "Prompt template version performance rollup",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q18",
+      "contract": "Aggregates observations by payload.attr.prompt_template_version to compare trace coverage, latency, and cost across prompt template revisions.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q18"
+    },
+    {
+      "id": "Q19",
+      "title": "Incident rollup by deployment channel and release ring",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q19",
+      "contract": "Aggregates error-, timeout-, or retry-like observations by payload.attr.deployment_channel and payload.attr.release_ring.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q19"
+    },
+    {
+      "id": "Q20",
+      "title": "Workflow variant and policy pack operational rollup",
+      "category": "analytics",
+      "main_track": true,
+      "result_kind": "aggregate_rows",
+      "expected_result_contract_id": "Q20",
+      "contract": "Aggregates observations by payload.attr.workflow_variant and payload.attr.policy_pack to compare tenant breadth, latency, and cost.",
+      "canonical_sql_file": "agentlogsbench/common/queries/queries.sql",
+      "canonical_sql_section": "Q20"
+    }
+  ]
+}

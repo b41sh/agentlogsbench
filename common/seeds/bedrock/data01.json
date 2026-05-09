@@ -1,0 +1,65 @@
+{
+  "request": {
+    "headers": {
+      "content-type": "application/json",
+      "user-agent": "agentlogsbench-bedrock-seed"
+    },
+    "body": {
+      "system": "You are a workflow analyst. Preserve the causal chain between retrieval, tool execution, and the final operator decision.",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Review the guardrail escalation trace. Keep the causal chain, the policy evidence, and the operator handoff intact while removing redundant boilerplate."
+            },
+            {
+              "type": "thinking",
+              "thinking": "I should separate the guardrail trigger from the downstream workflow impact, then cite the policy evidence and the operator handoff state."
+            }
+          ]
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "tool_result",
+              "tool_use_id": "toolu_bedrock_00",
+              "content": "runbook fetch returned policy tier=enterprise_safe, escalation lane=security-review, operator_ack=true, and one stale artifact warning."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "mcp__matrix__eval_trace",
+          "description": "Evaluate a trace or answer quality and emit rubric scores.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "trace_id": {"type": "string"},
+              "rubric": {"type": "string"}
+            }
+          }
+        },
+        {
+          "name": "mcp__matrix__artifact_extract_pdf",
+          "description": "Extract key fields from an artifact such as a PDF incident report or spec.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "target": {"type": "string"}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "response": {
+    "headers": {
+      "content-type": "application/json",
+      "x-response-id": "resp_bedrock_messages"
+    }
+  }
+}

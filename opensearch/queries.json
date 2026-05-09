@@ -1,0 +1,558 @@
+{
+  "queries": [
+    {
+      "id": "Q01",
+      "label": "Q01: observation list",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"range": {"biz_date": {"gte": "__START_DATE__", "lte": "__END_DATE__"}}},
+              {"terms": {"type": ["GENERATION", "TOOL"]}},
+              {"terms": {"status": ["ok", "error"]}}
+            ]
+          }
+        },
+        "sort": [{"event_time": "desc"}, {"seq_no": "desc"}],
+        "_source": ["event_time", "trace_id", "observation_id", "seq_no", "type", "status", "model", "tool_name", "latency_ms"]
+      }
+    },
+    {
+      "id": "Q02",
+      "label": "Q02: trace list",
+      "body": {
+        "size": 0,
+        "query": {"range": {"biz_date": {"gte": "__START_DATE__", "lte": "__END_DATE__"}}},
+        "aggs": {
+          "trace_id": {
+            "terms": {"field": "trace_id", "size": 1000, "shard_size": 5000, "order": {"total_cost": "desc"}},
+            "aggs": {
+              "started_at": {"min": {"field": "event_time", "format": "yyyy-MM-dd HH:mm:ss"}},
+              "failure_count": {"filter": {"bool": {"must_not": [{"term": {"status": "ok"}}]}}},
+              "total_cost": {"sum": {"field": "total_cost"}},
+              "total_latency_ms": {"sum": {"field": "latency_ms"}}
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q03",
+      "label": "Q03: trace replay",
+      "body": {
+        "size": 100,
+        "query": {"term": {"trace_id": "__TRACE_ID__"}},
+        "sort": [{"seq_no": "asc"}],
+        "_source": ["trace_id", "seq_no", "type", "status", "model", "tool_name", "input", "output"]
+      }
+    },
+    {
+      "id": "Q04",
+      "label": "Q04: trace-local chain fetch approximation",
+      "body": {
+        "size": 200,
+        "query": {"term": {"trace_id": "__TRACE_ID__"}},
+        "sort": [{"seq_no": "asc"}],
+        "_source": ["trace_id", "seq_no", "observation_id", "parent_observation_id", "type", "status", "tool_name"]
+      }
+    },
+    {
+      "id": "Q05",
+      "label": "Q05: tool failure triage with text relevance",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"type": "TOOL"}},
+              {"term": {"status": "error"}},
+              {"term": {"tenant": "__TENANT__"}},
+              {"term": {"app": "__APP__"}}
+            ],
+            "must": [
+              {
+                "multi_match": {
+                  "query": "unable open",
+                  "fields": ["input", "output"],
+                  "type": "cross_fields",
+                  "operator": "and"
+                }
+              }
+            ]
+          }
+        },
+        "sort": [
+          {"latency_ms": "desc"},
+          {"event_time": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "tool_name", "latency_ms", "payload", "input", "output"]
+      }
+    },
+    {
+      "id": "Q06",
+      "label": "Q06: model type rollup",
+      "body": {
+        "size": 0,
+        "aggs": {
+          "type": {
+            "terms": {"field": "type", "size": 50},
+            "aggs": {
+              "model": {
+                "terms": {"field": "model", "size": 50},
+                "aggs": {
+                  "input_tokens": {"sum": {"field": "input_tokens"}},
+                  "output_tokens": {"sum": {"field": "output_tokens"}},
+                  "total_cost": {"sum": {"field": "total_cost"}},
+                  "avg_latency_ms": {"avg": {"field": "latency_ms"}}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q07",
+      "label": "Q07: attr filter",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"environment": "prod"}},
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL"]}},
+              {"terms": {"payload.attr.release_ring": ["stable", "canary"]}},
+              {"terms": {"payload.attr.retrieval_strategy": ["hybrid", "hybrid_rerank"]}},
+              {"terms": {"payload.attr.surface": ["api", "workflow_runner"]}},
+              {"terms": {"payload.attr.prompt_template_version": ["pt_2026_03_2", "pt_2026_04_1", "pt_2026_04_2"]}}
+            ]
+          }
+        },
+        "sort": [
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "payload"]
+      }
+    },
+    {
+      "id": "Q08",
+      "label": "Q08: term-based text retrieval",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}}
+            ],
+            "must": [
+              {
+                "multi_match": {
+                  "query": "unable open",
+                  "fields": ["input", "output"],
+                  "type": "cross_fields",
+                  "operator": "and"
+                }
+              },
+              {
+                "multi_match": {
+                  "query": "unable to open",
+                  "fields": ["input", "output"],
+                  "type": "phrase"
+                }
+              }
+            ],
+            "must_not": []
+          }
+        },
+        "sort": [
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "highlight": {
+          "fields": {
+            "input": {},
+            "output": {}
+          }
+        },
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "input", "output", "payload"]
+      }
+    },
+    {
+      "id": "Q09",
+      "label": "Q09: tool usage distribution",
+      "body": {
+        "size": 0,
+        "query": {"term": {"type": "TOOL"}},
+        "aggs": {
+          "tool_name": {
+            "terms": {"field": "tool_name", "size": 100},
+            "aggs": {
+              "status": {
+                "terms": {"field": "status", "size": 10},
+                "aggs": {
+                  "avg_latency_ms": {"avg": {"field": "latency_ms"}}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q10",
+      "label": "Q10: provider diagnostics",
+      "body": {
+        "size": 0,
+        "query": {"term": {"type": "GENERATION"}},
+        "aggs": {
+          "stop_reason": {
+            "terms": {"field": "payload.provider.stop_reason", "size": 20},
+            "aggs": {
+              "cache_hit": {
+                "terms": {"field": "payload.provider.cache_hit", "size": 2},
+                "aggs": {
+                  "avg_latency_ms": {"avg": {"field": "latency_ms"}}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q11",
+      "label": "Q11: app-scoped phrase retrieval",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"term": {"app": "__APP__"}},
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL"]}}
+            ],
+            "must": [
+              {
+                "multi_match": {
+                  "query": "unable open",
+                  "fields": ["input", "output"],
+                  "type": "cross_fields",
+                  "operator": "and"
+                }
+              },
+              {
+                "multi_match": {
+                  "query": "unable to open",
+                  "fields": ["input", "output"],
+                  "type": "phrase"
+                }
+              }
+            ]
+          }
+        },
+        "sort": [
+          {"latency_ms": "desc"},
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "tool_name", "latency_ms", "input", "output", "payload"]
+      }
+    },
+    {
+      "id": "Q12",
+      "label": "Q12: attr facet aggregation",
+      "body": {
+        "size": 0,
+        "query": {
+          "terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL"]}
+        },
+        "aggs": {
+          "release_ring": {
+            "terms": {"field": "payload.attr.release_ring", "size": 10},
+            "aggs": {
+              "customer_tier": {
+                "terms": {"field": "payload.attr.customer_tier", "size": 10},
+                "aggs": {
+                  "retrieval_strategy": {
+                    "terms": {"field": "payload.attr.retrieval_strategy", "size": 10},
+                    "aggs": {
+                      "avg_latency_ms": {"avg": {"field": "latency_ms"}},
+                      "total_cost": {"sum": {"field": "total_cost"}}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q13",
+      "label": "Q13: operational phrase aggregate",
+      "body": {
+        "size": 0,
+        "track_total_hits": true,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"range": {"biz_date": {"gte": "__START_DATE__", "lte": "__END_DATE__"}}},
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL", "EVENT"]}}
+            ],
+            "must": [
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "multi_match": {
+                        "query": "timeout awaiting headers",
+                        "fields": ["input", "output"],
+                        "type": "phrase"
+                      }
+                    },
+                    {
+                      "multi_match": {
+                        "query": "retry budget depleted",
+                        "fields": ["input", "output"],
+                        "type": "phrase"
+                      }
+                    },
+                    {
+                      "multi_match": {
+                        "query": "transient upstream failure",
+                        "fields": ["input", "output"],
+                        "type": "phrase"
+                      }
+                    }
+                  ],
+                  "minimum_should_match": 1
+                }
+              }
+            ]
+          }
+        },
+        "aggs": {
+          "traces": {"cardinality": {"field": "trace_id", "precision_threshold": 40000}},
+          "last_event_time": {"max": {"field": "event_time", "format": "yyyy-MM-dd HH:mm:ss"}}
+        }
+      }
+    },
+    {
+      "id": "Q14",
+      "label": "Q14: like-style keyword retrieval",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"term": {"app": "__APP__"}},
+              {"terms": {"type": ["GENERATION", "TOOL", "EVENT"]}}
+            ],
+            "must": [
+              {
+                "bool": {
+                  "should": [
+                    {"match": {"input": {"query": "deployment"}}},
+                    {"match": {"output": {"query": "deployment"}}},
+                    {"match": {"input": {"query": "rollback"}}},
+                    {"match": {"output": {"query": "rollback"}}},
+                    {"match": {"output": {"query": "transient"}}}
+                  ],
+                  "minimum_should_match": 1
+                }
+              }
+            ]
+          }
+        },
+        "sort": [
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "tool_name", "output"]
+      }
+    },
+    {
+      "id": "Q15",
+      "label": "Q15: operational phrase retrieval",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL", "EVENT"]}}
+            ],
+            "should": [
+              {
+                "multi_match": {
+                  "query": "transient upstream failure",
+                  "fields": ["input", "output"],
+                  "type": "phrase"
+                }
+              },
+              {
+                "multi_match": {
+                  "query": "retry budget depleted",
+                  "fields": ["input", "output"],
+                  "type": "phrase"
+                }
+              },
+              {
+                "multi_match": {
+                  "query": "connector timeout",
+                  "fields": ["input", "output"],
+                  "type": "phrase"
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        },
+        "sort": [
+          {"latency_ms": "desc"},
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "tool_name", "latency_ms"]
+      }
+    },
+    {
+      "id": "Q16",
+      "label": "Q16: low-cardinality attr filter",
+      "body": {
+        "size": 50,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"term": {"environment": "prod"}},
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL"]}},
+              {"term": {"payload.attr.release_ring": "__RELEASE_RING__"}},
+              {"term": {"payload.attr.customer_tier": "__CUSTOMER_TIER__"}},
+              {"term": {"payload.attr.traffic_cluster": "__TRAFFIC_CLUSTER__"}}
+            ]
+          }
+        },
+        "sort": [
+          {"event_time": "desc"},
+          {"trace_id": "desc"},
+          {"observation_id": "desc"}
+        ],
+        "_source": ["event_time", "trace_id", "observation_id", "type", "status", "payload"]
+      }
+    },
+    {
+      "id": "Q17",
+      "label": "Q17: high-cardinality request filter",
+      "body": {
+        "size": 100,
+        "query": {
+          "bool": {
+            "filter": [
+              {"term": {"tenant": "__TENANT__"}},
+              {"term": {"payload.attr.request_key": "__REQUEST_KEY__"}},
+              {"term": {"payload.attr.workflow_variant": "__WORKFLOW_VARIANT__"}}
+            ]
+          }
+        },
+        "sort": [
+          {"seq_no": "asc"},
+          {"observation_id": "asc"}
+        ],
+        "_source": ["trace_id", "observation_id", "seq_no", "type", "status", "payload"]
+      }
+    },
+    {
+      "id": "Q18",
+      "label": "Q18: prompt template rollup",
+      "body": {
+        "size": 0,
+        "query": {
+          "terms": {"type": ["GENERATION", "REASONING", "TOOL"]}
+        },
+        "aggs": {
+          "prompt_template_version": {
+            "terms": {"field": "payload.attr.prompt_template_version", "size": 20},
+            "aggs": {
+              "traces": {"cardinality": {"field": "trace_id", "precision_threshold": 40000}},
+              "avg_latency_ms": {"avg": {"field": "latency_ms"}},
+              "total_cost": {"sum": {"field": "total_cost"}}
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q19",
+      "label": "Q19: incident rollup by deployment channel",
+      "body": {
+        "size": 0,
+        "query": {
+          "bool": {
+            "filter": [
+              {"terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL", "EVENT"]}}
+            ],
+            "must": [
+              {
+                "multi_match": {
+                  "query": "error timeout retry",
+                  "fields": ["input", "output"],
+                  "operator": "or"
+                }
+              }
+            ]
+          }
+        },
+        "aggs": {
+          "deployment_channel": {
+            "terms": {"field": "payload.attr.deployment_channel", "size": 10},
+            "aggs": {
+              "release_ring": {
+                "terms": {"field": "payload.attr.release_ring", "size": 10},
+                "aggs": {
+                  "incident_traces": {"cardinality": {"field": "trace_id", "precision_threshold": 40000}},
+                  "avg_latency_ms": {"avg": {"field": "latency_ms"}}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Q20",
+      "label": "Q20: workflow policy rollup",
+      "body": {
+        "size": 0,
+        "query": {
+          "terms": {"type": ["GENERATION", "TOOL", "RETRIEVAL", "REASONING"]}
+        },
+        "aggs": {
+          "workflow_variant": {
+            "terms": {"field": "payload.attr.workflow_variant", "size": 20},
+            "aggs": {
+              "policy_pack": {
+                "terms": {"field": "payload.attr.policy_pack", "size": 10},
+                "aggs": {
+                  "tenants": {"cardinality": {"field": "tenant", "precision_threshold": 40000}},
+                  "avg_latency_ms": {"avg": {"field": "latency_ms"}},
+                  "total_cost": {"sum": {"field": "total_cost"}}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "tenant": "tenant_005",
+  "app": "app_002",
+  "trace_id": "trace_000013_78e32ddd",
+  "release_ring": "canary",
+  "customer_tier": "pro",
+  "traffic_cluster": "cluster_d",
+  "request_key": "req_000026_05c6d662",
+  "workflow_variant": "direct_answer",
+  "start_date": "2026-03-17",
+  "end_date": "2027-03-20"
+}

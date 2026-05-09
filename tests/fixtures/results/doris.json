@@ -1,0 +1,359 @@
+{
+  "dataset_tier": "M",
+  "edition": "2026.04-observability-v1",
+  "engine": "doris",
+  "query_results": [
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q01",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        100,
+        98,
+        101,
+        99,
+        100
+      ],
+      "query_id": "Q01",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q02",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        110,
+        111,
+        109,
+        108,
+        112
+      ],
+      "query_id": "Q02",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q03",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        120,
+        122,
+        119,
+        121,
+        118
+      ],
+      "query_id": "Q03",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q04",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        130,
+        128,
+        131,
+        129,
+        130
+      ],
+      "query_id": "Q04",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q05",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        140,
+        141,
+        139,
+        142,
+        138
+      ],
+      "query_id": "Q05",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q06",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        150,
+        148,
+        151,
+        149,
+        150
+      ],
+      "query_id": "Q06",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q07",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        160,
+        159,
+        161,
+        158,
+        160
+      ],
+      "query_id": "Q07",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q08",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        170,
+        172,
+        168,
+        171,
+        169
+      ],
+      "query_id": "Q08",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q09",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        180,
+        182,
+        179,
+        181,
+        178
+      ],
+      "query_id": "Q09",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q10",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        190,
+        188,
+        191,
+        189,
+        190
+      ],
+      "query_id": "Q10",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q11",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        200,
+        201,
+        199,
+        198,
+        202
+      ],
+      "query_id": "Q11",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q12",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [
+        210,
+        212,
+        209,
+        211,
+        208
+      ],
+      "query_id": "Q12",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q13",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [220, 219, 221, 218, 220],
+      "query_id": "Q13",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q14",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [230, 231, 229, 232, 228],
+      "query_id": "Q14",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q15",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [240, 238, 241, 239, 240],
+      "query_id": "Q15",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q16",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [250, 251, 249, 252, 248],
+      "query_id": "Q16",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q17",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [260, 259, 261, 258, 260],
+      "query_id": "Q17",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q18",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [270, 271, 269, 272, 268],
+      "query_id": "Q18",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q19",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [280, 278, 281, 279, 280],
+      "query_id": "Q19",
+      "status": "ok"
+    },
+    {
+      "contract_verification": {
+        "assertion_keys_checked": [
+          "must_include_fields",
+          "tolerance"
+        ],
+        "contract_id": "Q20",
+        "fixture_dataset": "fixture-mini-observation-v1"
+      },
+      "latency_ms_runs": [290, 291, 289, 292, 288],
+      "query_id": "Q20",
+      "status": "ok"
+    }
+  ],
+  "run_metadata": {
+    "config_fingerprint": "cfg-doris-fixture",
+    "dataset_version": "fixture-mini-observability-v1",
+    "engine_version": "doris-fixture-1.0",
+    "index_config_fingerprint": "idx-doris-fixture",
+    "query_adapter_version": "2",
+    "execution_mode": "fixture",
+    "run_timestamp": "2026-04-11T15:00:00Z"
+  },
+  "run_protocol": {
+    "cache_policy": "disable_where_supported",
+    "measured_runs": 5,
+    "timeout_seconds": 900,
+    "warmup_runs": 1
+  },
+  "secondary_metrics": {
+    "index_build_ms": 18000,
+    "ingest_ms": 120000,
+    "storage_bytes": 640000000
+  }
+}
