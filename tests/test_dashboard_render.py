@@ -122,10 +122,13 @@ class DashboardRenderTest(unittest.TestCase):
             self.assertEqual(len(query_catalog), 2)
             self.assertEqual(dataset_sizes, [{"value": 1_000_000, "label": "1M"}])
             self.assertEqual(len(results), 1)
-            self.assertEqual(results[0]["source"], "clickhouse/results/demo.json")
+            self.assertEqual(
+                results[0]["source"],
+                "https://github.com/velodb/agentlogsbench/blob/main/clickhouse/results/demo.json",
+            )
             self.assertEqual(
                 results[0]["query_results_source"],
-                "clickhouse/results/_query_results/_demo.query_results",
+                "https://github.com/velodb/agentlogsbench/blob/main/clickhouse/results/_query_results/_demo.query_results",
             )
             self.assertEqual(results[0]["cluster_size"], 1)
             self.assertEqual(results[0]["proprietary"], "no")

@@ -24,6 +24,7 @@ ENGINE_DEFAULT_TAGS = {
 }
 
 REQUIRED_RESULT_TRIES = 3
+GITHUB_BLOB_BASE_URL = "https://github.com/velodb/agentlogsbench/blob/main"
 
 
 def format_dataset_size_label(dataset_size: int) -> str:
@@ -113,6 +114,10 @@ def _normalized_tags(engine: str, value: Any) -> list[str]:
     return tags if tags else ENGINE_DEFAULT_TAGS.get(engine, [engine])
 
 
+def github_blob_url(relative_path: str) -> str:
+    return f"{GITHUB_BLOB_BASE_URL}/{relative_path}"
+
+
 def normalize_dashboard_record(root: Path, path: Path, query_count: int) -> dict[str, Any] | None:
     payload = read_json(path)
     engine = path.parent.parent.name
@@ -139,7 +144,7 @@ def normalize_dashboard_record(root: Path, path: Path, query_count: int) -> dict
     if isinstance(query_results_relative, str) and query_results_relative:
         query_results_path = path.parent / query_results_relative
         if query_results_path.exists():
-            query_results_source = query_results_path.relative_to(root).as_posix()
+            query_results_source = github_blob_url(query_results_path.relative_to(root).as_posix())
 
     storage_bytes = _number_or_none(payload.get("total_size"))
     data_size = _number_or_none(payload.get("data_size"))
@@ -170,7 +175,7 @@ def normalize_dashboard_record(root: Path, path: Path, query_count: int) -> dict
         "version": payload.get("version"),
         "os": payload.get("os"),
         "result": result,
-        "source": source,
+        "source": github_blob_url(source),
         "query_results_source": query_results_source,
     }
 
