@@ -1047,13 +1047,15 @@ function render() {
         td_checkbox.appendChild(checkbox);
         tr.appendChild(td_checkbox);
 
+        const queryDisplayId = queryCatalogData[query_num]?.id || `Q${query_num + 1}`;
+
         let td_query_num = document.createElement('td');
         td_query_num.className = 'note';
-        td_query_num.appendChild(document.createTextNode(`Q${query_num}. `));
+        td_query_num.appendChild(document.createTextNode(`${queryDisplayId}. `));
 
         let tooltip = document.createElement('span');
         tooltip.className = 'tooltip tooltip-query';
-        tooltip.appendChild(document.createTextNode(`Query ${query_num}: ${queries[query_num] || ''}`));
+        tooltip.appendChild(document.createTextNode(`${queryDisplayId}: ${queries[query_num] || ''}`));
         td_query_num.appendChild(tooltip);
 
         tr.appendChild(td_query_num);
