@@ -187,7 +187,7 @@ class JsonBenchResultLayoutTest(unittest.TestCase):
         self.assertIn("artifact_manifest", readme)
         self.assertNotIn("Result sidecars such as", readme)
 
-        for engine in ("clickhouse", "doris", "duckdb", "postgres", "elastic", "opensearch"):
+        for engine in ("clickhouse", "doris", "duckdb", "postgres", "elastic", "opensearch", "databend"):
             content = (root / engine / "README.md").read_text(encoding="utf-8")
             self.assertIn("fold temporary metric files into the final JSON", content)
 

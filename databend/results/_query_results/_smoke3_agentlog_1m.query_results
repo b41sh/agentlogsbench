@@ -1,0 +1,418 @@
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q01:
+
+event_time                | trace_id              | observation_id                            | seq_no | type       | status | model           | tool_name                    | latency_ms
+
+--------------------------+-----------------------+-------------------------------------------+--------+------------+--------+-----------------+------------------------------+-----------
+2026-03-23 16:35:02+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000006_f0e6e01a | 6      | TOOL       | ok     | general-large   | mcp__matrix__web_search      | 3584      
+2026-03-23 16:35:00+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000004_a99e7fcb | 4      | GENERATION | ok     | general-large   | null                         | 3425      
+2026-03-23 16:21:02+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000003_3f74949f | 3      | TOOL       | ok     | coder-large     | mcp__matrix__memory_upsert   | 2968      
+2026-03-23 16:21:00+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000001_4fb2fb66 | 1      | GENERATION | ok     | coder-large     | null                         | 2925      
+2026-03-22 19:03:04+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000006_f874a8c7 | 6      | TOOL       | ok     | coder-large     | mcp__matrix__browser_get_dom | 574       
+2026-03-22 19:03:02+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000004_5bf225d5 | 4      | TOOL       | ok     | coder-large     | mcp__matrix__fetch_runbook   | 570       
+2026-03-22 19:03:00+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000002_d65394b3 | 2      | GENERATION | ok     | coder-large     | null                         | 1017      
+2026-03-17 21:35:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000016_fd6fcc9e | 16     | TOOL       | ok     | search-lite     | mcp__matrix__read_file       | 6006      
+2026-03-17 21:35:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000014_a20e7478 | 14     | GENERATION | ok     | search-lite     | null                         | 5902      
+2026-03-17 21:24:06+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000012_10cbfebc | 12     | TOOL       | ok     | reasoning-large | mcp__matrix__rerank_results  | 2063      
+2026-03-17 21:24:04+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000010_c255e58e | 10     | TOOL       | ok     | reasoning-large | mcp__matrix__vector_search   | 2040      
+2026-03-17 21:24:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000008_ebe199e6 | 8      | TOOL       | ok     | reasoning-large | mcp__matrix__browser_get_dom | 2121      
+2026-03-17 21:24:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000006_0c6d4540 | 6      | GENERATION | ok     | reasoning-large | null                         | 5858      
+2026-03-17 21:20:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000004_c47a601f | 4      | TOOL       | ok     | coder-medium    | mcp__matrix__vector_search   | 8063      
+2026-03-17 21:20:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000002_84e62ce7 | 2      | GENERATION | ok     | coder-medium    | null                         | 8004      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q02:
+
+trace_id              | started_at                | observation_count | failure_count | total_cost         | total_latency_ms
+
+----------------------+---------------------------+-------------------+---------------+--------------------+-----------------
+trace_000001_f1dff375 | 2026-03-17 21:03:00+00:00 | 16                | 0             | 3.86231            | 42313           
+trace_000018_a9314085 | 2026-03-22 18:57:00+00:00 | 14                | 2             | 3.416196           | 21635           
+trace_000017_f6b1f8af | 2026-03-21 11:47:00+00:00 | 28                | 0             | 2.975434           | 24924           
+trace_000010_648da0cb | 2026-03-22 18:01:00+00:00 | 9                 | 0             | 1.943112           | 13806           
+trace_000007_d9b27903 | 2026-03-19 14:37:00+00:00 | 4                 | 0             | 1.4139940000000002 | 3578            
+trace_000008_9ba35d69 | 2026-03-20 12:50:00+00:00 | 9                 | 0             | 1.413672           | 4428            
+trace_000015_f506eeaa | 2026-03-23 16:21:00+00:00 | 7                 | 0             | 1.413174           | 13440           
+trace_000019_55f7a48c | 2026-03-23 03:09:00+00:00 | 15                | 0             | 1.3116759999999998 | 14150           
+trace_000004_bac91534 | 2026-03-20 04:48:00+00:00 | 6                 | 0             | 1.234656           | 11343           
+trace_000016_dc243213 | 2026-03-20 11:18:00+00:00 | 5                 | 0             | 1.2336319999999998 | 3900            
+trace_000012_4f2ebaa2 | 2026-03-20 04:42:00+00:00 | 5                 | 0             | 1.2258280000000001 | 18859           
+trace_000003_feb9ad62 | 2026-03-19 13:42:00+00:00 | 9                 | 0             | 1.119912           | 13999           
+trace_000011_32fa7769 | 2026-03-19 15:17:00+00:00 | 13                | 10            | 0.93523            | 25692           
+trace_000005_933ef881 | 2026-03-21 00:57:00+00:00 | 6                 | 0             | 0.7048840000000001 | 8583            
+trace_000020_e6cdb6cc | 2026-03-24 13:15:00+00:00 | 8                 | 8             | 0.63218            | 17286           
+trace_000009_2521c0d9 | 2026-03-21 08:48:00+00:00 | 10                | 0             | 0.59927            | 9624            
+trace_000014_fa436bfb | 2026-03-22 18:52:00+00:00 | 7                 | 0             | 0.178558           | 2793            
+trace_000013_78e32ddd | 2026-03-21 09:40:00+00:00 | 3                 | 3             | 0.16868            | 7090            
+trace_000006_878f5c7e | 2026-03-18 11:20:00+00:00 | 2                 | 0             | 0.0                | 1437            
+trace_000002_cd9e03b6 | 2026-03-18 06:21:00+00:00 | 1                 | 0             | 0.0                | 703             
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q03:
+
+trace_id              | seq_no | type           | status | model           | tool_name                   
+
+----------------------+--------+----------------+--------+-----------------+-----------------------------
+trace_000001_f1dff375 | 1      | TOKEN_ESTIMATE | ok     | reasoning-large | null                        
+trace_000001_f1dff375 | 2      | GENERATION     | ok     | coder-medium    | null                        
+trace_000001_f1dff375 | 3      | REASONING      | ok     | coder-medium    | null                        
+trace_000001_f1dff375 | 4      | TOOL           | ok     | coder-medium    | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 5      | RETRIEVAL      | ok     | coder-medium    | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 6      | GENERATION     | ok     | reasoning-large | null                        
+trace_000001_f1dff375 | 7      | REASONING      | ok     | reasoning-large | null                        
+trace_000001_f1dff375 | 8      | TOOL           | ok     | reasoning-large | mcp__matrix__browser_get_dom
+trace_000001_f1dff375 | 9      | RETRIEVAL      | ok     | reasoning-large | mcp__matrix__browser_get_dom
+trace_000001_f1dff375 | 10     | TOOL           | ok     | reasoning-large | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 11     | RETRIEVAL      | ok     | reasoning-large | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 12     | TOOL           | ok     | reasoning-large | mcp__matrix__rerank_results 
+trace_000001_f1dff375 | 13     | RETRIEVAL      | ok     | reasoning-large | mcp__matrix__rerank_results 
+trace_000001_f1dff375 | 14     | GENERATION     | ok     | search-lite     | null                        
+trace_000001_f1dff375 | 15     | REASONING      | ok     | search-lite     | null                        
+trace_000001_f1dff375 | 16     | TOOL           | ok     | search-lite     | mcp__matrix__read_file      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q04:
+
+trace_id              | seq_no | observation_id                            | parent_observation_id                     | type           | status | tool_name                   
+
+----------------------+--------+-------------------------------------------+-------------------------------------------+----------------+--------+-----------------------------
+trace_000001_f1dff375 | 1      | obs_trace_000001_f1dff375_000001_c1e4ef51 | null                                      | TOKEN_ESTIMATE | ok     | null                        
+trace_000001_f1dff375 | 2      | obs_trace_000001_f1dff375_000002_84e62ce7 | null                                      | GENERATION     | ok     | null                        
+trace_000001_f1dff375 | 3      | obs_trace_000001_f1dff375_000003_207da324 | obs_trace_000001_f1dff375_000002_84e62ce7 | REASONING      | ok     | null                        
+trace_000001_f1dff375 | 4      | obs_trace_000001_f1dff375_000004_c47a601f | obs_trace_000001_f1dff375_000002_84e62ce7 | TOOL           | ok     | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 5      | obs_trace_000001_f1dff375_000005_2b5a1367 | obs_trace_000001_f1dff375_000004_c47a601f | RETRIEVAL      | ok     | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 6      | obs_trace_000001_f1dff375_000006_0c6d4540 | null                                      | GENERATION     | ok     | null                        
+trace_000001_f1dff375 | 7      | obs_trace_000001_f1dff375_000007_e0771614 | obs_trace_000001_f1dff375_000006_0c6d4540 | REASONING      | ok     | null                        
+trace_000001_f1dff375 | 8      | obs_trace_000001_f1dff375_000008_ebe199e6 | obs_trace_000001_f1dff375_000006_0c6d4540 | TOOL           | ok     | mcp__matrix__browser_get_dom
+trace_000001_f1dff375 | 9      | obs_trace_000001_f1dff375_000009_34ab1082 | obs_trace_000001_f1dff375_000008_ebe199e6 | RETRIEVAL      | ok     | mcp__matrix__browser_get_dom
+trace_000001_f1dff375 | 10     | obs_trace_000001_f1dff375_000010_c255e58e | obs_trace_000001_f1dff375_000006_0c6d4540 | TOOL           | ok     | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 11     | obs_trace_000001_f1dff375_000011_fe24992f | obs_trace_000001_f1dff375_000010_c255e58e | RETRIEVAL      | ok     | mcp__matrix__vector_search  
+trace_000001_f1dff375 | 12     | obs_trace_000001_f1dff375_000012_10cbfebc | obs_trace_000001_f1dff375_000006_0c6d4540 | TOOL           | ok     | mcp__matrix__rerank_results 
+trace_000001_f1dff375 | 13     | obs_trace_000001_f1dff375_000013_e789a66e | obs_trace_000001_f1dff375_000012_10cbfebc | RETRIEVAL      | ok     | mcp__matrix__rerank_results 
+trace_000001_f1dff375 | 14     | obs_trace_000001_f1dff375_000014_a20e7478 | null                                      | GENERATION     | ok     | null                        
+trace_000001_f1dff375 | 15     | obs_trace_000001_f1dff375_000015_c9769a97 | obs_trace_000001_f1dff375_000014_a20e7478 | REASONING      | ok     | null                        
+trace_000001_f1dff375 | 16     | obs_trace_000001_f1dff375_000016_fd6fcc9e | obs_trace_000001_f1dff375_000014_a20e7478 | TOOL           | ok     | mcp__matrix__read_file      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q05:
+
+event_time | trace_id | observation_id | tool_name | latency_ms
+
+-----------+----------+----------------+-----------+-----------
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q06:
+
+type           | model            | observations | input_tokens | output_tokens | total_cost            | avg_latency_ms    
+
+---------------+------------------+--------------+--------------+---------------+-----------------------+-------------------
+GENERATION     | coder-large      | 14           | 634593       | 226837        | 8.6143                | 2679.3571428571427
+GENERATION     | reasoning-medium | 9            | 396689       | 133417        | 5.301059999999999     | 2494.4444444444443
+GENERATION     | coder-medium     | 4            | 380941       | 147343        | 5.28284               | 4627.5            
+GENERATION     | search-lite      | 4            | 160492       | 52038         | 2.1253                | 5569.75           
+GENERATION     | reasoning-large  | 4            | 144401       | 57758         | 2.0215899999999998    | 3258.0            
+GENERATION     | general-medium   | 3            | 110461       | 44183         | 1.54644               | 3213.6666666666665
+GENERATION     | general-large    | 2            | 63351        | 25340         | 0.8869100000000001    | 3581.5            
+REASONING      | coder-large      | 12           | 0            | 701           | 0.0014020000000000003 | 43.833333333333336
+REASONING      | reasoning-medium | 7            | 0            | 407           | 0.000814              | 43.42857142857143 
+REASONING      | reasoning-large  | 4            | 0            | 225           | 0.00045               | 42.0              
+REASONING      | general-medium   | 3            | 0            | 176           | 0.000352              | 44.0              
+REASONING      | coder-medium     | 3            | 0            | 175           | 0.00035               | 43.666666666666664
+REASONING      | search-lite      | 3            | 0            | 172           | 0.000344              | 42.666666666666664
+REASONING      | general-large    | 2            | 0            | 123           | 0.000246              | 46.5              
+TOOL           | coder-medium     | 3            | 0            | 0             | 0.0                   | 4293.0            
+TOOL           | search-lite      | 8            | 0            | 0             | 0.0                   | 2837.375          
+TOOL           | general-large    | 3            | 0            | 0             | 0.0                   | 2494.0            
+TOOL           | general-medium   | 3            | 0            | 0             | 0.0                   | 1836.0            
+TOOL           | reasoning-medium | 11           | 0            | 0             | 0.0                   | 1791.3636363636363
+TOOL           | reasoning-large  | 8            | 0            | 0             | 0.0                   | 1601.75           
+TOOL           | coder-large      | 21           | 0            | 0             | 0.0                   | 1422.2857142857142
+TOKEN_ESTIMATE | general-large    | 1            | 1412         | 0             | 0.0                   | 672.0             
+TOKEN_ESTIMATE | count-token-lite | 2            | 2819         | 0             | 0.0                   | 629.0             
+TOKEN_ESTIMATE | coder-large      | 1            | 1411         | 0             | 0.0                   | 606.0             
+TOKEN_ESTIMATE | general-medium   | 1            | 4425         | 0             | 0.0                   | 579.0             
+TOKEN_ESTIMATE | reasoning-large  | 2            | 5812         | 0             | 0.0                   | 547.0             
+RETRIEVAL      | reasoning-large  | 4            | 32           | 1255          | 0.0                   | 450.0             
+RETRIEVAL      | general-large    | 3            | 23           | 1256          | 0.0                   | 450.0             
+RETRIEVAL      | coder-medium     | 2            | 16           | 878           | 0.0                   | 450.0             
+RETRIEVAL      | search-lite      | 1            | 7            | 271           | 0.0                   | 450.0             
+RETRIEVAL      | reasoning-medium | 6            | 47           | 1719          | 0.0                   | 323.8333333333333 
+RETRIEVAL      | general-medium   | 2            | 15           | 634           | 0.0                   | 306.5             
+RETRIEVAL      | coder-large      | 12           | 93           | 3639          | 0.0                   | 304.0             
+TOKEN_ESTIMATE | reasoning-medium | 1            | 1426         | 0             | 0.0                   | 207.0             
+EVENT          | coder-large      | 2            | 0            | 0             | 0.0                   | 180.0             
+EVENT          | coder-medium     | 2            | 0            | 0             | 0.0                   | 180.0             
+EVENT          | reasoning-medium | 2            | 0            | 0             | 0.0                   | 180.0             
+EVENT          | search-lite      | 1            | 0            | 0             | 0.0                   | 180.0             
+GUARDRAIL      | coder-large      | 1            | 0            | 0             | 0.0                   | 180.0             
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q07:
+
+event_time                | trace_id              | observation_id                            | type       | status
+
+--------------------------+-----------------------+-------------------------------------------+------------+-------
+2026-03-24 13:23:00+00:00 | trace_000020_e6cdb6cc | obs_trace_000020_e6cdb6cc_000005_9bcb01c9 | GENERATION | error 
+2026-03-24 13:15:03+00:00 | trace_000020_e6cdb6cc | obs_trace_000020_e6cdb6cc_000003_13229009 | RETRIEVAL  | error 
+2026-03-23 16:35:00+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000004_a99e7fcb | GENERATION | ok    
+2026-03-23 03:38:03+00:00 | trace_000019_55f7a48c | obs_trace_000019_55f7a48c_000013_5623aeaa | RETRIEVAL  | ok    
+2026-03-23 03:38:02+00:00 | trace_000019_55f7a48c | obs_trace_000019_55f7a48c_000012_cecce306 | TOOL       | ok    
+2026-03-23 03:09:03+00:00 | trace_000019_55f7a48c | obs_trace_000019_55f7a48c_000004_ec7a581b | RETRIEVAL  | ok    
+2026-03-23 03:09:00+00:00 | trace_000019_55f7a48c | obs_trace_000019_55f7a48c_000001_a8b09db0 | GENERATION | ok    
+2026-03-22 19:42:00+00:00 | trace_000018_a9314085 | obs_trace_000018_a9314085_000011_a7b7beff | GENERATION | ok    
+2026-03-22 19:03:04+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000006_f874a8c7 | TOOL       | ok    
+2026-03-22 19:03:03+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000005_f118aa7a | RETRIEVAL  | ok    
+2026-03-22 19:03:00+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000002_d65394b3 | GENERATION | ok    
+2026-03-22 18:57:00+00:00 | trace_000018_a9314085 | obs_trace_000018_a9314085_000001_4a60b50c | GENERATION | ok    
+2026-03-22 18:10:02+00:00 | trace_000010_648da0cb | obs_trace_000010_648da0cb_000007_350a03de | TOOL       | ok    
+2026-03-21 12:27:05+00:00 | trace_000017_f6b1f8af | obs_trace_000017_f6b1f8af_000026_77db48b8 | RETRIEVAL  | ok    
+2026-03-21 12:12:00+00:00 | trace_000017_f6b1f8af | obs_trace_000017_f6b1f8af_000017_3237d29f | GENERATION | ok    
+2026-03-21 12:07:03+00:00 | trace_000017_f6b1f8af | obs_trace_000017_f6b1f8af_000014_856bc0dd | RETRIEVAL  | ok    
+2026-03-21 11:58:03+00:00 | trace_000017_f6b1f8af | obs_trace_000017_f6b1f8af_000010_12664600 | TOOL       | ok    
+2026-03-21 11:58:02+00:00 | trace_000017_f6b1f8af | obs_trace_000017_f6b1f8af_000009_49c742ec | TOOL       | ok    
+2026-03-21 09:18:02+00:00 | trace_000009_2521c0d9 | obs_trace_000009_2521c0d9_000009_ac5d6278 | TOOL       | ok    
+2026-03-21 00:57:00+00:00 | trace_000005_933ef881 | obs_trace_000005_933ef881_000001_f59df2b6 | GENERATION | ok    
+2026-03-20 12:50:03+00:00 | trace_000008_9ba35d69 | obs_trace_000008_9ba35d69_000004_94a49658 | TOOL       | ok    
+2026-03-20 12:50:02+00:00 | trace_000008_9ba35d69 | obs_trace_000008_9ba35d69_000003_9dcd61ed | TOOL       | ok    
+2026-03-20 11:18:04+00:00 | trace_000016_dc243213 | obs_trace_000016_dc243213_000005_e5418b4d | TOOL       | ok    
+2026-03-20 11:18:02+00:00 | trace_000016_dc243213 | obs_trace_000016_dc243213_000003_4103bf05 | TOOL       | ok    
+2026-03-20 04:42:04+00:00 | trace_000012_4f2ebaa2 | obs_trace_000012_4f2ebaa2_000005_262c6032 | RETRIEVAL  | ok    
+2026-03-20 04:42:03+00:00 | trace_000012_4f2ebaa2 | obs_trace_000012_4f2ebaa2_000004_e558351f | TOOL       | ok    
+2026-03-19 15:41:03+00:00 | trace_000011_32fa7769 | obs_trace_000011_32fa7769_000012_ae26de80 | TOOL       | ok    
+2026-03-19 15:41:00+00:00 | trace_000011_32fa7769 | obs_trace_000011_32fa7769_000010_0d463d86 | GENERATION | error 
+2026-03-19 13:47:00+00:00 | trace_000003_feb9ad62 | obs_trace_000003_feb9ad62_000005_1cf32910 | GENERATION | ok    
+2026-03-19 13:42:00+00:00 | trace_000003_feb9ad62 | obs_trace_000003_feb9ad62_000001_1a8fa582 | GENERATION | ok    
+2026-03-17 21:35:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000016_fd6fcc9e | TOOL       | ok    
+2026-03-17 21:24:06+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000012_10cbfebc | TOOL       | ok    
+2026-03-17 21:24:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000006_0c6d4540 | GENERATION | ok    
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q08:
+
+event_time                | trace_id              | observation_id                            | type       | status
+
+--------------------------+-----------------------+-------------------------------------------+------------+-------
+2026-03-17 21:24:03+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000009_34ab1082 | RETRIEVAL  | ok    
+2026-03-17 21:24:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000008_ebe199e6 | TOOL       | ok    
+2026-03-23 16:21:00+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000001_4fb2fb66 | GENERATION | ok    
+2026-03-22 19:03:00+00:00 | trace_000014_fa436bfb | obs_trace_000014_fa436bfb_000002_d65394b3 | GENERATION | ok    
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q09:
+
+tool_name                       | status | observations | avg_latency_ms    
+
+--------------------------------+--------+--------------+-------------------
+mcp__matrix__vector_search      | ok     | 7            | 3052.8571428571427
+mcp__matrix__browser_get_dom    | ok     | 7            | 1340.0            
+mcp__matrix__web_search         | ok     | 5            | 2196.4            
+mcp__matrix__read_file          | ok     | 5            | 2008.4            
+mcp__matrix__memory_upsert      | ok     | 3            | 2033.3333333333333
+mcp__matrix__eval_trace         | ok     | 3            | 1497.3333333333333
+mcp__matrix__edit_file          | ok     | 3            | 1158.3333333333333
+mcp__matrix__fetch_runbook      | ok     | 3            | 948.0             
+mcp__matrix__browser_get_dom    | error  | 2            | 4036.0            
+mcp__matrix__query_warehouse    | ok     | 2            | 2565.5            
+mcp__matrix__github_search_code | ok     | 2            | 2457.5            
+mcp__matrix__deploy             | ok     | 2            | 2029.0            
+mcp__matrix__deploy             | error  | 2            | 1953.0            
+mcp__matrix__images_list        | ok     | 2            | 1336.0            
+mcp__matrix__bash_exec          | error  | 1            | 3463.0            
+mcp__matrix__github_search_code | error  | 1            | 2439.0            
+mcp__matrix__rerank_results     | ok     | 1            | 2063.0            
+mcp__matrix__schedule_workflow  | ok     | 1            | 1976.0            
+mcp__matrix__count_tokens       | ok     | 1            | 1379.0            
+mcp__matrix__deploy_service     | ok     | 1            | 969.0             
+mcp__matrix__bash_exec          | ok     | 1            | 574.0             
+mcp__matrix__inspect_metrics    | ok     | 1            | 368.0             
+mcp__matrix__tail_logs          | ok     | 1            | 285.0             
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q10:
+
+stop_reason | cache_hit | observations | avg_latency_ms    
+
+------------+-----------+--------------+-------------------
+tool_use    | true      | 26           | 3177.8076923076924
+error       | false     | 6            | 3909.0            
+stop        | true      | 3            | 2719.6666666666665
+end_turn    | true      | 3            | 2714.0            
+max_tokens  | true      | 2            | 4104.0            
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q11:
+
+event_time                | trace_id              | observation_id                            | type      | status | tool_name                    | latency_ms
+
+--------------------------+-----------------------+-------------------------------------------+-----------+--------+------------------------------+-----------
+2026-03-17 21:24:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000008_ebe199e6 | TOOL      | ok     | mcp__matrix__browser_get_dom | 2121      
+2026-03-17 21:24:03+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000009_34ab1082 | RETRIEVAL | ok     | mcp__matrix__browser_get_dom | 450       
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q12:
+
+release_ring | customer_tier | retrieval_strategy | observations | avg_latency_ms     | total_cost         
+
+-------------+---------------+--------------------+--------------+--------------------+--------------------
+shadow       | pro           | hybrid             | 7            | 2485.8571428571427 | 1.06331            
+shadow       | free          | keyword            | 6            | 2112.8333333333335 | 1.3605             
+stable       | pro           | hybrid_rerank      | 6            | 2701.8333333333335 | 0.78253            
+canary       | business      | dense              | 5            | 2402.4             | 1.2325             
+shadow       | business      | keyword            | 5            | 844.6              | 0.42977            
+staging      | pro           | dense              | 4            | 4268.25            | 3.92121            
+stable       | pro           | keyword            | 4            | 2377.5             | 1.9323800000000002 
+stable       | free          | keyword            | 4            | 1665.25            | 1.2354             
+stable       | business      | dense              | 4            | 2551.5             | 0.71037            
+stable       | business      | hybrid             | 4            | 1537.25            | 0.50545            
+canary       | free          | dense              | 4            | 2138.25            | 0.42446            
+canary       | business      | keyword            | 4            | 2108.5             | 0.12582            
+shadow       | pro           | hybrid_rerank      | 4            | 1507.0             | 0.0                
+shadow       | business      | dense              | 3            | 4488.333333333333  | 1.9347             
+canary       | pro           | hybrid             | 3            | 2168.3333333333335 | 0.36058999999999997
+shadow       | enterprise    | dense              | 3            | 959.6666666666666  | 0.0                
+stable       | business      | hybrid_rerank      | 3            | 1088.3333333333333 | 0.0                
+stable       | free          | hybrid             | 3            | 316.3333333333333  | 0.0                
+dev          | pro           | hybrid             | 2            | 2011.0             | 1.40786            
+stable       | free          | hybrid_rerank      | 2            | 779.5              | 0.71034            
+canary       | enterprise    | hybrid             | 2            | 2061.0             | 0.7083             
+stable       | pro           | hybrid             | 2            | 4872.0             | 0.70476            
+shadow       | business      | hybrid_rerank      | 2            | 1047.0             | 0.70375            
+canary       | business      | hybrid_rerank      | 2            | 4578.5             | 0.70224            
+stable       | free          | dense              | 2            | 1127.5             | 0.17651            
+stable       | enterprise    | keyword            | 2            | 1870.5             | 0.16868            
+canary       | enterprise    | dense              | 2            | 2207.0             | 0.0                
+canary       | free          | hybrid             | 2            | 462.0              | 0.0                
+canary       | free          | keyword            | 2            | 243.5              | 0.0                
+dev          | business      | hybrid             | 2            | 344.0              | 0.0                
+shadow       | free          | hybrid             | 2            | 3896.0             | 0.0                
+stable       | pro           | dense              | 2            | 2852.5             | 0.0                
+staging      | business      | dense              | 2            | 1938.5             | 0.0                
+staging      | pro           | hybrid_rerank      | 2            | 488.0              | 0.0                
+canary       | enterprise    | keyword            | 1            | 1713.0             | 1.23352            
+dev          | enterprise    | dense              | 1            | 2250.0             | 1.2334             
+canary       | free          | hybrid_rerank      | 1            | 3288.0             | 0.50622            
+dev          | business      | dense              | 1            | 829.0              | 0.43012            
+stable       | enterprise    | hybrid_rerank      | 1            | 3471.0             | 0.41139            
+staging      | business      | keyword            | 1            | 3747.0             | 0.30396            
+stable       | enterprise    | dense              | 1            | 1245.0             | 0.18037            
+shadow       | free          | dense              | 1            | 824.0              | 0.17803            
+canary       | business      | hybrid             | 1            | 417.0              | 0.0                
+canary       | enterprise    | hybrid_rerank      | 1            | 882.0              | 0.0                
+canary       | pro           | dense              | 1            | 191.0              | 0.0                
+canary       | pro           | keyword            | 1            | 1974.0             | 0.0                
+dev          | business      | hybrid_rerank      | 1            | 345.0              | 0.0                
+dev          | business      | keyword            | 1            | 106.0              | 0.0                
+shadow       | business      | hybrid             | 1            | 2352.0             | 0.0                
+shadow       | enterprise    | hybrid             | 1            | 3463.0             | 0.0                
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q13:
+
+observations | traces | last_event_time          
+
+-------------+--------+--------------------------
+1            | 1      | 2026-03-17 21:35:02+00:00
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q14:
+
+event_time                | trace_id              | observation_id                            | type | status | tool_name                   
+
+--------------------------+-----------------------+-------------------------------------------+------+--------+-----------------------------
+2026-03-17 21:24:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000008_ebe199e6 | TOOL | ok     | mcp__matrix__browser_get_dom
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q15:
+
+event_time                | trace_id              | observation_id                            | type       | status | tool_name              | latency_ms
+
+--------------------------+-----------------------+-------------------------------------------+------------+--------+------------------------+-----------
+2026-03-17 21:35:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000016_fd6fcc9e | TOOL       | ok     | mcp__matrix__read_file | 6006      
+2026-03-17 21:24:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000006_0c6d4540 | GENERATION | ok     | null                   | 5858      
+2026-03-23 16:21:00+00:00 | trace_000015_f506eeaa | obs_trace_000015_f506eeaa_000001_4fb2fb66 | GENERATION | ok     | null                   | 2925      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q16:
+
+event_time                | trace_id              | observation_id                            | type       | status | release_ring | customer_tier | traffic_cluster
+
+--------------------------+-----------------------+-------------------------------------------+------------+--------+--------------+---------------+----------------
+2026-03-17 21:35:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000016_fd6fcc9e | TOOL       | ok     | stable       | pro           | cluster_d      
+2026-03-17 21:24:02+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000008_ebe199e6 | TOOL       | ok     | stable       | pro           | cluster_d      
+2026-03-17 21:24:00+00:00 | trace_000001_f1dff375 | obs_trace_000001_f1dff375_000006_0c6d4540 | GENERATION | ok     | stable       | pro           | cluster_d      
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q17:
+
+trace_id              | observation_id                            | seq_no | type           | status | request_key         | workflow_variant   
+
+----------------------+-------------------------------------------+--------+----------------+--------+---------------------+--------------------
+trace_000001_f1dff375 | obs_trace_000001_f1dff375_000001_c1e4ef51 | 1      | TOKEN_ESTIMATE | ok     | req_000001_8cace09f | long_context_replay
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q18:
+
+prompt_template_version | observations | traces | avg_latency_ms     | total_cost        
+
+------------------------+--------------+--------+--------------------+-------------------
+pt_2026_04_2            | 45           | 18     | 2002.2888888888888 | 13.104084000000002
+pt_2026_04_1            | 45           | 17     | 1809.111111111111  | 6.897491999999999 
+pt_2026_03_2            | 41           | 16     | 1744.1463414634147 | 5.780822          
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q19:
+
+deployment_channel | release_ring | incident_observations | incident_traces | avg_latency_ms    
+
+-------------------+--------------+-----------------------+-----------------+-------------------
+default            | shadow       | 34                    | 15              | 1763.4705882352941
+shadow             | stable       | 30                    | 16              | 1904.1            
+customer_rollout   | canary       | 25                    | 12              | 1991.2            
+customer_rollout   | staging      | 5                     | 2               | 1662.6            
+default            | dev          | 4                     | 2               | 804.75            
+chat_ui            | stable       | 3                     | 3               | 3286.6666666666665
+shadow             | dev          | 3                     | 2               | 1149.0            
+shadow             | staging      | 3                     | 2               | 3112.3333333333335
+email              | shadow       | 2                     | 2               | 6575.0            
+slack              | canary       | 2                     | 2               | 1666.5            
+customer_rollout   | dev          | 1                     | 1               | 1574.0            
+default            | staging      | 1                     | 1               | 180.0             
+
+------------------------------------------------------------------------------------------------------------------------
+
+Result for query Q20:
+
+workflow_variant    | policy_pack     | observations | tenants | avg_latency_ms     | total_cost        
+
+--------------------+-----------------+--------------+---------+--------------------+-------------------
+tool_first          | latency_strict  | 34           | 3       | 1057.264705882353  | 3.581332          
+tool_first          | default         | 24           | 3       | 1302.875           | 4.06002           
+long_context_replay | latency_strict  | 22           | 3       | 1759.7727272727273 | 3.867196          
+tool_first          | cost_guarded    | 21           | 2       | 2002.7619047619048 | 4.996974          
+long_context_replay | cost_guarded    | 21           | 3       | 1022.6666666666666 | 3.004678          
+direct_answer       | default         | 10           | 1       | 1786.6             | 2.9855799999999997
+tool_first          | enterprise_safe | 7            | 2       | 2071.8571428571427 | 1.0123760000000002
+retry_with_backoff  | enterprise_safe | 7            | 1       | 2504.0             | 0.63127           
+long_context_replay | enterprise_safe | 7            | 2       | 2004.2857142857142 | 0.580176          
+long_context_replay | default         | 5            | 2       | 2089.4             | 0.936836          
+retry_with_backoff  | default         | 3            | 1       | 3296.0             | 0.12596           
+

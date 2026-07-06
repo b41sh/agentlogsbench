@@ -162,7 +162,7 @@ case "${COMMAND}" in
     run-engine|run-all)
         SIZE=""
         ENGINE=""
-        ENGINES="clickhouse,doris,elastic,opensearch,postgres,duckdb"
+        ENGINES="clickhouse,doris,elastic,opensearch,postgres,duckdb,databend"
         DATA_DIR=""
         OUTPUT_PREFIX="$(default_output_prefix)"
         MACHINE_LABEL="$(current_machine_label)"

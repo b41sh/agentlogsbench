@@ -30,6 +30,7 @@ class TextQueryContractTest(unittest.TestCase):
         sections_by_surface = {
             "common/queries/queries.sql": load_query_sections(self.root / "common" / "queries" / "queries.sql"),
             "clickhouse/queries.sql": load_query_sections(self.root / "clickhouse" / "queries.sql"),
+            "databend/queries.sql": load_query_sections(self.root / "databend" / "queries.sql"),
             "doris/queries.sql": load_query_sections(self.root / "doris" / "queries.sql"),
             "postgres/queries.sql": load_query_sections(self.root / "postgres" / "queries.sql"),
         }
@@ -191,6 +192,16 @@ class TextQueryContractTest(unittest.TestCase):
         self.assertIn("payload.attr.deployment_channel::String", q19)
         self.assertIn("payload.attr.release_ring::String", q19)
         self.assertNotIn("JSONExtractString(", q19)
+
+    def test_databend_text_queries_use_inverted_index_predicates(self) -> None:
+        databend_sections = load_query_sections(self.root / "databend" / "queries.sql")
+        databend_create = (self.root / "databend" / "create.sql").read_text(encoding="utf-8")
+
+        self.assertIn("INVERTED INDEX idx_agent_observations_text (input, output)", databend_create)
+        for query_id in ("Q05", "Q08", "Q11", "Q13", "Q14", "Q15", "Q19"):
+            self.assertIn("MATCH('input, output'", databend_sections[query_id], msg=query_id)
+        for query_id in ("Q05", "Q08", "Q11"):
+            self.assertIn("SCORE()", databend_sections[query_id], msg=query_id)
 
 
 if __name__ == "__main__":

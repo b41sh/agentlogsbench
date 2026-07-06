@@ -1,0 +1,75 @@
+{
+  "system": "Databend",
+  "version": "Databend Query v1.2.833-nightly-fcf7671a7c(rust-1.94.0-nightly-2026-06-30T10:57:06.086583565Z)",
+  "os": "macos",
+  "date": "2026-07-01",
+  "machine": "local",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 1000000,
+  "num_loaded_documents": 177,
+  "total_size": 159771,
+  "result": [
+    [0.096],
+    [0.118],
+    [0.081],
+    [0.098],
+    [0.155],
+    [0.113],
+    [0.146],
+    [0.372],
+    [0.1],
+    [0.29],
+    [0.094],
+    [0.102],
+    [0.065],
+    [0.034],
+    [0.025],
+    [0.101],
+    [0.093],
+    [0.084],
+    [0.166],
+    [0.26]
+  ],
+  "data_size": 87322,
+  "index_size": 72449,
+  "load_time": 2.818,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "smoke_agentlog_1m.count",
+        "field": "num_loaded_documents",
+        "value": 177
+      },
+      {
+        "name": "smoke_agentlog_1m.total_size",
+        "field": "total_size",
+        "value": 159771
+      },
+      {
+        "name": "smoke_agentlog_1m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 1
+      },
+      {
+        "name": "smoke_agentlog_1m.data_size",
+        "field": "data_size",
+        "value": 87322
+      },
+      {
+        "name": "smoke_agentlog_1m.index_size",
+        "field": "index_size",
+        "value": 72449
+      },
+      {
+        "name": "smoke_agentlog_1m.load_time",
+        "field": "load_time",
+        "value": 2.818
+      }
+    ],
+    "query_results": {
+      "path": "_query_results/_smoke_agentlog_1m.query_results"
+    }
+  }
+}

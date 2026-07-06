@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
 
-RUNNABLE_ENGINES = ("clickhouse", "doris", "duckdb", "elastic", "opensearch", "postgres")
+RUNNABLE_ENGINES = ("clickhouse", "doris", "duckdb", "elastic", "opensearch", "postgres", "databend")
 ENGINE_SURFACE_FILES: Dict[str, Tuple[str, ...]] = {
     "clickhouse": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.sql", "queries.sql", "README.md"),
     "doris": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.sql", "queries.sql", "README.md"),
@@ -12,6 +12,7 @@ ENGINE_SURFACE_FILES: Dict[str, Tuple[str, ...]] = {
     "elastic": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.json", "queries.json", "README.md"),
     "opensearch": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.json", "queries.json", "README.md"),
     "postgres": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.sql", "queries.sql", "README.md"),
+    "databend": ("benchmark.sh", "run_queries.sh", "start.sh", "stop.sh", "create.sql", "queries.sql", "README.md"),
 }
 LEGACY_RESULTS_DIRNAME = "result"
 CLICKBENCH_RESULTS_DIRNAME = "results"

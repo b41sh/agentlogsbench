@@ -1,0 +1,72 @@
+{
+  "system": "Databend",
+  "version": "Databend Query v1.2.833-nightly-fcf7671a7c(rust-1.94.0-nightly-2026-06-30T10:57:06.086583565Z)",
+  "os": "Darwin 25.5.0",
+  "date": "2026-07-01",
+  "machine": "bogon",
+  "retains_structure": "yes",
+  "tags": [],
+  "dataset_size": 10000000,
+  "num_loaded_documents": 9996778,
+  "total_size": 6913487150,
+  "result": [
+    [0.238, 0.2, 0.144],
+    [0.204, 0.225, 0.352],
+    [0.272, 0.125, 0.299],
+    [0.273, 0.266, 0.226],
+    [2.036, 2.184, 2.185],
+    [0.235, 0.381, 0.181],
+    [6.602, 6.719, 6.579],
+    [1.663, 1.852, 1.73],
+    [0.335, 0.437, 0.394],
+    [4.195, 4.322, 4.371],
+    [0.38, 0.217, 0.278],
+    [5.249, 5.342, 5.429],
+    [0.325, 0.211, 0.178],
+    [0.529, 0.48, 0.48],
+    [0.409, 0.455, 0.291],
+    [4.724, 4.778, 4.719],
+    [4.2, 4.14, 4.254],
+    [5.05, 5.628, 5.236],
+    [5.323, 5.218, 5.223],
+    [5.379, 5.313, 5.315]
+  ],
+  "data_size": 4157050900,
+  "index_size": 2756436250,
+  "load_time": 1808.344,
+  "artifact_manifest": {
+    "embedded_sidecars": [
+      {
+        "name": "databend_agentlog_10m.count",
+        "field": "num_loaded_documents",
+        "value": 9996778
+      },
+      {
+        "name": "databend_agentlog_10m.total_size",
+        "field": "total_size",
+        "value": 6913487150
+      },
+      {
+        "name": "databend_agentlog_10m.results_runtime",
+        "field": "result",
+        "rows": 20,
+        "tries": 3
+      },
+      {
+        "name": "databend_agentlog_10m.data_size",
+        "field": "data_size",
+        "value": 4157050900
+      },
+      {
+        "name": "databend_agentlog_10m.index_size",
+        "field": "index_size",
+        "value": 2756436250
+      },
+      {
+        "name": "databend_agentlog_10m.load_time",
+        "field": "load_time",
+        "value": 1808.344
+      }
+    ]
+  }
+}
