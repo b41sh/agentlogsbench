@@ -29,4 +29,5 @@ CREATE TABLE __DATABEND_TABLE__ (
     payload VARIANT NOT NULL,
     INVERTED INDEX idx_agent_observations_text (input, output)
 )
-CLUSTER BY (biz_date, trace_id, seq_no);
+CLUSTER BY (biz_date, trace_id, seq_no)
+enable_virtual_column=true;

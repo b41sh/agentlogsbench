@@ -159,6 +159,7 @@ def main() -> int:
     log_lines: list[str] = []
     try:
         conn.exec(f"USE {args.database}")
+        conn.exec("SET enable_experimental_virtual_column=1")
         engine_version = conn.version()
         params = load_context_from_paths(manifest_observation_paths(manifest_path, manifest), manifest["replay_trace_id"])
 

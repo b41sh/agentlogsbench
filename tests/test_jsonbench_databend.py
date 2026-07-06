@@ -18,6 +18,14 @@ import run_queries
 import stats
 
 
+class FakeConn:
+    def __init__(self) -> None:
+        self.statements: list[str] = []
+
+    def exec(self, statement: str) -> None:
+        self.statements.append(statement)
+
+
 class JsonbenchDatabendTest(unittest.TestCase):
     def test_promoted_row_extracts_benchmark_paths_and_keeps_data(self) -> None:
         raw = {
@@ -103,6 +111,20 @@ class JsonbenchDatabendTest(unittest.TestCase):
             )
 
             self.assertEqual(run_queries.load_queries(path), ["SELECT 1", "SELECT 2"])
+
+    def test_recluster_table_runs_final_recluster(self) -> None:
+        conn = FakeConn()
+
+        load_data.recluster_table(conn, "bluesky")
+
+        self.assertEqual(conn.statements, ["ALTER TABLE bluesky RECLUSTER FINAL"])
+
+    def test_query_session_enables_virtual_columns(self) -> None:
+        conn = FakeConn()
+
+        run_queries.configure_session(conn)
+
+        self.assertEqual(conn.statements, ["SET enable_experimental_virtual_column=1"])
 
     def test_parse_runtime_matrix_reads_jsonbench_sidecar(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir_raw:

@@ -103,6 +103,10 @@ def execute_query(conn: object, sql: str, params: dict[str, str]) -> float:
     return time.perf_counter() - started
 
 
+def configure_session(conn: object) -> None:
+    conn.exec("SET enable_experimental_virtual_column=1")  # type: ignore[attr-defined]
+
+
 def tsv_text(columns: list[str], rows: list[dict[str, Any]]) -> str:
     buffer = io.StringIO()
     writer = csv.writer(buffer, delimiter="\t", lineterminator="\n")
@@ -160,6 +164,7 @@ def main() -> int:
     sections: list[str] = []
     try:
         conn.exec(f"USE {args.database}")
+        configure_session(conn)
         params = resolve_context(conn, args.table, args.query_context_file)
         queries = list(load_query_sections(args.queries_file).items())
         log(f"Resolved {len(queries)} SQL queries from {args.queries_file} with warmup_runs={args.warmup_runs} measured_runs={args.tries}")
