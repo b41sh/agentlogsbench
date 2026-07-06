@@ -59,6 +59,12 @@ def load_file(conn: object, table: str, file_path: Path, method: str) -> int:
     return int(getattr(stats, "write_rows", 0))
 
 
+def recluster_table(conn: object, table: str) -> None:
+    log(f"Reclustering table {table}")
+    conn.exec(f"ALTER TABLE {table} RECLUSTER FINAL")  # type: ignore[attr-defined]
+    log(f"Recluster complete for {table}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Import agent observation NDJSON into Databend.")
     parser.add_argument("--dsn", default=os.environ.get("DATABEND_DSN", "databend://root:@127.0.0.1:8000/?sslmode=disable"))
@@ -69,6 +75,11 @@ def main() -> int:
     parser.add_argument("--create-sql", type=Path, default=Path(__file__).with_name("create.sql"))
     parser.add_argument("--data-glob", action="append", default=[])
     parser.add_argument("--load-method", default=os.environ.get("DATABEND_LOAD_METHOD", "stage"), choices=("stage", "streaming"))
+    parser.add_argument(
+        "--recluster",
+        action=argparse.BooleanOptionalAction,
+        default=os.environ.get("DATABEND_RECLUSTER", "1").lower() not in {"0", "false", "no"},
+    )
     parser.add_argument("--schema-only", action="store_true")
     args = parser.parse_args()
 
@@ -100,6 +111,8 @@ def main() -> int:
         table_rows = int(conn.query_row(f"SELECT COUNT(*) FROM {args.table}").values()[0])
         if table_rows != loaded_rows:
             raise SystemExit(f"Loaded row count mismatch: load_file wrote {loaded_rows}, table has {table_rows}")
+        if args.recluster:
+            recluster_table(conn, args.table)
         log(f"Import complete files={len(files)} rows={loaded_rows}")
         return 0
     finally:
